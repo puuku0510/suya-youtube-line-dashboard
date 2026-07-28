@@ -4,9 +4,7 @@
     "lastSync": "2026-07-28T21:30:14+09:00",
     "youtubeSnapshotAt": "2026-07-28T23:08:00+09:00",
     "timezone": "Asia/Tokyo",
-    "notice": "現在はUTAGE集計値とYouTube公開値のスナップショットです。期間内の再生増分・登録者増分はYouTube Analytics接続後に表示します。",
-    "lineNotice": "現在の2分類は、既存集計の58人・21人を便宜上まとめた暫定グループです。公式LINEアカウントの総数や、概要欄にあるリンクの本数を表すものではありません。",
-    "routeNotice": "登録経路は、UTAGEの流入計測用URLに付けられた管理名です。同じ公式LINEへ進むリンクでも、動画や設置場所ごとに別の登録経路名を付けられます。現在の値はUTAGE側の名称をそのまま表示しています。"
+    "notice": "現在はUTAGEの登録数とYouTube APIの公開値を組み合わせたスナップショットです。公式LINE別の有効友だち数は、UTAGE全アカウントの照合完了後に追加します。"
   },
   "channels": [
     {
@@ -120,26 +118,7 @@
       "publishedText": "10日前"
     }
   ],
-  "officialLines": [
-    {
-      "id": "yuru-line",
-      "name": "ゆるAI",
-      "activeFriends": 58,
-      "cumulative": 58,
-      "blocks": 0,
-      "status": "unverified",
-      "verifiedAccount": false
-    },
-    {
-      "id": "yukkuri-line",
-      "name": "ゆっくりAI起業",
-      "activeFriends": 21,
-      "cumulative": 21,
-      "blocks": 0,
-      "status": "unverified",
-      "verifiedAccount": false
-    }
-  ],
+  "officialLines": [],
   "records": [
     {
       "date": "2026-07-05",
