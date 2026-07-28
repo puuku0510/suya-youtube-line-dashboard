@@ -1,8 +1,8 @@
 {
   "meta": {
     "mode": "live-api",
-    "lastSync": "2026-07-28T17:24:18.943Z",
-    "youtubeSnapshotAt": "2026-07-28T17:24:18.943Z",
+    "lastSync": "2026-07-28T17:26:58.732Z",
+    "youtubeSnapshotAt": "2026-07-28T17:26:58.732Z",
     "timezone": "Asia/Tokyo",
     "utageAccountCount": 35,
     "youtubeTrackingCount": 12,
@@ -381,16 +381,6 @@
       "activeFriends": 4,
       "channels": [
         "manimani"
-      ],
-      "status": "connected"
-    },
-    {
-      "id": "line-7cd62c8408d4",
-      "name": "AI×一人起業【YouTube統合】",
-      "totalFriends": 1,
-      "activeFriends": 1,
-      "channels": [
-        "yukkuri"
       ],
       "status": "connected"
     }
