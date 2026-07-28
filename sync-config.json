@@ -1,0 +1,75 @@
+{
+  "timezone": "Asia/Tokyo",
+  "channels": [
+    {
+      "id": "yuruyuru",
+      "name": "ゆるAI",
+      "handle": "@yuruyuru-ai000",
+      "channelId": "UCnY6D6uMLAlD65iHG87PYsQ",
+      "status": "active"
+    },
+    {
+      "id": "yukkuri",
+      "name": "ゆっくりAI副業",
+      "handle": "@yuttukuriAIhukugyou",
+      "channelId": "UCcv-5yPFRjlGOyMLuIsvOIA",
+      "status": "active"
+    },
+    {
+      "id": "manimani",
+      "name": "AIマニア",
+      "handle": "@ai-manimani",
+      "channelId": "UCnAxolbizhj78gp84sIaWcQ",
+      "status": "active"
+    }
+  ],
+  "lineAccountRules": [
+    {
+      "accountName": "ゆるAI",
+      "channels": ["yuruyuru"],
+      "defaultChannel": "yuruyuru"
+    },
+    {
+      "accountName": "ゆっくりAI起業",
+      "channels": ["yukkuri"],
+      "defaultChannel": "yukkuri"
+    },
+    {
+      "accountName": "AIマニアの秘密基地",
+      "channels": ["manimani"],
+      "defaultChannel": "manimani"
+    },
+    {
+      "accountName": "AI×一人起業【YouTube統合】",
+      "channels": ["yukkuri"],
+      "defaultChannel": "yukkuri"
+    }
+  ],
+  "routeMappings": [
+    {
+      "trackingName": "AIゆるっと1",
+      "channel": "yuruyuru",
+      "videoId": "MZOtIDFBYQY"
+    },
+    {
+      "trackingName": "ゆるっと4",
+      "channel": "yuruyuru",
+      "videoId": "0i2ZdKe7PKY"
+    },
+    {
+      "trackingName": "ゆるAI2",
+      "channel": "yuruyuru",
+      "videoId": "9z3P90deMBI"
+    },
+    {
+      "trackingName": "ゆるっと3",
+      "channel": "yuruyuru",
+      "videoId": "ZcwZhJRDZcA"
+    },
+    {
+      "trackingName": "ゆっくりAI副業10",
+      "channel": "yukkuri",
+      "videoId": null
+    }
+  ]
+}
