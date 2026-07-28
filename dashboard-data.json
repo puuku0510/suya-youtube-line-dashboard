@@ -1,8 +1,8 @@
 {
   "meta": {
     "mode": "live-api",
-    "lastSync": "2026-07-28T17:01:48.837Z",
-    "youtubeSnapshotAt": "2026-07-28T17:01:48.837Z",
+    "lastSync": "2026-07-28T17:05:08.858Z",
+    "youtubeSnapshotAt": "2026-07-28T17:05:08.858Z",
     "timezone": "Asia/Tokyo",
     "utageAccountCount": 35,
     "notice": "UTAGE全配信アカウントとYouTube Data APIを自動同期しています。公式LINEの有効友だち数は、ブロック・配信除外を除いた現在値です。"
@@ -23,7 +23,7 @@
       "handle": "@yuttukuriAIhukugyou",
       "channelId": "UCcv-5yPFRjlGOyMLuIsvOIA",
       "subscribers": 542,
-      "currentViews": 14570,
+      "currentViews": 14567,
       "status": "active"
     },
     {
@@ -41,7 +41,7 @@
       "channel": "yuruyuru",
       "videoId": "q5DdZbwn8ys",
       "title": "2026年7月27日",
-      "currentViews": 138,
+      "currentViews": 136,
       "publishedAt": "2026-07-28T11:00:10Z",
       "publishedText": "今日"
     },
@@ -193,7 +193,7 @@
       "channel": "yuruyuru",
       "videoId": "0HdLDHCguKg",
       "title": "Codexの最強の使い方#ai#codex#claude #副業",
-      "currentViews": 1672,
+      "currentViews": 1674,
       "publishedAt": "2026-07-19T10:00:27Z",
       "publishedText": "1週間前"
     },
@@ -241,7 +241,7 @@
       "channel": "yukkuri",
       "videoId": "1b_qRGocOmU",
       "title": "【最新版】初心者でもわかるCodexの使い方徹底解説",
-      "currentViews": 3744,
+      "currentViews": 3741,
       "publishedAt": "2026-07-16T10:00:31Z",
       "publishedText": "1週間前"
     },
@@ -501,7 +501,7 @@
       "totalFriends": null,
       "activeFriends": null,
       "channels": [],
-      "status": "unavailable"
+      "status": "stale"
     },
     {
       "id": "line-af28edd7eaa4",
@@ -509,7 +509,7 @@
       "totalFriends": null,
       "activeFriends": null,
       "channels": [],
-      "status": "unavailable"
+      "status": "stale"
     }
   ],
   "records": [
@@ -537,14 +537,14 @@
     {
       "date": "2026-07-08",
       "channel": "yuruyuru",
-      "videoId": null,
+      "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
       "leads": 1
     },
     {
       "date": "2026-07-11",
       "channel": "yuruyuru",
-      "videoId": null,
+      "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
       "leads": 1
     },
@@ -558,9 +558,16 @@
     {
       "date": "2026-07-19",
       "channel": "yuruyuru",
-      "videoId": null,
+      "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
-      "leads": 2
+      "leads": 1
+    },
+    {
+      "date": "2026-07-19",
+      "channel": "yuruyuru",
+      "videoId": "ZcwZhJRDZcA",
+      "line": "line-782007577b68",
+      "leads": 1
     },
     {
       "date": "2026-07-19",
@@ -579,9 +586,16 @@
     {
       "date": "2026-07-20",
       "channel": "yuruyuru",
-      "videoId": null,
+      "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
-      "leads": 25
+      "leads": 13
+    },
+    {
+      "date": "2026-07-20",
+      "channel": "yuruyuru",
+      "videoId": "ZcwZhJRDZcA",
+      "line": "line-782007577b68",
+      "leads": 12
     },
     {
       "date": "2026-07-20",
@@ -593,9 +607,16 @@
     {
       "date": "2026-07-21",
       "channel": "yuruyuru",
-      "videoId": null,
+      "videoId": "ZcwZhJRDZcA",
       "line": "line-782007577b68",
-      "leads": 7
+      "leads": 4
+    },
+    {
+      "date": "2026-07-21",
+      "channel": "yuruyuru",
+      "videoId": "9z3P90deMBI",
+      "line": "line-782007577b68",
+      "leads": 3
     },
     {
       "date": "2026-07-21",
@@ -607,14 +628,21 @@
     {
       "date": "2026-07-22",
       "channel": "yuruyuru",
-      "videoId": null,
+      "videoId": "ZcwZhJRDZcA",
       "line": "line-782007577b68",
-      "leads": 8
+      "leads": 5
+    },
+    {
+      "date": "2026-07-22",
+      "channel": "yuruyuru",
+      "videoId": "9z3P90deMBI",
+      "line": "line-782007577b68",
+      "leads": 3
     },
     {
       "date": "2026-07-23",
       "channel": "yuruyuru",
-      "videoId": null,
+      "videoId": "ZcwZhJRDZcA",
       "line": "line-782007577b68",
       "leads": 3
     },
@@ -628,9 +656,16 @@
     {
       "date": "2026-07-24",
       "channel": "yuruyuru",
-      "videoId": null,
+      "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
-      "leads": 2
+      "leads": 1
+    },
+    {
+      "date": "2026-07-24",
+      "channel": "yuruyuru",
+      "videoId": "ZcwZhJRDZcA",
+      "line": "line-782007577b68",
+      "leads": 1
     },
     {
       "date": "2026-07-24",
@@ -642,16 +677,37 @@
     {
       "date": "2026-07-25",
       "channel": "yuruyuru",
-      "videoId": null,
+      "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
-      "leads": 3
+      "leads": 1
+    },
+    {
+      "date": "2026-07-25",
+      "channel": "yuruyuru",
+      "videoId": "ZcwZhJRDZcA",
+      "line": "line-782007577b68",
+      "leads": 1
+    },
+    {
+      "date": "2026-07-25",
+      "channel": "yuruyuru",
+      "videoId": "0i2ZdKe7PKY",
+      "line": "line-782007577b68",
+      "leads": 1
     },
     {
       "date": "2026-07-26",
       "channel": "yuruyuru",
-      "videoId": null,
+      "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
-      "leads": 5
+      "leads": 2
+    },
+    {
+      "date": "2026-07-26",
+      "channel": "yuruyuru",
+      "videoId": "ZcwZhJRDZcA",
+      "line": "line-782007577b68",
+      "leads": 3
     },
     {
       "date": "2026-07-27",
@@ -672,7 +728,7 @@
       "date": "2026-07-29",
       "channel": "yukkuri",
       "subscribers": 542,
-      "views": 14570
+      "views": 14567
     },
     {
       "date": "2026-07-29",
@@ -685,7 +741,7 @@
     {
       "date": "2026-07-29",
       "videoId": "q5DdZbwn8ys",
-      "views": 138
+      "views": 136
     },
     {
       "date": "2026-07-29",
@@ -780,7 +836,7 @@
     {
       "date": "2026-07-29",
       "videoId": "0HdLDHCguKg",
-      "views": 1672
+      "views": 1674
     },
     {
       "date": "2026-07-29",
@@ -810,7 +866,7 @@
     {
       "date": "2026-07-29",
       "videoId": "1b_qRGocOmU",
-      "views": 3744
+      "views": 3741
     },
     {
       "date": "2026-07-29",
