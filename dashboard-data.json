@@ -1,0 +1,375 @@
+{
+  "meta": {
+    "mode": "snapshot",
+    "lastSync": "2026-07-28T21:30:14+09:00",
+    "youtubeSnapshotAt": "2026-07-28T23:08:00+09:00",
+    "timezone": "Asia/Tokyo",
+    "notice": "現在はUTAGE集計値とYouTube公開値のスナップショットです。期間内の再生増分・登録者増分はYouTube Analytics接続後に表示します。",
+    "lineNotice": "現在の2分類は、既存集計の58人・21人を便宜上まとめた暫定グループです。公式LINEアカウントの総数や、概要欄にあるリンクの本数を表すものではありません。",
+    "routeNotice": "登録経路は、UTAGEの流入計測用URLに付けられた管理名です。同じ公式LINEへ進むリンクでも、動画や設置場所ごとに別の登録経路名を付けられます。現在の値はUTAGE側の名称をそのまま表示しています。"
+  },
+  "channels": [
+    {
+      "id": "yuruyuru",
+      "name": "ゆるAI",
+      "handle": "@yuruyuru-ai000",
+      "channelId": "UCnY6D6uMLAlD65iHG87PYsQ",
+      "subscribers": 106,
+      "status": "active"
+    },
+    {
+      "id": "yukkuri",
+      "name": "ゆっくりAI副業",
+      "handle": "@yuttukuriAIhukugyou",
+      "channelId": "UCcv-5yPFRjlGOyMLuIsvOIA",
+      "subscribers": 542,
+      "status": "active"
+    },
+    {
+      "id": "manimani",
+      "name": "AIマニア",
+      "handle": "@ai-manimani",
+      "channelId": "UCnAxolbizhj78gp84sIaWcQ",
+      "subscribers": 2,
+      "status": "active"
+    }
+  ],
+  "videos": [
+    {
+      "channel": "yukkuri",
+      "videoId": "1b_qRGocOmU",
+      "title": "【最新版】初心者でもわかるCodexの使い方徹底解説",
+      "currentViews": 3732,
+      "publishedText": "12日前"
+    },
+    {
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "title": "【Claude Code】動画編集を完全自動化 5時間かかった動画編集が『テロップ入れて』の一言で終わる!?",
+      "currentViews": 1740,
+      "publishedText": "1か月前"
+    },
+    {
+      "channel": "yukkuri",
+      "videoId": "PkACpVlSvmA",
+      "title": "【楽したい人向け】世界1番カンタンなClaude Codeの始め方",
+      "currentViews": 156,
+      "publishedText": "2か月前"
+    },
+    {
+      "channel": "yukkuri",
+      "videoId": "nRt-lwDoP_E",
+      "title": "【2026年最新版】AIを活用して完璧なYouTube台本を爆速で作る方法を徹底解説！【Antigravity×NotebookLM】",
+      "currentViews": 186,
+      "publishedText": "3か月前"
+    },
+    {
+      "channel": "yukkuri",
+      "videoId": "t8ISg0HYlzA",
+      "title": "【収益化停止】知らないと一生収益化停止に⁉︎収益化停止祭りの真実と新たな抜け道とは",
+      "currentViews": 690,
+      "publishedText": "3か月前"
+    },
+    {
+      "channel": "yukkuri",
+      "videoId": "fVrw_p75IXc",
+      "title": "【神AI × 神AI 】まだ自力で作ってるの⁉︎Googleの『NotebookLM』のスライド作成術がヤバすぎる【全人類必見】",
+      "currentViews": 82,
+      "publishedText": "3か月前"
+    },
+    {
+      "channel": "yukkuri",
+      "videoId": "Oi9KnlR0E5k",
+      "title": "YouTubeを始める前にやっておくこと【ゆっくり実況】",
+      "currentViews": 361,
+      "publishedText": "3か月前"
+    },
+    {
+      "channel": "yuruyuru",
+      "videoId": "0i2ZdKe7PKY",
+      "title": "【最新版】AIガチ勢が厳選した、課金すべきAI TOP3 ChatGPTは時代遅れ...？",
+      "currentViews": 190,
+      "publishedText": "5日前"
+    },
+    {
+      "channel": "yuruyuru",
+      "videoId": "ZcwZhJRDZcA",
+      "title": "【最新版】CodexをAPIコスト7割削減しながら限界まで働かせる方法",
+      "currentViews": 3066,
+      "publishedText": "10日前"
+    },
+    {
+      "channel": "yuruyuru",
+      "videoId": "9z3P90deMBI",
+      "title": "【最新版】初心者でもわかるCodexの使い方徹底解説",
+      "currentViews": 469,
+      "publishedText": "2週間前"
+    },
+    {
+      "channel": "yuruyuru",
+      "videoId": "MZOtIDFBYQY",
+      "title": "【最新版！】Claude Code完全入門マニュアル",
+      "currentViews": 183,
+      "publishedText": "3週間前"
+    },
+    {
+      "channel": "manimani",
+      "videoId": "XB8D06toYZ8",
+      "title": "【最新版】初心者でもスグ使える基礎から応用を徹底解説！",
+      "currentViews": 7,
+      "publishedText": "10日前"
+    }
+  ],
+  "officialLines": [
+    {
+      "id": "yuru-line",
+      "name": "ゆるAI",
+      "activeFriends": 58,
+      "cumulative": 58,
+      "blocks": 0,
+      "status": "unverified",
+      "verifiedAccount": false
+    },
+    {
+      "id": "yukkuri-line",
+      "name": "ゆっくりAI起業",
+      "activeFriends": 21,
+      "cumulative": 21,
+      "blocks": 0,
+      "status": "unverified",
+      "verifiedAccount": false
+    }
+  ],
+  "records": [
+    {
+      "date": "2026-07-05",
+      "channel": "yuruyuru",
+      "video": "【最新版！】Claude Code完全入門マニュアル",
+      "videoId": "MZOtIDFBYQY",
+      "line": "yuru-line",
+      "route": "AIゆるっと1",
+      "leads": 1,
+      "views": null
+    },
+    {
+      "date": "2026-07-08",
+      "channel": "yuruyuru",
+      "video": "【最新版】AIガチ勢が厳選した、課金すべきAI TOP3 ChatGPTは時代遅れ...？",
+      "videoId": "0i2ZdKe7PKY",
+      "line": "yuru-line",
+      "route": "ゆるっと4",
+      "leads": 1,
+      "views": null
+    },
+    {
+      "date": "2026-07-11",
+      "channel": "yuruyuru",
+      "video": "【最新版】初心者でもわかるCodexの使い方徹底解説",
+      "videoId": "9z3P90deMBI",
+      "line": "yuru-line",
+      "route": "ゆるAI2",
+      "leads": 1,
+      "views": null
+    },
+    {
+      "date": "2026-07-18",
+      "channel": "yuruyuru",
+      "video": "【最新版】CodexをAPIコスト7割削減しながら限界まで働かせる方法",
+      "videoId": "ZcwZhJRDZcA",
+      "line": "yuru-line",
+      "route": "ゆるっと3",
+      "leads": 1,
+      "views": null
+    },
+    {
+      "date": "2026-07-19",
+      "channel": "yuruyuru",
+      "video": "【最新版】CodexをAPIコスト7割削減しながら限界まで働かせる方法",
+      "videoId": "ZcwZhJRDZcA",
+      "line": "yuru-line",
+      "route": "ゆるっと3",
+      "leads": 9,
+      "views": null
+    },
+    {
+      "date": "2026-07-19",
+      "channel": "yuruyuru",
+      "video": "【最新版】初心者でもわかるCodexの使い方徹底解説",
+      "videoId": "9z3P90deMBI",
+      "line": "yuru-line",
+      "route": "ゆるAI2",
+      "leads": 8,
+      "views": null
+    },
+    {
+      "date": "2026-07-20",
+      "channel": "yuruyuru",
+      "video": "【最新版】CodexをAPIコスト7割削減しながら限界まで働かせる方法",
+      "videoId": "ZcwZhJRDZcA",
+      "line": "yuru-line",
+      "route": "ゆるっと3",
+      "leads": 8,
+      "views": null
+    },
+    {
+      "date": "2026-07-20",
+      "channel": "yuruyuru",
+      "video": "【最新版】初心者でもわかるCodexの使い方徹底解説",
+      "videoId": "9z3P90deMBI",
+      "line": "yuru-line",
+      "route": "ゆるAI2",
+      "leads": 6,
+      "views": null
+    },
+    {
+      "date": "2026-07-21",
+      "channel": "yuruyuru",
+      "video": "【最新版】CodexをAPIコスト7割削減しながら限界まで働かせる方法",
+      "videoId": "ZcwZhJRDZcA",
+      "line": "yuru-line",
+      "route": "ゆるっと3",
+      "leads": 2,
+      "views": null
+    },
+    {
+      "date": "2026-07-21",
+      "channel": "yuruyuru",
+      "video": "【最新版】初心者でもわかるCodexの使い方徹底解説",
+      "videoId": "9z3P90deMBI",
+      "line": "yuru-line",
+      "route": "ゆるAI2",
+      "leads": 1,
+      "views": null
+    },
+    {
+      "date": "2026-07-22",
+      "channel": "yuruyuru",
+      "video": "【最新版】CodexをAPIコスト7割削減しながら限界まで働かせる方法",
+      "videoId": "ZcwZhJRDZcA",
+      "line": "yuru-line",
+      "route": "ゆるっと3",
+      "leads": 6,
+      "views": null
+    },
+    {
+      "date": "2026-07-22",
+      "channel": "yuruyuru",
+      "video": "【最新版】初心者でもわかるCodexの使い方徹底解説",
+      "videoId": "9z3P90deMBI",
+      "line": "yuru-line",
+      "route": "ゆるAI2",
+      "leads": 4,
+      "views": null
+    },
+    {
+      "date": "2026-07-24",
+      "channel": "yuruyuru",
+      "video": "【最新版】CodexをAPIコスト7割削減しながら限界まで働かせる方法",
+      "videoId": "ZcwZhJRDZcA",
+      "line": "yuru-line",
+      "route": "ゆるっと3",
+      "leads": 1,
+      "views": null
+    },
+    {
+      "date": "2026-07-24",
+      "channel": "yuruyuru",
+      "video": "【最新版】初心者でもわかるCodexの使い方徹底解説",
+      "videoId": "9z3P90deMBI",
+      "line": "yuru-line",
+      "route": "ゆるAI2",
+      "leads": 2,
+      "views": null
+    },
+    {
+      "date": "2026-07-25",
+      "channel": "yuruyuru",
+      "video": "【最新版】CodexをAPIコスト7割削減しながら限界まで働かせる方法",
+      "videoId": "ZcwZhJRDZcA",
+      "line": "yuru-line",
+      "route": "ゆるっと3",
+      "leads": 3,
+      "views": null
+    },
+    {
+      "date": "2026-07-25",
+      "channel": "yuruyuru",
+      "video": "【最新版】初心者でもわかるCodexの使い方徹底解説",
+      "videoId": "9z3P90deMBI",
+      "line": "yuru-line",
+      "route": "ゆるAI2",
+      "leads": 3,
+      "views": null
+    },
+    {
+      "date": "2026-07-26",
+      "channel": "yuruyuru",
+      "video": "【最新版】初心者でもわかるCodexの使い方徹底解説",
+      "videoId": "9z3P90deMBI",
+      "line": "yuru-line",
+      "route": "ゆるAI2",
+      "leads": 1,
+      "views": null
+    },
+    {
+      "date": "2026-06-28",
+      "channel": "yukkuri",
+      "video": "動画を特定できない登録",
+      "videoId": null,
+      "line": "yukkuri-line",
+      "route": "ゆっくりAI副業10",
+      "leads": 1,
+      "views": null
+    },
+    {
+      "date": "2026-07-18",
+      "channel": "yukkuri",
+      "video": "動画を特定できない登録",
+      "videoId": null,
+      "line": "yukkuri-line",
+      "route": "ゆっくりAI副業10",
+      "leads": 4,
+      "views": null
+    },
+    {
+      "date": "2026-07-20",
+      "channel": "yukkuri",
+      "video": "動画を特定できない登録",
+      "videoId": null,
+      "line": "yukkuri-line",
+      "route": "ゆっくりAI副業10",
+      "leads": 7,
+      "views": null
+    },
+    {
+      "date": "2026-07-21",
+      "channel": "yukkuri",
+      "video": "動画を特定できない登録",
+      "videoId": null,
+      "line": "yukkuri-line",
+      "route": "ゆっくりAI副業10",
+      "leads": 4,
+      "views": null
+    },
+    {
+      "date": "2026-07-22",
+      "channel": "yukkuri",
+      "video": "動画を特定できない登録",
+      "videoId": null,
+      "line": "yukkuri-line",
+      "route": "ゆっくりAI副業10",
+      "leads": 1,
+      "views": null
+    },
+    {
+      "date": "2026-07-23",
+      "channel": "yukkuri",
+      "video": "動画を特定できない登録",
+      "videoId": null,
+      "line": "yukkuri-line",
+      "route": "ゆっくりAI副業10",
+      "leads": 4,
+      "views": null
+    }
+  ]
+}
