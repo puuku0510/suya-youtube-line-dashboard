@@ -109,6 +109,7 @@ async function fetchYouTubeData() {
   const previousVideos = previous.videos || [];
   const channels = [];
   const videos = [];
+  const descriptionSources = [];
 
   for (const configured of config.channels) {
     const live = liveById.get(configured.channelId);
@@ -153,6 +154,11 @@ async function fetchYouTubeData() {
           publishedAt: item.snippet.publishedAt,
           publishedText: publishedText(item.snippet.publishedAt)
         });
+        descriptionSources.push({
+          channel: configured.id,
+          videoId: item.id,
+          description: item.snippet.description || ""
+        });
       }
     }
 
@@ -168,7 +174,88 @@ async function fetchYouTubeData() {
   }
 
   videos.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
-  return { channels, videos };
+  const trackingById = await discoverYouTubeTrackingIds(descriptionSources);
+  return { channels, videos, trackingById };
+}
+
+function extractDescriptionUrls(description) {
+  return (String(description).match(/https?:\/\/[^\s\u3000<>()\]」]+/g) || [])
+    .map((value) => value.replace(/[.,。、]+$/g, ""));
+}
+
+async function resolveUtageUrl(rawUrl) {
+  const allowedHosts = new Set(["x.gd", "tinyurl.com", "utage-system.com"]);
+  let current;
+  try {
+    current = new URL(rawUrl);
+  } catch {
+    return null;
+  }
+
+  for (let redirect = 0; redirect < 6; redirect += 1) {
+    if (!allowedHosts.has(current.hostname.toLowerCase())) return null;
+    let response;
+    try {
+      response = await fetch(current, {
+        method: "GET",
+        redirect: "manual",
+        headers: { "User-Agent": "YouTube-LINE-Dashboard/1.0" },
+        signal: AbortSignal.timeout(15_000)
+      });
+    } catch {
+      return null;
+    }
+
+    const location = response.headers.get("location");
+    await response.body?.cancel();
+    if (response.status >= 300 && response.status < 400 && location) {
+      current = new URL(location, current);
+      continue;
+    }
+    return current.hostname.toLowerCase() === "utage-system.com" ? current : null;
+  }
+  return null;
+}
+
+async function discoverYouTubeTrackingIds(descriptionSources) {
+  const sourceByUrl = new Map();
+  for (const source of descriptionSources) {
+    for (const url of extractDescriptionUrls(source.description)) {
+      let hostname;
+      try {
+        hostname = new URL(url).hostname.toLowerCase();
+      } catch {
+        continue;
+      }
+      if (!["x.gd", "tinyurl.com", "utage-system.com"].includes(hostname)) continue;
+      const sources = sourceByUrl.get(url) || [];
+      sources.push(source);
+      sourceByUrl.set(url, sources);
+    }
+  }
+
+  const trackingById = new Map();
+  const ambiguousIds = new Set();
+  for (const [url, sources] of sourceByUrl) {
+    const resolved = await resolveUtageUrl(url);
+    const trackingId = resolved?.searchParams.get("mtid");
+    if (!trackingId) continue;
+    for (const source of sources) {
+      const existing = trackingById.get(trackingId);
+      if (existing && existing.videoId !== source.videoId) {
+        ambiguousIds.add(trackingId);
+        trackingById.delete(trackingId);
+        continue;
+      }
+      if (!ambiguousIds.has(trackingId)) {
+        trackingById.set(trackingId, {
+          channel: source.channel,
+          videoId: source.videoId
+        });
+      }
+    }
+  }
+  return trackingById;
 }
 
 async function fetchAllReaders(accountId) {
@@ -184,9 +271,12 @@ async function fetchAllReaders(accountId) {
   return readers;
 }
 
-async function fetchUtageData() {
+async function fetchUtageData(youtubeTrackingById) {
   const accountsPayload = await utageGet("/accounts");
   const accounts = accountsPayload.data || [];
+  const lineAccounts = accounts.filter(
+    (account) => account.type === "line" || account.type === "mail_line"
+  );
   const previousLines = new Map((previous.officialLines || []).map((line) => [line.id, line]));
   const lineRules = new Map(config.lineAccountRules.map((rule) => [rule.accountName, rule]));
   const routeRules = new Map(
@@ -194,55 +284,65 @@ async function fetchUtageData() {
   );
   const officialLines = [];
   const scopedReaderCandidates = [];
+  const discoveredLineChannels = new Map();
 
-  for (const account of accounts) {
-    if (account.type === "line" || account.type === "mail_line") {
-      try {
-        const allFriends = await utageGet(`/accounts/${account.id}/line/friends?per_page=1`);
-        const activeFriends = await utageGet(
-          `/accounts/${account.id}/line/friends?is_blocked=false&is_exclusion=false&per_page=1`
-        );
-        const rule = lineRules.get(account.name);
-        officialLines.push({
-          id: publicLineId(account.id),
-          name: account.name,
-          totalFriends: Number(allFriends.meta?.total || 0),
-          activeFriends: Number(activeFriends.meta?.total || 0),
-          channels: rule?.channels || [],
-          status: "connected"
-        });
-      } catch (error) {
-        const old = previousLines.get(publicLineId(account.id));
-        const rule = lineRules.get(account.name);
-        officialLines.push({
-          id: publicLineId(account.id),
-          name: account.name,
-          totalFriends: old?.totalFriends ?? null,
-          activeFriends: old?.activeFriends ?? null,
-          channels: rule?.channels || old?.channels || [],
-          status: old ? "stale" : "unavailable"
-        });
-        console.warn(`LINE aggregate unavailable for ${account.name}: ${error.message}`);
-      }
-    }
-
+  for (const account of lineAccounts) {
     const readers = await fetchAllReaders(account.id);
-    const accountRule = lineRules.get(account.name);
     for (const reader of readers) {
       const trackingName = reader.message_tracking_name || reader.funnel_tracking_name || null;
       const routeRule = trackingName ? routeRules.get(normalizeTrackingName(trackingName)) : null;
-      const channel = routeRule?.channel || accountRule?.defaultChannel || null;
+      const videoRule = reader.message_tracking_id
+        ? youtubeTrackingById.get(reader.message_tracking_id)
+        : null;
+      const channel = videoRule?.channel || routeRule?.channel || null;
       if (!channel) continue;
+      const lineChannels = discoveredLineChannels.get(account.id) || new Set();
+      lineChannels.add(channel);
+      discoveredLineChannels.set(account.id, lineChannels);
       scopedReaderCandidates.push({
         uniqueId: reader.common_reader_id || reader.id,
         createdAt: reader.created_at,
         date: tokyoDate(reader.created_at),
         channel,
-        videoId: routeRule?.videoId || null,
+        videoId: videoRule?.videoId || routeRule?.videoId || null,
         line: publicLineId(account.id),
         trackingName,
-        knownRoute: Boolean(routeRule)
+        knownRoute: Boolean(videoRule || routeRule)
       });
+    }
+  }
+
+  for (const account of lineAccounts) {
+    const configuredRule = lineRules.get(account.name);
+    const detectedChannels = discoveredLineChannels.get(account.id);
+    if (!configuredRule && !detectedChannels?.size) continue;
+    const channels = [
+      ...new Set([...(configuredRule?.channels || []), ...(detectedChannels || [])])
+    ];
+    try {
+      const allFriends = await utageGet(`/accounts/${account.id}/line/friends?per_page=1`);
+      const activeFriends = await utageGet(
+        `/accounts/${account.id}/line/friends?is_blocked=false&is_exclusion=false&per_page=1`
+      );
+      officialLines.push({
+        id: publicLineId(account.id),
+        name: account.name,
+        totalFriends: Number(allFriends.meta?.total || 0),
+        activeFriends: Number(activeFriends.meta?.total || 0),
+        channels,
+        status: "connected"
+      });
+    } catch (error) {
+      const old = previousLines.get(publicLineId(account.id));
+      officialLines.push({
+        id: publicLineId(account.id),
+        name: account.name,
+        totalFriends: old?.totalFriends ?? null,
+        activeFriends: old?.activeFriends ?? null,
+        channels,
+        status: old ? "stale" : "unavailable"
+      });
+      console.warn(`LINE aggregate unavailable for ${account.name}: ${error.message}`);
     }
   }
 
@@ -286,7 +386,8 @@ async function fetchUtageData() {
   return {
     officialLines,
     records: [...grouped.values()].sort((a, b) => a.date.localeCompare(b.date)),
-    accountCount: accounts.length
+    accountCount: accounts.length,
+    youtubeTrackingCount: youtubeTrackingById.size
   };
 }
 
@@ -308,7 +409,8 @@ function mergeHistory(previousHistory, rows, keyFields) {
   return [...byKey.values()].sort((a, b) => a.date.localeCompare(b.date));
 }
 
-const [youtube, utage] = await Promise.all([fetchYouTubeData(), fetchUtageData()]);
+const youtube = await fetchYouTubeData();
+const utage = await fetchUtageData(youtube.trackingById);
 const youtubeHistory = mergeHistory(
   previous.youtubeHistory,
   youtube.channels.map((channel) => ({
@@ -335,7 +437,8 @@ const output = {
     youtubeSnapshotAt: now.toISOString(),
     timezone: config.timezone,
     utageAccountCount: utage.accountCount,
-    notice: "UTAGE全配信アカウントとYouTube Data APIを自動同期しています。公式LINEの有効友だち数は、ブロック・配信除外を除いた現在値です。"
+    youtubeTrackingCount: utage.youtubeTrackingCount,
+    notice: "YouTube概要欄の登録用リンクとUTAGEを照合し、YouTube由来だけを表示しています。公式LINEの有効友だち数は、ブロック・配信除外を除いた現在値です。"
   },
   channels: youtube.channels,
   videos: youtube.videos,
