@@ -1,11 +1,12 @@
 {
   "meta": {
     "mode": "live-api",
-    "lastSync": "2026-07-28T17:05:08.858Z",
-    "youtubeSnapshotAt": "2026-07-28T17:05:08.858Z",
+    "lastSync": "2026-07-28T17:24:18.943Z",
+    "youtubeSnapshotAt": "2026-07-28T17:24:18.943Z",
     "timezone": "Asia/Tokyo",
     "utageAccountCount": 35,
-    "notice": "UTAGE全配信アカウントとYouTube Data APIを自動同期しています。公式LINEの有効友だち数は、ブロック・配信除外を除いた現在値です。"
+    "youtubeTrackingCount": 12,
+    "notice": "YouTube概要欄の登録用リンクとUTAGEを照合し、YouTube由来だけを表示しています。公式LINEの有効友だち数は、ブロック・配信除外を除いた現在値です。"
   },
   "channels": [
     {
@@ -41,7 +42,7 @@
       "channel": "yuruyuru",
       "videoId": "q5DdZbwn8ys",
       "title": "2026年7月27日",
-      "currentViews": 136,
+      "currentViews": 138,
       "publishedAt": "2026-07-28T11:00:10Z",
       "publishedText": "今日"
     },
@@ -113,7 +114,7 @@
       "channel": "yuruyuru",
       "videoId": "0i2ZdKe7PKY",
       "title": "【最新版】AIガチ勢が厳選した、課金すべきAI TOP3 ChatGPTは時代遅れ...？",
-      "currentViews": 190,
+      "currentViews": 193,
       "publishedAt": "2026-07-23T10:00:17Z",
       "publishedText": "5日前"
     },
@@ -193,7 +194,7 @@
       "channel": "yuruyuru",
       "videoId": "0HdLDHCguKg",
       "title": "Codexの最強の使い方#ai#codex#claude #副業",
-      "currentViews": 1674,
+      "currentViews": 1672,
       "publishedAt": "2026-07-19T10:00:27Z",
       "publishedText": "1週間前"
     },
@@ -225,7 +226,7 @@
       "channel": "yuruyuru",
       "videoId": "ZcwZhJRDZcA",
       "title": "【最新版】CodexをAPIコスト7割削減しながら限界まで働かせる方法",
-      "currentViews": 3071,
+      "currentViews": 3068,
       "publishedAt": "2026-07-18T10:00:31Z",
       "publishedText": "1週間前"
     },
@@ -344,19 +345,13 @@
   ],
   "officialLines": [
     {
-      "id": "line-dea423fa6459",
-      "name": "【特典配布】こすもす",
-      "totalFriends": 168,
-      "activeFriends": 134,
-      "channels": [],
-      "status": "connected"
-    },
-    {
       "id": "line-afa637d047af",
       "name": "すやメディアスクール",
       "totalFriends": 59,
       "activeFriends": 56,
-      "channels": [],
+      "channels": [
+        "yukkuri"
+      ],
       "status": "connected"
     },
     {
@@ -370,14 +365,6 @@
       "status": "connected"
     },
     {
-      "id": "line-9c5a7edb9b6f",
-      "name": "購入者用",
-      "totalFriends": 30,
-      "activeFriends": 29,
-      "channels": [],
-      "status": "connected"
-    },
-    {
       "id": "line-2feecc2495f7",
       "name": "ゆっくりAI起業",
       "totalFriends": 21,
@@ -385,54 +372,6 @@
       "channels": [
         "yukkuri"
       ],
-      "status": "connected"
-    },
-    {
-      "id": "line-52daadb7e45a",
-      "name": "AIでひとり起業(個別相談)",
-      "totalFriends": 20,
-      "activeFriends": 19,
-      "channels": [],
-      "status": "connected"
-    },
-    {
-      "id": "line-1bdf701861c2",
-      "name": "【優先案内】Youtube顧問",
-      "totalFriends": 10,
-      "activeFriends": 10,
-      "channels": [],
-      "status": "connected"
-    },
-    {
-      "id": "line-c37f4dd7616e",
-      "name": "AIでひとり起業スクール",
-      "totalFriends": 7,
-      "activeFriends": 7,
-      "channels": [],
-      "status": "connected"
-    },
-    {
-      "id": "line-9bcbdeab9b2a",
-      "name": "FIREを目指す会",
-      "totalFriends": 9,
-      "activeFriends": 7,
-      "channels": [],
-      "status": "connected"
-    },
-    {
-      "id": "line-a0ce3f122eec",
-      "name": "AIでひとり起業（広告）",
-      "totalFriends": 6,
-      "activeFriends": 6,
-      "channels": [],
-      "status": "connected"
-    },
-    {
-      "id": "line-009799457bc7",
-      "name": "こすもす【公式】",
-      "totalFriends": 7,
-      "activeFriends": 6,
-      "channels": [],
       "status": "connected"
     },
     {
@@ -446,22 +385,6 @@
       "status": "connected"
     },
     {
-      "id": "line-93fa7e365057",
-      "name": "さんとく",
-      "totalFriends": 3,
-      "activeFriends": 3,
-      "channels": [],
-      "status": "connected"
-    },
-    {
-      "id": "line-6fec448aa634",
-      "name": "AIでひとり起業（特典）",
-      "totalFriends": 2,
-      "activeFriends": 2,
-      "channels": [],
-      "status": "connected"
-    },
-    {
       "id": "line-7cd62c8408d4",
       "name": "AI×一人起業【YouTube統合】",
       "totalFriends": 1,
@@ -470,61 +393,119 @@
         "yukkuri"
       ],
       "status": "connected"
-    },
-    {
-      "id": "line-7e4cad079f95",
-      "name": "AI×一人起業【予備、特典として】",
-      "totalFriends": 1,
-      "activeFriends": 1,
-      "channels": [],
-      "status": "connected"
-    },
-    {
-      "id": "line-82e046d175d1",
-      "name": "こすもす勉強会",
-      "totalFriends": 0,
-      "activeFriends": 0,
-      "channels": [],
-      "status": "connected"
-    },
-    {
-      "id": "line-eeb5bd48b97e",
-      "name": "さとりの世界一やさしいAI教室",
-      "totalFriends": 0,
-      "activeFriends": 0,
-      "channels": [],
-      "status": "connected"
-    },
-    {
-      "id": "line-075f5a4ff699",
-      "name": "AI×起業攻略",
-      "totalFriends": null,
-      "activeFriends": null,
-      "channels": [],
-      "status": "stale"
-    },
-    {
-      "id": "line-af28edd7eaa4",
-      "name": "DISCORD",
-      "totalFriends": null,
-      "activeFriends": null,
-      "channels": [],
-      "status": "stale"
     }
   ],
   "records": [
     {
+      "date": "2026-06-04",
+      "channel": "yukkuri",
+      "videoId": "PkACpVlSvmA",
+      "line": "line-afa637d047af",
+      "leads": 1
+    },
+    {
+      "date": "2026-06-05",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
+      "leads": 1
+    },
+    {
+      "date": "2026-06-14",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
+      "leads": 1
+    },
+    {
+      "date": "2026-06-20",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
+      "leads": 1
+    },
+    {
+      "date": "2026-06-24",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
+      "leads": 1
+    },
+    {
       "date": "2026-06-25",
       "channel": "manimani",
-      "videoId": null,
+      "videoId": "XB8D06toYZ8",
       "line": "line-cdc95b94f2d8",
-      "leads": 2
+      "leads": 1
+    },
+    {
+      "date": "2026-06-25",
+      "channel": "yukkuri",
+      "videoId": "PkACpVlSvmA",
+      "line": "line-afa637d047af",
+      "leads": 1
+    },
+    {
+      "date": "2026-06-28",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
+      "leads": 1
     },
     {
       "date": "2026-06-29",
       "channel": "yukkuri",
-      "videoId": null,
+      "videoId": "1b_qRGocOmU",
       "line": "line-2feecc2495f7",
+      "leads": 1
+    },
+    {
+      "date": "2026-06-29",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
+      "leads": 2
+    },
+    {
+      "date": "2026-06-30",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
+      "leads": 2
+    },
+    {
+      "date": "2026-07-01",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
+      "leads": 1
+    },
+    {
+      "date": "2026-07-02",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
+      "leads": 1
+    },
+    {
+      "date": "2026-07-03",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
+      "leads": 3
+    },
+    {
+      "date": "2026-07-04",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
+      "leads": 3
+    },
+    {
+      "date": "2026-07-05",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
       "leads": 1
     },
     {
@@ -535,10 +516,45 @@
       "leads": 1
     },
     {
+      "date": "2026-07-06",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
+      "leads": 3
+    },
+    {
+      "date": "2026-07-07",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
+      "leads": 6
+    },
+    {
       "date": "2026-07-08",
       "channel": "yuruyuru",
       "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
+      "leads": 1
+    },
+    {
+      "date": "2026-07-08",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
+      "leads": 1
+    },
+    {
+      "date": "2026-07-09",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
+      "leads": 1
+    },
+    {
+      "date": "2026-07-10",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
       "leads": 1
     },
     {
@@ -549,10 +565,52 @@
       "leads": 1
     },
     {
+      "date": "2026-07-11",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
+      "leads": 1
+    },
+    {
+      "date": "2026-07-12",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
+      "leads": 1
+    },
+    {
+      "date": "2026-07-13",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
+      "leads": 1
+    },
+    {
+      "date": "2026-07-15",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
+      "leads": 1
+    },
+    {
+      "date": "2026-07-16",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
+      "leads": 1
+    },
+    {
       "date": "2026-07-18",
       "channel": "yukkuri",
-      "videoId": null,
+      "videoId": "1b_qRGocOmU",
       "line": "line-2feecc2495f7",
+      "leads": 2
+    },
+    {
+      "date": "2026-07-18",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
       "leads": 2
     },
     {
@@ -572,16 +630,23 @@
     {
       "date": "2026-07-19",
       "channel": "yukkuri",
-      "videoId": null,
+      "videoId": "1b_qRGocOmU",
       "line": "line-2feecc2495f7",
       "leads": 2
     },
     {
       "date": "2026-07-19",
       "channel": "manimani",
-      "videoId": null,
+      "videoId": "XB8D06toYZ8",
       "line": "line-cdc95b94f2d8",
       "leads": 2
+    },
+    {
+      "date": "2026-07-19",
+      "channel": "yukkuri",
+      "videoId": "x7Q0qvvmwT8",
+      "line": "line-afa637d047af",
+      "leads": 1
     },
     {
       "date": "2026-07-20",
@@ -600,7 +665,7 @@
     {
       "date": "2026-07-20",
       "channel": "yukkuri",
-      "videoId": null,
+      "videoId": "1b_qRGocOmU",
       "line": "line-2feecc2495f7",
       "leads": 2
     },
@@ -621,7 +686,7 @@
     {
       "date": "2026-07-21",
       "channel": "yukkuri",
-      "videoId": null,
+      "videoId": "1b_qRGocOmU",
       "line": "line-2feecc2495f7",
       "leads": 9
     },
@@ -649,7 +714,7 @@
     {
       "date": "2026-07-23",
       "channel": "yukkuri",
-      "videoId": null,
+      "videoId": "1b_qRGocOmU",
       "line": "line-2feecc2495f7",
       "leads": 2
     },
@@ -670,7 +735,7 @@
     {
       "date": "2026-07-24",
       "channel": "yukkuri",
-      "videoId": null,
+      "videoId": "1b_qRGocOmU",
       "line": "line-2feecc2495f7",
       "leads": 3
     },
@@ -708,13 +773,6 @@
       "videoId": "ZcwZhJRDZcA",
       "line": "line-782007577b68",
       "leads": 3
-    },
-    {
-      "date": "2026-07-27",
-      "channel": "yukkuri",
-      "videoId": null,
-      "line": "line-7cd62c8408d4",
-      "leads": 1
     }
   ],
   "youtubeHistory": [
@@ -741,7 +799,7 @@
     {
       "date": "2026-07-29",
       "videoId": "q5DdZbwn8ys",
-      "views": 136
+      "views": 138
     },
     {
       "date": "2026-07-29",
@@ -786,7 +844,7 @@
     {
       "date": "2026-07-29",
       "videoId": "0i2ZdKe7PKY",
-      "views": 190
+      "views": 193
     },
     {
       "date": "2026-07-29",
@@ -836,7 +894,7 @@
     {
       "date": "2026-07-29",
       "videoId": "0HdLDHCguKg",
-      "views": 1674
+      "views": 1672
     },
     {
       "date": "2026-07-29",
@@ -856,7 +914,7 @@
     {
       "date": "2026-07-29",
       "videoId": "ZcwZhJRDZcA",
-      "views": 3071
+      "views": 3068
     },
     {
       "date": "2026-07-29",
