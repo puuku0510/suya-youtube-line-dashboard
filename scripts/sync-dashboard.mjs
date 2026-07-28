@@ -49,7 +49,8 @@ async function utageGet(endpoint) {
 
     if (!response.ok) {
       const body = await response.text();
-      throw new Error(`UTAGE ${endpoint} failed (${response.status}): ${body.slice(0, 240)}`);
+      const safeEndpoint = endpoint.replace(/\/accounts\/[^/]+/g, "/accounts/[redacted]");
+      throw new Error(`UTAGE ${safeEndpoint} failed (${response.status}): ${body.slice(0, 240)}`);
     }
 
     return response.json();
@@ -81,6 +82,10 @@ function tokyoDate(value = new Date()) {
 
 function publicLineId(accountId) {
   return `line-${createHash("sha256").update(accountId).digest("hex").slice(0, 12)}`;
+}
+
+function normalizeTrackingName(value) {
+  return String(value || "").normalize("NFKC").trim();
 }
 
 function publishedText(value) {
@@ -184,7 +189,9 @@ async function fetchUtageData() {
   const accounts = accountsPayload.data || [];
   const previousLines = new Map((previous.officialLines || []).map((line) => [line.id, line]));
   const lineRules = new Map(config.lineAccountRules.map((rule) => [rule.accountName, rule]));
-  const routeRules = new Map(config.routeMappings.map((rule) => [rule.trackingName, rule]));
+  const routeRules = new Map(
+    config.routeMappings.map((rule) => [normalizeTrackingName(rule.trackingName), rule])
+  );
   const officialLines = [];
   const scopedReaderCandidates = [];
 
@@ -223,7 +230,7 @@ async function fetchUtageData() {
     const accountRule = lineRules.get(account.name);
     for (const reader of readers) {
       const trackingName = reader.message_tracking_name || reader.funnel_tracking_name || null;
-      const routeRule = trackingName ? routeRules.get(trackingName) : null;
+      const routeRule = trackingName ? routeRules.get(normalizeTrackingName(trackingName)) : null;
       const channel = routeRule?.channel || accountRule?.defaultChannel || null;
       if (!channel) continue;
       scopedReaderCandidates.push({
@@ -233,7 +240,8 @@ async function fetchUtageData() {
         channel,
         videoId: routeRule?.videoId || null,
         line: publicLineId(account.id),
-        trackingName
+        trackingName,
+        knownRoute: Boolean(routeRule)
       });
     }
   }
@@ -241,7 +249,16 @@ async function fetchUtageData() {
   const firstRegistration = new Map();
   for (const candidate of scopedReaderCandidates) {
     const current = firstRegistration.get(candidate.uniqueId);
-    if (!current || new Date(candidate.createdAt) < new Date(current.createdAt)) {
+    const isBetterAttribution =
+      current &&
+      ((!current.knownRoute && candidate.knownRoute) ||
+        (!current.videoId && candidate.videoId));
+    const isEarlierEquivalent =
+      current &&
+      current.knownRoute === candidate.knownRoute &&
+      Boolean(current.videoId) === Boolean(candidate.videoId) &&
+      new Date(candidate.createdAt) < new Date(current.createdAt);
+    if (!current || isBetterAttribution || isEarlierEquivalent) {
       firstRegistration.set(candidate.uniqueId, candidate);
     }
   }
