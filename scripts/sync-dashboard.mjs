@@ -278,7 +278,6 @@ async function fetchUtageData(youtubeTrackingById) {
     (account) => account.type === "line" || account.type === "mail_line"
   );
   const previousLines = new Map((previous.officialLines || []).map((line) => [line.id, line]));
-  const lineRules = new Map(config.lineAccountRules.map((rule) => [rule.accountName, rule]));
   const routeRules = new Map(
     config.routeMappings.map((rule) => [normalizeTrackingName(rule.trackingName), rule])
   );
@@ -313,12 +312,9 @@ async function fetchUtageData(youtubeTrackingById) {
   }
 
   for (const account of lineAccounts) {
-    const configuredRule = lineRules.get(account.name);
     const detectedChannels = discoveredLineChannels.get(account.id);
-    if (!configuredRule && !detectedChannels?.size) continue;
-    const channels = [
-      ...new Set([...(configuredRule?.channels || []), ...(detectedChannels || [])])
-    ];
+    if (!detectedChannels?.size) continue;
+    const channels = [...detectedChannels];
     try {
       const allFriends = await utageGet(`/accounts/${account.id}/line/friends?per_page=1`);
       const activeFriends = await utageGet(

@@ -23,28 +23,6 @@
       "status": "active"
     }
   ],
-  "lineAccountRules": [
-    {
-      "accountName": "ゆるAI",
-      "channels": ["yuruyuru"],
-      "defaultChannel": "yuruyuru"
-    },
-    {
-      "accountName": "ゆっくりAI起業",
-      "channels": ["yukkuri"],
-      "defaultChannel": "yukkuri"
-    },
-    {
-      "accountName": "AIマニアの秘密基地",
-      "channels": ["manimani"],
-      "defaultChannel": "manimani"
-    },
-    {
-      "accountName": "AI×一人起業【YouTube統合】",
-      "channels": ["yukkuri"],
-      "defaultChannel": "yukkuri"
-    }
-  ],
   "routeMappings": [
     {
       "trackingName": "AIゆるっと1",
