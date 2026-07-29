@@ -1,8 +1,8 @@
 {
   "meta": {
     "mode": "live-api",
-    "lastSync": "2026-07-28T17:26:58.732Z",
-    "youtubeSnapshotAt": "2026-07-28T17:26:58.732Z",
+    "lastSync": "2026-07-29T05:43:07.622Z",
+    "youtubeSnapshotAt": "2026-07-29T05:43:07.622Z",
     "timezone": "Asia/Tokyo",
     "utageAccountCount": 35,
     "youtubeTrackingCount": 12,
@@ -15,7 +15,7 @@
       "handle": "@yuruyuru-ai000",
       "channelId": "UCnY6D6uMLAlD65iHG87PYsQ",
       "subscribers": 106,
-      "currentViews": 17063,
+      "currentViews": 17104,
       "status": "active"
     },
     {
@@ -24,7 +24,7 @@
       "handle": "@yuttukuriAIhukugyou",
       "channelId": "UCcv-5yPFRjlGOyMLuIsvOIA",
       "subscribers": 542,
-      "currentViews": 14567,
+      "currentViews": 14590,
       "status": "active"
     },
     {
@@ -42,7 +42,7 @@
       "channel": "yuruyuru",
       "videoId": "q5DdZbwn8ys",
       "title": "2026年7月27日",
-      "currentViews": 138,
+      "currentViews": 140,
       "publishedAt": "2026-07-28T11:00:10Z",
       "publishedText": "今日"
     },
@@ -50,7 +50,7 @@
       "channel": "yuruyuru",
       "videoId": "A_smpw8gbak",
       "title": "2026年7月27日",
-      "currentViews": 151,
+      "currentViews": 152,
       "publishedAt": "2026-07-28T10:00:12Z",
       "publishedText": "今日"
     },
@@ -66,7 +66,7 @@
       "channel": "yuruyuru",
       "videoId": "73LFVoB1QGc",
       "title": "2026年7月27日",
-      "currentViews": 917,
+      "currentViews": 915,
       "publishedAt": "2026-07-27T10:00:02Z",
       "publishedText": "1日前"
     },
@@ -98,7 +98,7 @@
       "channel": "yuruyuru",
       "videoId": "CLpKdTbFANA",
       "title": "自動Compactって何？#codex #claude#副業#ai#chatgpt",
-      "currentViews": 332,
+      "currentViews": 333,
       "publishedAt": "2026-07-24T09:30:22Z",
       "publishedText": "4日前"
     },
@@ -106,7 +106,7 @@
       "channel": "yuruyuru",
       "videoId": "k3d_ede0274",
       "title": "API消費を抑える裏技#codex #claude#副業#ai#chatgpt",
-      "currentViews": 377,
+      "currentViews": 378,
       "publishedAt": "2026-07-23T10:00:27Z",
       "publishedText": "5日前"
     },
@@ -114,7 +114,7 @@
       "channel": "yuruyuru",
       "videoId": "0i2ZdKe7PKY",
       "title": "【最新版】AIガチ勢が厳選した、課金すべきAI TOP3 ChatGPTは時代遅れ...？",
-      "currentViews": 193,
+      "currentViews": 209,
       "publishedAt": "2026-07-23T10:00:17Z",
       "publishedText": "5日前"
     },
@@ -162,7 +162,7 @@
       "channel": "yuruyuru",
       "videoId": "erDWZp1YkWM",
       "title": "API消費を抑える裏技#codex #claude#副業#ai#chatgpt",
-      "currentViews": 157,
+      "currentViews": 159,
       "publishedAt": "2026-07-21T10:00:37Z",
       "publishedText": "1週間前"
     },
@@ -178,7 +178,7 @@
       "channel": "yuruyuru",
       "videoId": "bLDy7SZFwxs",
       "title": "AIエージェントの仕組み#ai#codex#claude #副業",
-      "currentViews": 1056,
+      "currentViews": 1057,
       "publishedAt": "2026-07-20T10:00:31Z",
       "publishedText": "1週間前"
     },
@@ -194,7 +194,7 @@
       "channel": "yuruyuru",
       "videoId": "0HdLDHCguKg",
       "title": "Codexの最強の使い方#ai#codex#claude #副業",
-      "currentViews": 1672,
+      "currentViews": 1682,
       "publishedAt": "2026-07-19T10:00:27Z",
       "publishedText": "1週間前"
     },
@@ -226,7 +226,7 @@
       "channel": "yuruyuru",
       "videoId": "ZcwZhJRDZcA",
       "title": "【最新版】CodexをAPIコスト7割削減しながら限界まで働かせる方法",
-      "currentViews": 3068,
+      "currentViews": 3077,
       "publishedAt": "2026-07-18T10:00:31Z",
       "publishedText": "1週間前"
     },
@@ -242,7 +242,7 @@
       "channel": "yukkuri",
       "videoId": "1b_qRGocOmU",
       "title": "【最新版】初心者でもわかるCodexの使い方徹底解説",
-      "currentViews": 3741,
+      "currentViews": 3759,
       "publishedAt": "2026-07-16T10:00:31Z",
       "publishedText": "1週間前"
     },
@@ -298,7 +298,7 @@
       "channel": "yukkuri",
       "videoId": "x7Q0qvvmwT8",
       "title": "【Claude Code】動画編集を完全自動化 5時間かかった動画編集が『テロップ入れて』の一言で終わる!?",
-      "currentViews": 1741,
+      "currentViews": 1746,
       "publishedAt": "2026-05-30T10:00:11Z",
       "publishedText": "1か月前"
     },
@@ -358,7 +358,7 @@
       "id": "line-782007577b68",
       "name": "ゆるAI",
       "totalFriends": 58,
-      "activeFriends": 56,
+      "activeFriends": 55,
       "channels": [
         "yuruyuru"
       ],
@@ -367,8 +367,8 @@
     {
       "id": "line-2feecc2495f7",
       "name": "ゆっくりAI起業",
-      "totalFriends": 21,
-      "activeFriends": 20,
+      "totalFriends": 22,
+      "activeFriends": 21,
       "channels": [
         "yukkuri"
       ],
@@ -763,6 +763,13 @@
       "videoId": "ZcwZhJRDZcA",
       "line": "line-782007577b68",
       "leads": 3
+    },
+    {
+      "date": "2026-07-29",
+      "channel": "yukkuri",
+      "videoId": "1b_qRGocOmU",
+      "line": "line-2feecc2495f7",
+      "leads": 1
     }
   ],
   "youtubeHistory": [
@@ -770,13 +777,13 @@
       "date": "2026-07-29",
       "channel": "yuruyuru",
       "subscribers": 106,
-      "views": 17063
+      "views": 17104
     },
     {
       "date": "2026-07-29",
       "channel": "yukkuri",
       "subscribers": 542,
-      "views": 14567
+      "views": 14590
     },
     {
       "date": "2026-07-29",
@@ -789,12 +796,12 @@
     {
       "date": "2026-07-29",
       "videoId": "q5DdZbwn8ys",
-      "views": 138
+      "views": 140
     },
     {
       "date": "2026-07-29",
       "videoId": "A_smpw8gbak",
-      "views": 151
+      "views": 152
     },
     {
       "date": "2026-07-29",
@@ -804,7 +811,7 @@
     {
       "date": "2026-07-29",
       "videoId": "73LFVoB1QGc",
-      "views": 917
+      "views": 915
     },
     {
       "date": "2026-07-29",
@@ -824,17 +831,17 @@
     {
       "date": "2026-07-29",
       "videoId": "CLpKdTbFANA",
-      "views": 332
+      "views": 333
     },
     {
       "date": "2026-07-29",
       "videoId": "k3d_ede0274",
-      "views": 377
+      "views": 378
     },
     {
       "date": "2026-07-29",
       "videoId": "0i2ZdKe7PKY",
-      "views": 193
+      "views": 209
     },
     {
       "date": "2026-07-29",
@@ -864,7 +871,7 @@
     {
       "date": "2026-07-29",
       "videoId": "erDWZp1YkWM",
-      "views": 157
+      "views": 159
     },
     {
       "date": "2026-07-29",
@@ -874,7 +881,7 @@
     {
       "date": "2026-07-29",
       "videoId": "bLDy7SZFwxs",
-      "views": 1056
+      "views": 1057
     },
     {
       "date": "2026-07-29",
@@ -884,7 +891,7 @@
     {
       "date": "2026-07-29",
       "videoId": "0HdLDHCguKg",
-      "views": 1672
+      "views": 1682
     },
     {
       "date": "2026-07-29",
@@ -904,7 +911,7 @@
     {
       "date": "2026-07-29",
       "videoId": "ZcwZhJRDZcA",
-      "views": 3068
+      "views": 3077
     },
     {
       "date": "2026-07-29",
@@ -914,7 +921,7 @@
     {
       "date": "2026-07-29",
       "videoId": "1b_qRGocOmU",
-      "views": 3741
+      "views": 3759
     },
     {
       "date": "2026-07-29",
@@ -949,7 +956,7 @@
     {
       "date": "2026-07-29",
       "videoId": "x7Q0qvvmwT8",
-      "views": 1741
+      "views": 1746
     },
     {
       "date": "2026-07-29",
