@@ -1,8 +1,8 @@
 {
   "meta": {
     "mode": "live-api",
-    "lastSync": "2026-07-29T16:16:29.515Z",
-    "youtubeSnapshotAt": "2026-07-29T16:16:29.515Z",
+    "lastSync": "2026-07-30T05:31:27.281Z",
+    "youtubeSnapshotAt": "2026-07-30T05:31:27.281Z",
     "timezone": "Asia/Tokyo",
     "utageAccountCount": 35,
     "youtubeTrackingCount": 12,
@@ -14,8 +14,8 @@
       "name": "ゆるAI",
       "handle": "@yuruyuru-ai000",
       "channelId": "UCnY6D6uMLAlD65iHG87PYsQ",
-      "subscribers": 107,
-      "currentViews": 17699,
+      "subscribers": 106,
+      "currentViews": 17724,
       "status": "active"
     },
     {
@@ -24,7 +24,7 @@
       "handle": "@yuttukuriAIhukugyou",
       "channelId": "UCcv-5yPFRjlGOyMLuIsvOIA",
       "subscribers": 543,
-      "currentViews": 14611,
+      "currentViews": 14636,
       "status": "active"
     },
     {
@@ -130,7 +130,7 @@
       "channel": "yuruyuru",
       "videoId": "0i2ZdKe7PKY",
       "title": "【最新版】AIガチ勢が厳選した、課金すべきAI TOP3 ChatGPTは時代遅れ...？",
-      "currentViews": 217,
+      "currentViews": 236,
       "publishedAt": "2026-07-23T10:00:17Z",
       "publishedText": "6日前"
     },
@@ -210,7 +210,7 @@
       "channel": "yuruyuru",
       "videoId": "0HdLDHCguKg",
       "title": "Codexの最強の使い方#ai#codex#claude #副業",
-      "currentViews": 1685,
+      "currentViews": 1688,
       "publishedAt": "2026-07-19T10:00:27Z",
       "publishedText": "1週間前"
     },
@@ -242,7 +242,7 @@
       "channel": "yuruyuru",
       "videoId": "ZcwZhJRDZcA",
       "title": "【最新版】CodexをAPIコスト7割削減しながら限界まで働かせる方法",
-      "currentViews": 3085,
+      "currentViews": 3088,
       "publishedAt": "2026-07-18T10:00:31Z",
       "publishedText": "1週間前"
     },
@@ -258,7 +258,7 @@
       "channel": "yukkuri",
       "videoId": "1b_qRGocOmU",
       "title": "【最新版】初心者でもわかるCodexの使い方徹底解説",
-      "currentViews": 3775,
+      "currentViews": 3798,
       "publishedAt": "2026-07-16T10:00:31Z",
       "publishedText": "1週間前"
     },
@@ -314,7 +314,7 @@
       "channel": "yukkuri",
       "videoId": "x7Q0qvvmwT8",
       "title": "【Claude Code】動画編集を完全自動化 5時間かかった動画編集が『テロップ入れて』の一言で終わる!?",
-      "currentViews": 1748,
+      "currentViews": 1750,
       "publishedAt": "2026-05-30T10:00:11Z",
       "publishedText": "2か月前"
     },
@@ -384,7 +384,7 @@
       "id": "line-2feecc2495f7",
       "name": "ゆっくりAI起業",
       "totalFriends": 22,
-      "activeFriends": 21,
+      "activeFriends": 20,
       "channels": [
         "yukkuri"
       ],
@@ -810,14 +810,14 @@
     {
       "date": "2026-07-30",
       "channel": "yuruyuru",
-      "subscribers": 107,
-      "views": 17699
+      "subscribers": 106,
+      "views": 17724
     },
     {
       "date": "2026-07-30",
       "channel": "yukkuri",
       "subscribers": 543,
-      "views": 14611
+      "views": 14636
     },
     {
       "date": "2026-07-30",
@@ -1075,7 +1075,7 @@
     {
       "date": "2026-07-30",
       "videoId": "0i2ZdKe7PKY",
-      "views": 217
+      "views": 236
     },
     {
       "date": "2026-07-30",
@@ -1125,7 +1125,7 @@
     {
       "date": "2026-07-30",
       "videoId": "0HdLDHCguKg",
-      "views": 1685
+      "views": 1688
     },
     {
       "date": "2026-07-30",
@@ -1145,7 +1145,7 @@
     {
       "date": "2026-07-30",
       "videoId": "ZcwZhJRDZcA",
-      "views": 3085
+      "views": 3088
     },
     {
       "date": "2026-07-30",
@@ -1155,7 +1155,7 @@
     {
       "date": "2026-07-30",
       "videoId": "1b_qRGocOmU",
-      "views": 3775
+      "views": 3798
     },
     {
       "date": "2026-07-30",
@@ -1190,7 +1190,7 @@
     {
       "date": "2026-07-30",
       "videoId": "x7Q0qvvmwT8",
-      "views": 1748
+      "views": 1750
     },
     {
       "date": "2026-07-30",
