@@ -10,6 +10,7 @@ const UTAGE_BASE = "https://api.utage-system.com/v1";
 const YOUTUBE_BASE = "https://www.googleapis.com/youtube/v3";
 const UTAGE_MIN_INTERVAL_MS = 1100;
 const MAX_HISTORY_DAYS = 400;
+const YOUTUBE_HISTORY_SCOPE = "public-videos-over-60s-v1";
 
 const utageApiKey = process.env.UTAGE_API_KEY;
 const youtubeApiKey = process.env.YOUTUBE_API_KEY;
@@ -97,6 +98,19 @@ function publishedText(value) {
   return `${Math.floor(days / 365)}年前`;
 }
 
+function durationSeconds(value) {
+  const match = String(value || "").match(
+    /^P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+(?:\.\d+)?)S)?)?$/
+  );
+  if (!match) return 0;
+  return (
+    Number(match[1] || 0) * 86_400 +
+    Number(match[2] || 0) * 3_600 +
+    Number(match[3] || 0) * 60 +
+    Number(match[4] || 0)
+  );
+}
+
 async function fetchYouTubeData() {
   const ids = config.channels.map((channel) => channel.channelId).join(",");
   const channelResponse = await youtubeGet("channels", {
@@ -116,7 +130,11 @@ async function fetchYouTubeData() {
     if (!live) {
       const fallback = previousChannels.get(configured.id);
       if (fallback) channels.push({ ...fallback, status: "unavailable" });
-      videos.push(...previousVideos.filter((video) => video.channel === configured.id));
+      videos.push(
+        ...previousVideos.filter(
+          (video) => video.channel === configured.id && Number(video.durationSeconds) > 60
+        )
+      );
       continue;
     }
 
@@ -138,12 +156,14 @@ async function fetchYouTubeData() {
     for (let offset = 0; offset < videoIds.length; offset += 50) {
       const batchIds = videoIds.slice(offset, offset + 50);
       const page = await youtubeGet("videos", {
-        part: "snippet,statistics,status",
+        part: "snippet,statistics,status,contentDetails",
         id: batchIds.join(","),
         maxResults: 50
       });
       for (const item of page.items) {
         if (item.status?.privacyStatus !== "public") continue;
+        const seconds = durationSeconds(item.contentDetails?.duration);
+        if (seconds <= 60) continue;
         const views = Number(item.statistics?.viewCount || 0);
         channelViewTotal += views;
         videos.push({
@@ -152,7 +172,8 @@ async function fetchYouTubeData() {
           title: item.snippet.title,
           currentViews: views,
           publishedAt: item.snippet.publishedAt,
-          publishedText: publishedText(item.snippet.publishedAt)
+          publishedText: publishedText(item.snippet.publishedAt),
+          durationSeconds: seconds
         });
         descriptionSources.push({
           channel: configured.id,
@@ -373,6 +394,23 @@ async function fetchUtageData(youtubeTrackingById) {
     grouped.set(key, current);
   }
 
+  const youtubeLineTotals = new Map();
+  for (const row of grouped.values()) {
+    const current = youtubeLineTotals.get(row.line) || {
+      youtubeLeads: 0,
+      firstYoutubeLeadDate: row.date
+    };
+    current.youtubeLeads += row.leads;
+    if (row.date < current.firstYoutubeLeadDate) current.firstYoutubeLeadDate = row.date;
+    youtubeLineTotals.set(row.line, current);
+  }
+  for (const line of officialLines) {
+    Object.assign(line, youtubeLineTotals.get(line.id) || {
+      youtubeLeads: 0,
+      firstYoutubeLeadDate: null
+    });
+  }
+
   officialLines.sort((a, b) => {
     const aActive = a.activeFriends ?? -1;
     const bActive = b.activeFriends ?? -1;
@@ -407,8 +445,10 @@ function mergeHistory(previousHistory, rows, keyFields) {
 
 const youtube = await fetchYouTubeData();
 const utage = await fetchUtageData(youtube.trackingById);
+const compatibleYoutubeHistory =
+  previous.meta?.youtubeHistoryScope === YOUTUBE_HISTORY_SCOPE;
 const youtubeHistory = mergeHistory(
-  previous.youtubeHistory,
+  compatibleYoutubeHistory ? previous.youtubeHistory : [],
   youtube.channels.map((channel) => ({
     channel: channel.id,
     subscribers: channel.subscribers,
@@ -417,12 +457,21 @@ const youtubeHistory = mergeHistory(
   ["date", "channel"]
 );
 const youtubeVideoHistory = mergeHistory(
-  previous.youtubeVideoHistory,
+  compatibleYoutubeHistory ? previous.youtubeVideoHistory : [],
   youtube.videos.map((video) => ({
     videoId: video.videoId,
     views: video.currentViews
   })),
   ["date", "videoId"]
+);
+const lineHistory = mergeHistory(
+  previous.lineHistory,
+  utage.officialLines.map((line) => ({
+    line: line.id,
+    totalFriends: line.totalFriends,
+    activeFriends: line.activeFriends
+  })),
+  ["date", "line"]
 );
 
 const now = new Date();
@@ -432,6 +481,7 @@ const output = {
     lastSync: now.toISOString(),
     youtubeSnapshotAt: now.toISOString(),
     timezone: config.timezone,
+    youtubeHistoryScope: YOUTUBE_HISTORY_SCOPE,
     utageAccountCount: utage.accountCount,
     youtubeTrackingCount: utage.youtubeTrackingCount,
     notice: "YouTube概要欄の登録用リンクとUTAGEを照合し、YouTube由来だけを表示しています。公式LINEの有効友だち数は、ブロック・配信除外を除いた現在値です。"
@@ -441,7 +491,8 @@ const output = {
   officialLines: utage.officialLines,
   records: utage.records,
   youtubeHistory,
-  youtubeVideoHistory
+  youtubeVideoHistory,
+  lineHistory
 };
 
 await writeFile(DATA_PATH, `${JSON.stringify(output, null, 2)}\n`, "utf8");
