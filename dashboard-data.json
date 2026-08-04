@@ -1,8 +1,8 @@
 {
   "meta": {
     "mode": "live-api",
-    "lastSync": "2026-08-04T05:39:25.979Z",
-    "youtubeSnapshotAt": "2026-08-04T05:39:25.979Z",
+    "lastSync": "2026-08-04T16:46:59.609Z",
+    "youtubeSnapshotAt": "2026-08-04T16:46:59.609Z",
     "timezone": "Asia/Tokyo",
     "youtubeHistoryScope": "public-videos-over-60s-v1",
     "utageAccountCount": 36,
@@ -15,8 +15,8 @@
       "name": "ゆるAI",
       "handle": "@yuruyuru-ai000",
       "channelId": "UCnY6D6uMLAlD65iHG87PYsQ",
-      "subscribers": 205,
-      "currentViews": 7917,
+      "subscribers": 213,
+      "currentViews": 8201,
       "status": "active"
     },
     {
@@ -25,7 +25,7 @@
       "handle": "@yuttukuriAIhukugyou",
       "channelId": "UCcv-5yPFRjlGOyMLuIsvOIA",
       "subscribers": 545,
-      "currentViews": 7228,
+      "currentViews": 7239,
       "status": "active"
     },
     {
@@ -34,7 +34,7 @@
       "handle": "@ai-manimani",
       "channelId": "UCnAxolbizhj78gp84sIaWcQ",
       "subscribers": 2,
-      "currentViews": 7,
+      "currentViews": 9,
       "status": "active"
     }
   ],
@@ -42,35 +42,35 @@
     {
       "channel": "yuruyuru",
       "videoId": "WRjN6UeNtcE",
-      "title": "【最新版】今アツい稼げるAI副業5選",
-      "currentViews": 47,
+      "title": "【最新版】今アツい稼げるAI副業5選 |Claude CodeやCodexを活用して時代に乗る方法",
+      "currentViews": 72,
       "publishedAt": "2026-08-03T10:35:54Z",
-      "publishedText": "今日",
+      "publishedText": "1日前",
       "durationSeconds": 1185
     },
     {
       "channel": "yukkuri",
       "videoId": "68R-bUGBs5s",
       "title": "【最新版】CodexのAPIコストを7割カットして限界までコキ使う方法",
-      "currentViews": 30,
+      "currentViews": 31,
       "publishedAt": "2026-08-02T10:00:21Z",
-      "publishedText": "1日前",
+      "publishedText": "2日前",
       "durationSeconds": 890
     },
     {
       "channel": "yuruyuru",
       "videoId": "hmjIPVylvlw",
       "title": "Claude Codeで使える！Skills機能を世界一わかりやすく解説してみた",
-      "currentViews": 3502,
+      "currentViews": 3720,
       "publishedAt": "2026-07-30T10:00:05Z",
-      "publishedText": "4日前",
+      "publishedText": "5日前",
       "durationSeconds": 1237
     },
     {
       "channel": "yuruyuru",
       "videoId": "0i2ZdKe7PKY",
       "title": "【最新版】AIガチ勢が厳選した、課金すべきAI TOP3 ChatGPTは時代遅れ...？",
-      "currentViews": 391,
+      "currentViews": 413,
       "publishedAt": "2026-07-23T10:00:17Z",
       "publishedText": "1週間前",
       "durationSeconds": 901
@@ -79,7 +79,7 @@
       "channel": "yuruyuru",
       "videoId": "ZcwZhJRDZcA",
       "title": "【最新版】CodexをAPIコスト7割削減しながら限界まで働かせる方法",
-      "currentViews": 3210,
+      "currentViews": 3218,
       "publishedAt": "2026-07-18T10:00:31Z",
       "publishedText": "2週間前",
       "durationSeconds": 1125
@@ -88,7 +88,7 @@
       "channel": "manimani",
       "videoId": "XB8D06toYZ8",
       "title": "【最新版】初心者でもスグ使える基礎から応用を徹底解説！",
-      "currentViews": 7,
+      "currentViews": 9,
       "publishedAt": "2026-07-18T10:00:09Z",
       "publishedText": "2週間前",
       "durationSeconds": 519
@@ -97,7 +97,7 @@
       "channel": "yukkuri",
       "videoId": "1b_qRGocOmU",
       "title": "【最新版】初心者でもわかるCodexの使い方徹底解説",
-      "currentViews": 3924,
+      "currentViews": 3933,
       "publishedAt": "2026-07-16T10:00:31Z",
       "publishedText": "2週間前",
       "durationSeconds": 1103
@@ -106,7 +106,7 @@
       "channel": "yuruyuru",
       "videoId": "9z3P90deMBI",
       "title": "【最新版】初心者でもわかるCodexの使い方徹底解説",
-      "currentViews": 515,
+      "currentViews": 517,
       "publishedAt": "2026-07-10T07:32:22Z",
       "publishedText": "3週間前",
       "durationSeconds": 1045
@@ -115,7 +115,7 @@
       "channel": "yuruyuru",
       "videoId": "MZOtIDFBYQY",
       "title": "【最新版！】Claude Code完全入門マニュアル",
-      "currentViews": 252,
+      "currentViews": 261,
       "publishedAt": "2026-07-05T10:00:23Z",
       "publishedText": "4週間前",
       "durationSeconds": 1250
@@ -169,7 +169,7 @@
       "channel": "yukkuri",
       "videoId": "Oi9KnlR0E5k",
       "title": "YouTubeを始める前にやっておくこと【ゆっくり実況】",
-      "currentViews": 363,
+      "currentViews": 364,
       "publishedAt": "2026-04-12T11:12:01Z",
       "publishedText": "3か月前",
       "durationSeconds": 693
@@ -179,20 +179,20 @@
     {
       "id": "line-782007577b68",
       "name": "ゆるAI",
-      "totalFriends": 69,
-      "activeFriends": 66,
+      "totalFriends": 72,
+      "activeFriends": 69,
       "channels": [
         "yuruyuru"
       ],
       "status": "connected",
-      "youtubeLeads": 69,
+      "youtubeLeads": 72,
       "firstYoutubeLeadDate": "2026-07-06"
     },
     {
       "id": "line-afa637d047af",
       "name": "すやメディアスクール",
       "totalFriends": 60,
-      "activeFriends": 57,
+      "activeFriends": 55,
       "channels": [
         "yukkuri"
       ],
@@ -215,13 +215,13 @@
     {
       "id": "line-7cd62c8408d4",
       "name": "AI×一人起業【YouTube統合】",
-      "totalFriends": 16,
-      "activeFriends": 16,
+      "totalFriends": 19,
+      "activeFriends": 19,
       "channels": [
         "yuruyuru"
       ],
       "status": "connected",
-      "youtubeLeads": 15,
+      "youtubeLeads": 18,
       "firstYoutubeLeadDate": "2026-07-31"
     },
     {
@@ -720,6 +720,34 @@
       "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
       "leads": 2
+    },
+    {
+      "date": "2026-08-05",
+      "channel": "yuruyuru",
+      "videoId": "ZcwZhJRDZcA",
+      "line": "line-7cd62c8408d4",
+      "leads": 1
+    },
+    {
+      "date": "2026-08-05",
+      "channel": "yuruyuru",
+      "videoId": "WRjN6UeNtcE",
+      "line": "line-7cd62c8408d4",
+      "leads": 1
+    },
+    {
+      "date": "2026-08-05",
+      "channel": "yuruyuru",
+      "videoId": "hmjIPVylvlw",
+      "line": "line-7cd62c8408d4",
+      "leads": 1
+    },
+    {
+      "date": "2026-08-05",
+      "channel": "yuruyuru",
+      "videoId": "9z3P90deMBI",
+      "line": "line-782007577b68",
+      "leads": 3
     }
   ],
   "youtubeHistory": [
@@ -830,6 +858,24 @@
       "channel": "manimani",
       "subscribers": 2,
       "views": 7
+    },
+    {
+      "date": "2026-08-05",
+      "channel": "yuruyuru",
+      "subscribers": 213,
+      "views": 8201
+    },
+    {
+      "date": "2026-08-05",
+      "channel": "yukkuri",
+      "subscribers": 545,
+      "views": 7239
+    },
+    {
+      "date": "2026-08-05",
+      "channel": "manimani",
+      "subscribers": 2,
+      "views": 9
     }
   ],
   "youtubeVideoHistory": [
@@ -1232,6 +1278,81 @@
       "date": "2026-08-04",
       "videoId": "Oi9KnlR0E5k",
       "views": 363
+    },
+    {
+      "date": "2026-08-05",
+      "videoId": "WRjN6UeNtcE",
+      "views": 72
+    },
+    {
+      "date": "2026-08-05",
+      "videoId": "68R-bUGBs5s",
+      "views": 31
+    },
+    {
+      "date": "2026-08-05",
+      "videoId": "hmjIPVylvlw",
+      "views": 3720
+    },
+    {
+      "date": "2026-08-05",
+      "videoId": "0i2ZdKe7PKY",
+      "views": 413
+    },
+    {
+      "date": "2026-08-05",
+      "videoId": "ZcwZhJRDZcA",
+      "views": 3218
+    },
+    {
+      "date": "2026-08-05",
+      "videoId": "XB8D06toYZ8",
+      "views": 9
+    },
+    {
+      "date": "2026-08-05",
+      "videoId": "1b_qRGocOmU",
+      "views": 3933
+    },
+    {
+      "date": "2026-08-05",
+      "videoId": "9z3P90deMBI",
+      "views": 517
+    },
+    {
+      "date": "2026-08-05",
+      "videoId": "MZOtIDFBYQY",
+      "views": 261
+    },
+    {
+      "date": "2026-08-05",
+      "videoId": "x7Q0qvvmwT8",
+      "views": 1787
+    },
+    {
+      "date": "2026-08-05",
+      "videoId": "PkACpVlSvmA",
+      "views": 163
+    },
+    {
+      "date": "2026-08-05",
+      "videoId": "nRt-lwDoP_E",
+      "views": 186
+    },
+    {
+      "date": "2026-08-05",
+      "videoId": "t8ISg0HYlzA",
+      "views": 693
+    },
+    {
+      "date": "2026-08-05",
+      "videoId": "fVrw_p75IXc",
+      "views": 82
+    },
+    {
+      "date": "2026-08-05",
+      "videoId": "Oi9KnlR0E5k",
+      "views": 364
     }
   ],
   "lineHistory": [
@@ -1405,6 +1526,36 @@
     },
     {
       "date": "2026-08-04",
+      "line": "line-cdc95b94f2d8",
+      "totalFriends": 4,
+      "activeFriends": 4
+    },
+    {
+      "date": "2026-08-05",
+      "line": "line-782007577b68",
+      "totalFriends": 72,
+      "activeFriends": 69
+    },
+    {
+      "date": "2026-08-05",
+      "line": "line-afa637d047af",
+      "totalFriends": 60,
+      "activeFriends": 55
+    },
+    {
+      "date": "2026-08-05",
+      "line": "line-2feecc2495f7",
+      "totalFriends": 22,
+      "activeFriends": 20
+    },
+    {
+      "date": "2026-08-05",
+      "line": "line-7cd62c8408d4",
+      "totalFriends": 19,
+      "activeFriends": 19
+    },
+    {
+      "date": "2026-08-05",
       "line": "line-cdc95b94f2d8",
       "totalFriends": 4,
       "activeFriends": 4
