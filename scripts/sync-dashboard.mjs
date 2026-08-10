@@ -3,6 +3,7 @@ import { createHash } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildFunnelAnalytics, toCsv } from "./funnel-analytics.mjs";
+import { buildAnalyticsPopulation, explicitCommonReaderId } from "./utage-reader-population.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CONFIG_PATH = path.join(ROOT, "sync-config.json");
@@ -335,7 +336,7 @@ function configuredFunnelLine(accountName) {
 }
 
 function commonReaderId(value) {
-  return value.common_reader_id || value.commonReaderId || value.common_reader?.id || value.reader?.common_reader_id || value.id;
+  return explicitCommonReaderId(value) || value.id;
 }
 
 async function fetchUtageData(youtubeTrackingById) {
@@ -355,12 +356,7 @@ async function fetchUtageData(youtubeTrackingById) {
 
   for (const account of lineAccounts) {
     const readers = await fetchAllReaders(account.id);
-    const readersByCommon = new Map();
     for (const reader of readers) {
-      const commonId = commonReaderId(reader);
-      const samePerson = readersByCommon.get(commonId) || [];
-      samePerson.push(reader);
-      readersByCommon.set(commonId, samePerson);
       const trackingName = reader.message_tracking_name || reader.funnel_tracking_name || null;
       const routeRule = trackingName ? routeRules.get(normalizeTrackingName(trackingName)) : null;
       const videoRule = reader.message_tracking_id
@@ -390,14 +386,21 @@ async function fetchUtageData(youtubeTrackingById) {
       } catch (error) {
         console.warn(`LINE friend detail unavailable for ${account.name}: ${error.message}`);
       }
-      const population = friends.length ? friends : [...readersByCommon.values()].map((group) => group[0]);
-      for (const friend of population) {
-        const commonId = commonReaderId(friend);
-        const scenarioReaders = readersByCommon.get(commonId) || [];
+      const population = buildAnalyticsPopulation(readers, friends);
+      for (const { commonId, scenarioReaders, friend } of population) {
         const earliest = [...scenarioReaders].sort((a, b) => new Date(a.created_at) - new Date(b.created_at))[0] || friend;
-        let labels = friend.labels || friend.label_names || [];
+        let labels = [
+          friend.labels,
+          friend.label_names,
+          ...scenarioReaders.flatMap((reader) => [reader.labels, reader.label_names])
+        ].flatMap((value) => Array.isArray(value) ? value : value ? [value] : []);
         if (!labels.length) labels = await fetchCommonReaderLabels(account.id, commonId);
-        const scenarios = scenarioReaders.flatMap((reader) => [reader.scenario, reader.scenario_name, reader.current_scenario_name].filter(Boolean));
+        const scenarios = scenarioReaders.flatMap((reader) => [
+          reader.scenario,
+          reader.scenario_title,
+          reader.scenario_name,
+          reader.current_scenario_name
+        ].filter(Boolean));
         const trackingName = earliest.message_tracking_name || earliest.funnel_tracking_name || friend.tracking_name || null;
         const trackingId = earliest.message_tracking_id || friend.message_tracking_id || null;
         const videoRule = trackingId ? youtubeTrackingById.get(trackingId) : null;
@@ -411,8 +414,8 @@ async function fetchUtageData(youtubeTrackingById) {
           videoId: videoRule?.videoId || routeRule?.videoId || null,
           reader: {
             ...earliest,
-            is_blocked: friend.is_blocked,
-            is_exclusion: friend.is_exclusion,
+            is_blocked: friend.is_blocked ?? scenarioReaders.some((reader) => reader.is_blocked === true || reader.is_line_blocked === true || reader.blocked === true),
+            is_exclusion: friend.is_exclusion ?? scenarioReaders.some((reader) => reader.is_exclusion === true || reader.excluded === true),
             labels,
             scenarios
           }
