@@ -1,8 +1,8 @@
 {
   "meta": {
     "mode": "live-api",
-    "lastSync": "2026-08-10T20:13:55.314Z",
-    "youtubeSnapshotAt": "2026-08-10T20:13:55.314Z",
+    "lastSync": "2026-08-10T21:36:58.751Z",
+    "youtubeSnapshotAt": "2026-08-10T21:36:58.751Z",
     "timezone": "Asia/Tokyo",
     "youtubeHistoryScope": "public-videos-over-60s-v1",
     "utageAccountCount": 39,
@@ -16,7 +16,7 @@
       "handle": "@yuruyuru-ai000",
       "channelId": "UCnY6D6uMLAlD65iHG87PYsQ",
       "subscribers": 285,
-      "currentViews": 11760,
+      "currentViews": 11773,
       "status": "active"
     },
     {
@@ -43,7 +43,7 @@
       "channel": "yuruyuru",
       "videoId": "98se0y1flLo",
       "title": "【AI業界に激震】Claude Fable5は裏側で一体何が起きたのか？",
-      "currentViews": 1209,
+      "currentViews": 1220,
       "publishedAt": "2026-08-07T10:00:38Z",
       "publishedText": "3日前",
       "durationSeconds": 902
@@ -124,7 +124,7 @@
       "channel": "yuruyuru",
       "videoId": "MZOtIDFBYQY",
       "title": "【最新版！】Claude Code完全入門マニュアル",
-      "currentViews": 395,
+      "currentViews": 397,
       "publishedAt": "2026-07-05T10:00:23Z",
       "publishedText": "1か月前",
       "durationSeconds": 1250
@@ -884,7 +884,7 @@
       "date": "2026-08-11",
       "channel": "yuruyuru",
       "subscribers": 285,
-      "views": 11760
+      "views": 11773
     },
     {
       "date": "2026-08-11",
@@ -1768,7 +1768,7 @@
     {
       "date": "2026-08-11",
       "videoId": "98se0y1flLo",
-      "views": 1209
+      "views": 1220
     },
     {
       "date": "2026-08-11",
@@ -1813,7 +1813,7 @@
     {
       "date": "2026-08-11",
       "videoId": "MZOtIDFBYQY",
-      "views": 395
+      "views": 397
     },
     {
       "date": "2026-08-11",
