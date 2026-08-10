@@ -33,6 +33,32 @@ test("cohort events are aggregated by LINE registration date", () => {
   assert.equal(result.cohort[0].meeting_from_vsl, 1);
 });
 
+test("legacy YouTube LINE accounts are included and old scenario names recover events", () => {
+  const result = buildFunnelAnalytics({
+    config,
+    snapshotAt: "2026-08-11T03:00:00.000Z",
+    tokyoDate,
+    readers: [{
+      accountName: "ゆるAI",
+      uniqueId: "legacy-1",
+      createdAt: "2026-07-01T01:00:00Z",
+      trackingName: "旧ルート",
+      reader: {
+        labels: ["benefit_delivered"],
+        scenarios: ["Zoomサポート会リマインダ", "セミナー募集_未申込者", "09 申込者LINE（k6x新規）", "VSL_一部視聴", "05 面談予約リマインド（vVq新規）"]
+      }
+    }]
+  });
+  assert.equal(result.current[0].funnel_id, "youtube-yuru-legacy");
+  assert.equal(result.cohort[0].zoom_applied, 1);
+  assert.equal(result.cohort[0].seminar_offered, 1);
+  assert.equal(result.cohort[0].seminar_applied, 1);
+  assert.equal(result.cohort[0].vsl_offered, 1);
+  assert.equal(result.cohort[0].vsl_started, 1);
+  assert.equal(result.cohort[0].meeting_applied, 1);
+  assert.equal(result.cohort[0].meeting_from_vsl, 1);
+});
+
 test("multiple scenario records are unioned per reader without losing the entry cohort", () => {
   const result = buildFunnelAnalytics({
     config,

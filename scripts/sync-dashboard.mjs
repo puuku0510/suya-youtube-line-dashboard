@@ -609,7 +609,8 @@ await writeFile(FUNNEL_COHORT_PATH, toCsv(funnelAnalytics.cohort, [
   "registration_date", "line_id", "line_name", "source", "funnel_id", "funnel_name",
   "channel_id", "channel_name", "video_id", "video_title", "registered", "zoom_applied",
   "seminar_applied", "vsl_offered", "vsl_started", "vsl_completed", "meeting_applied",
-  "meeting_from_vsl", "meeting_from_seminar", "openchat_offered", "openchat_clicked", "snapshot_at", "quality"
+  "meeting_from_vsl", "meeting_from_seminar", "openchat_offered", "openchat_clicked", "snapshot_at", "quality",
+  "seminar_offered"
 ]), "utf8");
 await writeFile(FUNNEL_HEALTH_PATH, toCsv(funnelAnalytics.health, [
   "snapshot_at", "configured_reader_records", "unique_readers", "labels_available_readers",

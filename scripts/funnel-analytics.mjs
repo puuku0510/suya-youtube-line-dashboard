@@ -75,9 +75,16 @@ function statusDefinition(reader, signals, stage, config) {
 }
 
 function eventFlags(signals, config) {
-  return Object.fromEntries(
+  const flags = Object.fromEntries(
     Object.entries(config.events).map(([key, aliases]) => [key, includesAny(signals, aliases) ? 1 : 0])
   );
+  // Old UTAGE routes did not preserve path-specific evt_* labels. Infer the
+  // VSL path only when the same deduplicated reader has both a meeting booking
+  // and a VSL-offer history. Explicit path labels still take precedence.
+  if (flags.meeting_applied && flags.vsl_offered && !flags.meeting_from_vsl) {
+    flags.meeting_from_vsl = 1;
+  }
+  return flags;
 }
 
 function mergeSignals(target, incoming) {
