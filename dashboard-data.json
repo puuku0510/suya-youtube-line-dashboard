@@ -1,8 +1,8 @@
 {
   "meta": {
     "mode": "live-api",
-    "lastSync": "2026-08-10T15:50:16.695Z",
-    "youtubeSnapshotAt": "2026-08-10T15:50:16.695Z",
+    "lastSync": "2026-08-10T20:08:24.158Z",
+    "youtubeSnapshotAt": "2026-08-10T20:08:24.158Z",
     "timezone": "Asia/Tokyo",
     "youtubeHistoryScope": "public-videos-over-60s-v1",
     "utageAccountCount": 39,
@@ -15,8 +15,8 @@
       "name": "ゆるAI",
       "handle": "@yuruyuru-ai000",
       "channelId": "UCnY6D6uMLAlD65iHG87PYsQ",
-      "subscribers": 284,
-      "currentViews": 11632,
+      "subscribers": 285,
+      "currentViews": 11764,
       "status": "active"
     },
     {
@@ -43,7 +43,7 @@
       "channel": "yuruyuru",
       "videoId": "98se0y1flLo",
       "title": "【AI業界に激震】Claude Fable5は裏側で一体何が起きたのか？",
-      "currentViews": 1165,
+      "currentViews": 1218,
       "publishedAt": "2026-08-07T10:00:38Z",
       "publishedText": "3日前",
       "durationSeconds": 902
@@ -52,7 +52,7 @@
       "channel": "yuruyuru",
       "videoId": "WRjN6UeNtcE",
       "title": "【最新版】今アツい稼げるAI副業5選 |Claude CodeやCodexを活用して時代に乗る方法",
-      "currentViews": 331,
+      "currentViews": 333,
       "publishedAt": "2026-08-03T10:35:54Z",
       "publishedText": "1週間前",
       "durationSeconds": 1185
@@ -70,7 +70,7 @@
       "channel": "yuruyuru",
       "videoId": "hmjIPVylvlw",
       "title": "Claude Codeで使える！Skills機能を世界一わかりやすく解説してみた",
-      "currentViews": 5144,
+      "currentViews": 5202,
       "publishedAt": "2026-07-30T10:00:05Z",
       "publishedText": "1週間前",
       "durationSeconds": 1237
@@ -79,7 +79,7 @@
       "channel": "yuruyuru",
       "videoId": "0i2ZdKe7PKY",
       "title": "【最新版】AIガチ勢が厳選した、課金すべきAI TOP3 ChatGPTは時代遅れ...？",
-      "currentViews": 582,
+      "currentViews": 590,
       "publishedAt": "2026-07-23T10:00:17Z",
       "publishedText": "2週間前",
       "durationSeconds": 901
@@ -88,7 +88,7 @@
       "channel": "yuruyuru",
       "videoId": "ZcwZhJRDZcA",
       "title": "【最新版】CodexをAPIコスト7割削減しながら限界まで働かせる方法",
-      "currentViews": 3426,
+      "currentViews": 3428,
       "publishedAt": "2026-07-18T10:00:31Z",
       "publishedText": "3週間前",
       "durationSeconds": 1125
@@ -115,7 +115,7 @@
       "channel": "yuruyuru",
       "videoId": "9z3P90deMBI",
       "title": "【最新版】初心者でもわかるCodexの使い方徹底解説",
-      "currentViews": 596,
+      "currentViews": 597,
       "publishedAt": "2026-07-10T07:32:22Z",
       "publishedText": "1か月前",
       "durationSeconds": 1045
@@ -124,7 +124,7 @@
       "channel": "yuruyuru",
       "videoId": "MZOtIDFBYQY",
       "title": "【最新版！】Claude Code完全入門マニュアル",
-      "currentViews": 388,
+      "currentViews": 396,
       "publishedAt": "2026-07-05T10:00:23Z",
       "publishedText": "1か月前",
       "durationSeconds": 1250
@@ -883,8 +883,8 @@
     {
       "date": "2026-08-11",
       "channel": "yuruyuru",
-      "subscribers": 284,
-      "views": 11632
+      "subscribers": 285,
+      "views": 11764
     },
     {
       "date": "2026-08-11",
@@ -1768,12 +1768,12 @@
     {
       "date": "2026-08-11",
       "videoId": "98se0y1flLo",
-      "views": 1165
+      "views": 1218
     },
     {
       "date": "2026-08-11",
       "videoId": "WRjN6UeNtcE",
-      "views": 331
+      "views": 333
     },
     {
       "date": "2026-08-11",
@@ -1783,17 +1783,17 @@
     {
       "date": "2026-08-11",
       "videoId": "hmjIPVylvlw",
-      "views": 5144
+      "views": 5202
     },
     {
       "date": "2026-08-11",
       "videoId": "0i2ZdKe7PKY",
-      "views": 582
+      "views": 590
     },
     {
       "date": "2026-08-11",
       "videoId": "ZcwZhJRDZcA",
-      "views": 3426
+      "views": 3428
     },
     {
       "date": "2026-08-11",
@@ -1808,12 +1808,12 @@
     {
       "date": "2026-08-11",
       "videoId": "9z3P90deMBI",
-      "views": 596
+      "views": 597
     },
     {
       "date": "2026-08-11",
       "videoId": "MZOtIDFBYQY",
-      "views": 388
+      "views": 396
     },
     {
       "date": "2026-08-11",

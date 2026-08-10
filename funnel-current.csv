@@ -1,1 +1,7 @@
 snapshot_at,line_id,line_name,source,funnel_id,funnel_name,stage_id,stage_name,status_id,status_name,count,quality,source_system
+2026-08-10T20:08:24.158Z,line-youtube-unified,AI×一人起業【YouTube統合】,YouTube,youtube-unified,YouTube統合,unclassified,未分類（計測ラベル不足）,automatic,自動配信中,29,labels_unavailable,UTAGE
+2026-08-10T20:08:24.158Z,line-youtube-unified,AI×一人起業【YouTube統合】,YouTube,youtube-unified,YouTube統合,unclassified,未分類（計測ラベル不足）,stopped,停止,2,labels_unavailable,UTAGE
+2026-08-10T20:08:24.158Z,line-meta,AIでひとり起業（広告）,Meta広告,meta-seminar-direct,Meta広告｜セミナー直行,unclassified,未分類（計測ラベル不足）,automatic,自動配信中,21,labels_unavailable,UTAGE
+2026-08-10T20:08:24.158Z,line-meta,AIでひとり起業（広告）,Meta広告,meta-seminar-direct,Meta広告｜セミナー直行,unclassified,未分類（計測ラベル不足）,stopped,停止,8,labels_unavailable,UTAGE
+2026-08-10T20:08:24.158Z,line-instagram,こすもす【公式】,Instagram,instagram-10-benefits,Instagram｜10大特典,unclassified,未分類（計測ラベル不足）,automatic,自動配信中,10,labels_unavailable,UTAGE
+2026-08-10T20:08:24.158Z,line-instagram,こすもす【公式】,Instagram,instagram-10-benefits,Instagram｜10大特典,unclassified,未分類（計測ラベル不足）,stopped,停止,1,labels_unavailable,UTAGE
