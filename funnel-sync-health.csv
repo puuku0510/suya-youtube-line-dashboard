@@ -1,0 +1,2 @@
+snapshot_at,configured_reader_records,unique_readers,labels_available_readers,unclassified_readers,label_coverage_rate,status,note
+未公開,0,0,0,0,0,pending,GitHub push後の初回同期待ち

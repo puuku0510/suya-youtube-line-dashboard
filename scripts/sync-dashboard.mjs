@@ -2,10 +2,15 @@ import { readFile, writeFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { buildFunnelAnalytics, toCsv } from "./funnel-analytics.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CONFIG_PATH = path.join(ROOT, "sync-config.json");
+const FUNNEL_CONFIG_PATH = path.join(ROOT, "funnel-analytics-config.json");
 const DATA_PATH = path.join(ROOT, "dashboard-data.json");
+const FUNNEL_CURRENT_PATH = path.join(ROOT, "funnel-current.csv");
+const FUNNEL_COHORT_PATH = path.join(ROOT, "funnel-cohort.csv");
+const FUNNEL_HEALTH_PATH = path.join(ROOT, "funnel-sync-health.csv");
 const UTAGE_BASE = "https://api.utage-system.com/v1";
 const YOUTUBE_BASE = "https://www.googleapis.com/youtube/v3";
 const UTAGE_MIN_INTERVAL_MS = 1100;
@@ -19,6 +24,7 @@ if (!utageApiKey) throw new Error("UTAGE_API_KEY is not configured");
 if (!youtubeApiKey) throw new Error("YOUTUBE_API_KEY is not configured");
 
 const config = JSON.parse(await readFile(CONFIG_PATH, "utf8"));
+const funnelConfig = JSON.parse(await readFile(FUNNEL_CONFIG_PATH, "utf8"));
 let previous = {};
 try {
   previous = JSON.parse(await readFile(DATA_PATH, "utf8"));
@@ -292,6 +298,46 @@ async function fetchAllReaders(accountId) {
   return readers;
 }
 
+async function fetchAllLineFriends(accountId) {
+  const friends = [];
+  let page = 1;
+  let total = 0;
+  while (true) {
+    const payload = await utageGet(`/accounts/${accountId}/line/friends?per_page=100&page=${page}`);
+    friends.push(...(payload.data || []));
+    total = Number(payload.meta?.total || friends.length);
+    if (friends.length >= total || !(payload.data || []).length) break;
+    page += 1;
+  }
+  return { friends, total };
+}
+
+async function fetchCommonReaderLabels(accountId, commonReaderId) {
+  if (!commonReaderId) return [];
+  try {
+    const payload = await utageGet(`/accounts/${accountId}/common-readers/${commonReaderId}/labels?per_page=100`);
+    return payload.data || payload.labels || [];
+  } catch (error) {
+    console.warn(`Reader label coverage unavailable: ${error.message}`);
+    return [];
+  }
+}
+
+function normalized(value) {
+  return String(value || "").normalize("NFKC").trim().toLowerCase();
+}
+
+function configuredFunnelLine(accountName) {
+  const account = normalized(accountName);
+  return funnelConfig.officialLines.some((line) =>
+    [line.name, ...(line.aliases || [])].map(normalized).includes(account)
+  );
+}
+
+function commonReaderId(value) {
+  return value.common_reader_id || value.commonReaderId || value.common_reader?.id || value.reader?.common_reader_id || value.id;
+}
+
 async function fetchUtageData(youtubeTrackingById) {
   const accountsPayload = await utageGet("/accounts");
   const accounts = accountsPayload.data || [];
@@ -304,11 +350,17 @@ async function fetchUtageData(youtubeTrackingById) {
   );
   const officialLines = [];
   const scopedReaderCandidates = [];
+  const analyticsReaders = [];
   const discoveredLineChannels = new Map();
 
   for (const account of lineAccounts) {
     const readers = await fetchAllReaders(account.id);
+    const readersByCommon = new Map();
     for (const reader of readers) {
+      const commonId = commonReaderId(reader);
+      const samePerson = readersByCommon.get(commonId) || [];
+      samePerson.push(reader);
+      readersByCommon.set(commonId, samePerson);
       const trackingName = reader.message_tracking_name || reader.funnel_tracking_name || null;
       const routeRule = trackingName ? routeRules.get(normalizeTrackingName(trackingName)) : null;
       const videoRule = reader.message_tracking_id
@@ -329,6 +381,43 @@ async function fetchUtageData(youtubeTrackingById) {
         trackingName,
         knownRoute: Boolean(videoRule || routeRule)
       });
+    }
+
+    if (configuredFunnelLine(account.name)) {
+      let friends = [];
+      try {
+        friends = (await fetchAllLineFriends(account.id)).friends;
+      } catch (error) {
+        console.warn(`LINE friend detail unavailable for ${account.name}: ${error.message}`);
+      }
+      const population = friends.length ? friends : [...readersByCommon.values()].map((group) => group[0]);
+      for (const friend of population) {
+        const commonId = commonReaderId(friend);
+        const scenarioReaders = readersByCommon.get(commonId) || [];
+        const earliest = [...scenarioReaders].sort((a, b) => new Date(a.created_at) - new Date(b.created_at))[0] || friend;
+        let labels = friend.labels || friend.label_names || [];
+        if (!labels.length) labels = await fetchCommonReaderLabels(account.id, commonId);
+        const scenarios = scenarioReaders.flatMap((reader) => [reader.scenario, reader.scenario_name, reader.current_scenario_name].filter(Boolean));
+        const trackingName = earliest.message_tracking_name || earliest.funnel_tracking_name || friend.tracking_name || null;
+        const trackingId = earliest.message_tracking_id || friend.message_tracking_id || null;
+        const videoRule = trackingId ? youtubeTrackingById.get(trackingId) : null;
+        const routeRule = trackingName ? routeRules.get(normalizeTrackingName(trackingName)) : null;
+        analyticsReaders.push({
+          accountName: account.name,
+          uniqueId: commonId,
+          createdAt: earliest.created_at || friend.created_at,
+          trackingName,
+          channel: videoRule?.channel || routeRule?.channel || null,
+          videoId: videoRule?.videoId || routeRule?.videoId || null,
+          reader: {
+            ...earliest,
+            is_blocked: friend.is_blocked,
+            is_exclusion: friend.is_exclusion,
+            labels,
+            scenarios
+          }
+        });
+      }
     }
   }
 
@@ -420,6 +509,7 @@ async function fetchUtageData(youtubeTrackingById) {
   return {
     officialLines,
     records: [...grouped.values()].sort((a, b) => a.date.localeCompare(b.date)),
+    analyticsReaders,
     accountCount: accounts.length,
     youtubeTrackingCount: youtubeTrackingById.size
   };
@@ -445,6 +535,12 @@ function mergeHistory(previousHistory, rows, keyFields) {
 
 const youtube = await fetchYouTubeData();
 const utage = await fetchUtageData(youtube.trackingById);
+const channelNames = new Map(youtube.channels.map((channel) => [channel.id, channel.name]));
+const videoTitles = new Map(youtube.videos.map((video) => [video.videoId, video.title]));
+for (const reader of utage.analyticsReaders) {
+  reader.channelName = channelNames.get(reader.channel) || "";
+  reader.videoTitle = videoTitles.get(reader.videoId) || "";
+}
 const compatibleYoutubeHistory =
   previous.meta?.youtubeHistoryScope === YOUTUBE_HISTORY_SCOPE;
 const youtubeHistory = mergeHistory(
@@ -475,6 +571,12 @@ const lineHistory = mergeHistory(
 );
 
 const now = new Date();
+const funnelAnalytics = buildFunnelAnalytics({
+  readers: utage.analyticsReaders,
+  config: funnelConfig,
+  snapshotAt: now.toISOString(),
+  tokyoDate
+});
 const output = {
   meta: {
     mode: "live-api",
@@ -496,7 +598,22 @@ const output = {
 };
 
 await writeFile(DATA_PATH, `${JSON.stringify(output, null, 2)}\n`, "utf8");
+await writeFile(FUNNEL_CURRENT_PATH, toCsv(funnelAnalytics.current, [
+  "snapshot_at", "line_id", "line_name", "source", "funnel_id", "funnel_name",
+  "stage_id", "stage_name", "status_id", "status_name", "count", "quality", "source_system"
+]), "utf8");
+await writeFile(FUNNEL_COHORT_PATH, toCsv(funnelAnalytics.cohort, [
+  "registration_date", "line_id", "line_name", "source", "funnel_id", "funnel_name",
+  "channel_id", "channel_name", "video_id", "video_title", "registered", "zoom_applied",
+  "seminar_applied", "vsl_offered", "vsl_started", "vsl_completed", "meeting_applied",
+  "meeting_from_vsl", "meeting_from_seminar", "openchat_offered", "openchat_clicked", "snapshot_at", "quality"
+]), "utf8");
+await writeFile(FUNNEL_HEALTH_PATH, toCsv(funnelAnalytics.health, [
+  "snapshot_at", "configured_reader_records", "unique_readers", "labels_available_readers",
+  "unclassified_readers", "label_coverage_rate", "status", "note"
+]), "utf8");
 console.log(
   `Synced ${output.channels.length} channels, ${output.videos.length} videos, ` +
-  `${output.officialLines.length} LINE accounts, ${output.records.length} aggregate lead rows.`
+  `${output.officialLines.length} LINE accounts, ${output.records.length} aggregate lead rows, ` +
+  `${funnelAnalytics.current.length} current-stage rows and ${funnelAnalytics.cohort.length} cohort rows.`
 );

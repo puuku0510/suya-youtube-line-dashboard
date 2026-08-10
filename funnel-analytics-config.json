@@ -1,0 +1,50 @@
+{
+  "officialLines": [
+    { "key": "line-youtube-unified", "name": "AI×一人起業【YouTube統合】", "aliases": [] },
+    { "key": "line-instagram", "name": "こすもす【公式】", "aliases": [] },
+    { "key": "line-meta", "name": "AIでひとり起業（広告）", "aliases": [] }
+  ],
+  "funnels": [
+    { "id": "youtube-unified", "name": "YouTube統合", "source": "YouTube", "lineKey": "line-youtube-unified", "default": true, "matchAny": ["src_youtube"] },
+    { "id": "instagram-10-benefits", "name": "Instagram｜10大特典", "source": "Instagram", "lineKey": "line-instagram", "default": true, "matchAny": ["src_instagram_10benefits"] },
+    { "id": "meta-vsl-direct", "name": "Meta広告｜VSL直行", "source": "Meta広告", "lineKey": "line-meta", "matchAny": ["src_meta_vsl", "meta_vsl"], "trackingIncludes": ["VSL直行", "meta vsl"] },
+    { "id": "meta-seminar-direct", "name": "Meta広告｜セミナー直行", "source": "Meta広告", "lineKey": "line-meta", "default": true, "matchAny": ["src_meta_seminar"] }
+  ],
+  "stages": [
+    { "id": "completed", "name": "面談済み・完走", "matchAny": ["meeting_completed", "sales_won", "evt_meeting_completed"] },
+    { "id": "meeting_booked", "name": "面談予約済み", "matchAny": ["roadmap_booked", "sales_in_progress", "sales_next_meeting", "evt_meeting_applied"] },
+    { "id": "no_show_followup", "name": "面談無断欠席フォロー", "matchAny": ["offer_noshow_rebook_active", "roadmap_noshow_1", "roadmap_noshow_2plus"] },
+    { "id": "consult_offer", "name": "面談案内・催促", "matchAny": ["offer_consult_day_active", "offer_consult_48h_active", "roadmap_page_clicked_unbooked"] },
+    { "id": "openchat_clicked", "name": "オプチャリンククリック", "matchAny": ["openchat_link_clicked", "evt_openchat_clicked"] },
+    { "id": "openchat_offer", "name": "オプチャ案内中", "matchAny": ["openchat_invited", "evt_openchat_offered"] },
+    { "id": "vsl_completed", "name": "VSL完了・面談案内", "matchAny": ["vsl_main_completed", "evt_vsl_completed"] },
+    { "id": "vsl_in_progress", "name": "VSL途中視聴", "matchAny": ["vsl_main_started", "evt_vsl_started"] },
+    { "id": "vsl_unviewed", "name": "VSL未視聴", "matchAny": ["offer_vsl_active", "vsl_main_offered", "evt_vsl_offered"] },
+    { "id": "seminar_booked", "name": "セミナー申込済み", "matchAny": ["seminar_main_registered", "seminar_meta_registered", "evt_seminar_applied"] },
+    { "id": "seminar_offer", "name": "セミナー案内中", "matchAny": ["offer_seminar_active", "seminar_main_offered"] },
+    { "id": "zoom_booked", "name": "Zoomサポート会申込済み", "matchAny": ["zoom_support_booked", "zoom_support_registered", "evt_zoom_applied", "zoomサポート会申込"] },
+    { "id": "zoom_offer", "name": "Zoomサポート会案内中", "matchAny": ["offer_zoom_active", "zoom_support_offered", "zoomサポート", "サポート会_特典クリック済・未予約"] },
+    { "id": "benefit_delivered", "name": "特典配布済み", "matchAny": ["benefit_delivered", "ig_benefit_1to4_delivered", "evt_benefit_delivered"] },
+    { "id": "line_registered", "name": "LINE登録直後", "matchAny": ["line_main_registered"] },
+    { "id": "unclassified", "name": "未分類（計測ラベル不足）", "matchAny": [] }
+  ],
+  "statuses": [
+    { "id": "error", "name": "エラー", "matchAny": ["ops_error", "transition_error", "stagnation_error", "manual_error"] },
+    { "id": "manual", "name": "手動対応中", "matchAny": ["manual_handling", "manual_in_funnel", "manual_after_funnel", "sales_in_progress", "sales_next_meeting"] },
+    { "id": "stopped", "name": "停止", "matchAny": ["delivery_stopped", "opted_out", "sales_stop"] },
+    { "id": "completed", "name": "完走", "matchAny": [] },
+    { "id": "automatic", "name": "自動配信中", "matchAny": [] }
+  ],
+  "events": {
+    "zoom_applied": ["evt_zoom_applied", "zoom_support_booked", "zoom_support_registered"],
+    "seminar_applied": ["evt_seminar_applied", "seminar_main_registered", "seminar_meta_registered"],
+    "vsl_offered": ["evt_vsl_offered", "vsl_main_offered", "offer_vsl_active"],
+    "vsl_started": ["evt_vsl_started", "vsl_main_started", "vsl_main_completed"],
+    "vsl_completed": ["evt_vsl_completed", "vsl_main_completed"],
+    "meeting_applied": ["evt_meeting_applied", "roadmap_booked"],
+    "meeting_from_vsl": ["evt_meeting_from_vsl"],
+    "meeting_from_seminar": ["evt_meeting_from_seminar"],
+    "openchat_offered": ["evt_openchat_offered", "openchat_invited", "openchat_link_clicked"],
+    "openchat_clicked": ["evt_openchat_clicked", "openchat_link_clicked"]
+  }
+}
