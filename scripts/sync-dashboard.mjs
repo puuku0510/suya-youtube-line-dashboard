@@ -4,6 +4,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildFunnelAnalytics, toCsv } from "./funnel-analytics.mjs";
 import { buildAnalyticsPopulation, explicitCommonReaderId } from "./utage-reader-population.mjs";
+import { redactUtageEndpoint, retryDelayMs } from "./utage-http-safety.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CONFIG_PATH = path.join(ROOT, "sync-config.json");
@@ -11,6 +12,7 @@ const FUNNEL_CONFIG_PATH = path.join(ROOT, "funnel-analytics-config.json");
 const DATA_PATH = path.join(ROOT, "dashboard-data.json");
 const FUNNEL_CURRENT_PATH = path.join(ROOT, "funnel-current.csv");
 const FUNNEL_COHORT_PATH = path.join(ROOT, "funnel-cohort.csv");
+const FUNNEL_COHORT_QUALITY_PATH = path.join(ROOT, "funnel-cohort-quality.csv");
 const FUNNEL_HEALTH_PATH = path.join(ROOT, "funnel-sync-health.csv");
 const UTAGE_BASE = "https://api.utage-system.com/v1";
 const YOUTUBE_BASE = "https://www.googleapis.com/youtube/v3";
@@ -35,6 +37,13 @@ try {
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 let lastUtageRequestAt = 0;
+const utageRequestHealth = {
+  requestCount: 0,
+  rateLimit: null,
+  rateRemaining: null,
+  rateReset: null,
+  rateLimitedCount: 0
+};
 
 async function utageGet(endpoint) {
   for (let attempt = 0; attempt < 5; attempt += 1) {
@@ -48,22 +57,35 @@ async function utageGet(endpoint) {
         Accept: "application/json"
       }
     });
+    utageRequestHealth.requestCount += 1;
+    const rateLimitHeader = response.headers.get("x-ratelimit-limit");
+    const rateRemainingHeader = response.headers.get("x-ratelimit-remaining");
+    const rateLimit = rateLimitHeader == null ? NaN : Number(rateLimitHeader);
+    const rateRemaining = rateRemainingHeader == null ? NaN : Number(rateRemainingHeader);
+    const rateReset = response.headers.get("x-ratelimit-reset");
+    if (Number.isFinite(rateLimit)) utageRequestHealth.rateLimit = rateLimit;
+    if (Number.isFinite(rateRemaining)) utageRequestHealth.rateRemaining = rateRemaining;
+    if (rateReset) utageRequestHealth.rateReset = rateReset;
 
     if (response.status === 429) {
-      const retryAfter = Number(response.headers.get("retry-after"));
-      await sleep(Number.isFinite(retryAfter) ? retryAfter * 1000 : 61_000);
+      utageRequestHealth.rateLimitedCount += 1;
+      await sleep(retryDelayMs({
+        rateReset,
+        retryAfter: response.headers.get("retry-after")
+      }));
       continue;
     }
 
     if (!response.ok) {
-      const body = await response.text();
-      const safeEndpoint = endpoint.replace(/\/accounts\/[^/]+/g, "/accounts/[redacted]");
-      throw new Error(`UTAGE ${safeEndpoint} failed (${response.status}): ${body.slice(0, 240)}`);
+      await response.arrayBuffer();
+      const safeEndpoint = redactUtageEndpoint(endpoint);
+      const requestId = response.headers.get("x-request-id");
+      throw new Error(`UTAGE ${safeEndpoint} failed (${response.status})${requestId ? ` request=${requestId}` : ""}`);
     }
 
     return response.json();
   }
-  throw new Error(`UTAGE ${endpoint} exceeded retry limit`);
+  throw new Error(`UTAGE ${redactUtageEndpoint(endpoint)} exceeded retry limit`);
 }
 
 async function youtubeGet(resource, params) {
@@ -316,7 +338,7 @@ async function fetchAllLineFriends(accountId) {
 async function fetchCommonReaderLabels(accountId, commonReaderId) {
   if (!commonReaderId) return [];
   try {
-    const payload = await utageGet(`/accounts/${accountId}/common-readers/${commonReaderId}/labels?per_page=100`);
+    const payload = await utageGet(`/accounts/${accountId}/common-readers/${commonReaderId}/labels`);
     return payload.data || payload.labels || [];
   } catch (error) {
     console.warn(`Reader label coverage unavailable: ${error.message}`);
@@ -409,6 +431,8 @@ async function fetchUtageData(youtubeTrackingById) {
           accountName: account.name,
           uniqueId: commonId,
           createdAt: earliest.created_at || friend.created_at,
+          createdAtBasis: "proxy_reader_created_at",
+          timezoneStatus: "unverified",
           trackingName,
           channel: videoRule?.channel || routeRule?.channel || null,
           videoId: videoRule?.videoId || routeRule?.videoId || null,
@@ -580,6 +604,13 @@ const funnelAnalytics = buildFunnelAnalytics({
   snapshotAt: now.toISOString(),
   tokyoDate
 });
+Object.assign(funnelAnalytics.health[0], {
+  api_request_count: utageRequestHealth.requestCount,
+  api_rate_limit: utageRequestHealth.rateLimit,
+  api_rate_remaining: utageRequestHealth.rateRemaining,
+  api_rate_reset: utageRequestHealth.rateReset,
+  api_429_count: utageRequestHealth.rateLimitedCount
+});
 const output = {
   meta: {
     mode: "live-api",
@@ -589,6 +620,7 @@ const output = {
     youtubeHistoryScope: YOUTUBE_HISTORY_SCOPE,
     utageAccountCount: utage.accountCount,
     youtubeTrackingCount: utage.youtubeTrackingCount,
+    utageApiHealth: utageRequestHealth,
     notice: "YouTube概要欄の登録用リンクとUTAGEを照合し、YouTube由来だけを表示しています。公式LINEの有効友だち数は、ブロック・配信除外を除いた現在値です。"
   },
   channels: youtube.channels,
@@ -612,9 +644,20 @@ await writeFile(FUNNEL_COHORT_PATH, toCsv(funnelAnalytics.cohort, [
   "meeting_from_vsl", "meeting_from_seminar", "openchat_offered", "openchat_clicked", "snapshot_at", "quality",
   "seminar_offered"
 ]), "utf8");
+await writeFile(FUNNEL_COHORT_QUALITY_PATH, toCsv(funnelAnalytics.cohortQuality, [
+  "cohort_date_proxy", "acquisition_timestamp_basis", "timezone_status", "line_id", "line_name",
+  "source", "funnel_id", "funnel_name", "channel_id", "channel_name", "video_id", "video_title",
+  "acquired_observed", "seminar_applied_observed", "seminar_applied_timestamped",
+  "meeting_applied_observed", "meeting_applied_timestamped", "observed_event_flags",
+  "timestamped_event_flags", "event_timestamp_coverage_rate", "event_timestamp_completeness",
+  "cohort_age_days", "d7_denominator_eligible_proxy", "d7_outcome_exact", "snapshot_at", "quality"
+]), "utf8");
 await writeFile(FUNNEL_HEALTH_PATH, toCsv(funnelAnalytics.health, [
   "snapshot_at", "configured_reader_records", "unique_readers", "labels_available_readers",
-  "unclassified_readers", "label_coverage_rate", "status", "note"
+  "unclassified_readers", "label_coverage_rate", "status", "note", "observed_event_flags", "timestamped_event_flags",
+  "event_timestamp_coverage_rate", "registration_timestamp_basis", "missing_acquisition_timestamp_readers",
+  "api_request_count", "api_rate_limit",
+  "api_rate_remaining", "api_rate_reset", "api_429_count"
 ]), "utf8");
 console.log(
   `Synced ${output.channels.length} channels, ${output.videos.length} videos, ` +

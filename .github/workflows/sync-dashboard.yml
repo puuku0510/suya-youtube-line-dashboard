@@ -31,12 +31,12 @@ jobs:
 
       - name: 更新データを公開
         run: |
-          if git diff --quiet -- dashboard-data.json funnel-current.csv funnel-cohort.csv funnel-sync-health.csv; then
+          if git diff --quiet -- dashboard-data.json funnel-current.csv funnel-cohort.csv funnel-cohort-quality.csv funnel-sync-health.csv; then
             echo "データ変更なし"
             exit 0
           fi
           git config user.name "dashboard-sync"
           git config user.email "dashboard-sync@users.noreply.github.com"
-          git add dashboard-data.json funnel-current.csv funnel-cohort.csv funnel-sync-health.csv
+          git add dashboard-data.json funnel-current.csv funnel-cohort.csv funnel-cohort-quality.csv funnel-sync-health.csv
           git commit -m "Update dashboard data"
           git push

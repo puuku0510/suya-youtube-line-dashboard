@@ -13,7 +13,29 @@ function valuesFrom(items) {
   return values;
 }
 
+function labelAssignmentsFrom(items) {
+  const assignments = new Map();
+  for (const item of items || []) {
+    if (!item || typeof item !== "object") continue;
+    const label = [item.name, item.title, item.label_name].find(Boolean);
+    const assignedAt = item.assigned_at || item.assignedAt || null;
+    if (!label || !assignedAt) continue;
+    const key = normalize(label);
+    const previous = assignments.get(key);
+    if (!previous || String(assignedAt) < String(previous)) assignments.set(key, String(assignedAt));
+  }
+  return assignments;
+}
+
 export function extractReaderSignals(reader) {
+  const labelCollections = [reader.labels, reader.label_names, reader.tags, reader.tag_names];
+  const labelAssignments = new Map();
+  for (const items of labelCollections) {
+    for (const [label, assignedAt] of labelAssignmentsFrom(items)) {
+      const previous = labelAssignments.get(label);
+      if (!previous || String(assignedAt) < String(previous)) labelAssignments.set(label, assignedAt);
+    }
+  }
   const labelValues = [
     ...valuesFrom(reader.labels),
     ...valuesFrom(reader.label_names),
@@ -32,7 +54,8 @@ export function extractReaderSignals(reader) {
   return {
     labels: new Set(labelValues.map(normalize).filter(Boolean)),
     context: new Set(contextValues.map(normalize).filter(Boolean)),
-    labelsAvailable: labelValues.length > 0
+    labelsAvailable: labelValues.length > 0,
+    labelAssignments
   };
 }
 
@@ -74,9 +97,18 @@ function statusDefinition(reader, signals, stage, config) {
   return config.statuses.find((status) => status.id === "automatic");
 }
 
-function eventFlags(signals, config) {
+function eventEvidence(signals, config) {
   const flags = Object.fromEntries(
     Object.entries(config.events).map(([key, aliases]) => [key, includesAny(signals, aliases) ? 1 : 0])
+  );
+  const timestamped = Object.fromEntries(
+    Object.entries(config.events).map(([key, aliases]) => {
+      const needles = aliases.map(normalize).filter(Boolean);
+      const hasAssignedAt = [...signals.labelAssignments.keys()].some((label) =>
+        needles.some((needle) => label === needle || label.includes(needle))
+      );
+      return [`${key}_timestamped`, hasAssignedAt ? 1 : 0];
+    })
   );
   // Old UTAGE routes did not preserve path-specific evt_* labels. Infer the
   // VSL path only when the same deduplicated reader has both a meeting booking
@@ -84,13 +116,17 @@ function eventFlags(signals, config) {
   if (flags.meeting_applied && flags.vsl_offered && !flags.meeting_from_vsl) {
     flags.meeting_from_vsl = 1;
   }
-  return flags;
+  return { ...flags, ...timestamped };
 }
 
 function mergeSignals(target, incoming) {
   for (const value of incoming.labels) target.labels.add(value);
   for (const value of incoming.context) target.context.add(value);
   target.labelsAvailable ||= incoming.labelsAvailable;
+  for (const [label, assignedAt] of incoming.labelAssignments) {
+    const previous = target.labelAssignments.get(label);
+    if (!previous || String(assignedAt) < String(previous)) target.labelAssignments.set(label, assignedAt);
+  }
   return target;
 }
 
@@ -114,6 +150,55 @@ function groupIncrement(map, key, base, fields) {
   map.set(key, row);
 }
 
+function dateAgeDays(snapshotDate, cohortDate) {
+  const [sy, sm, sd] = String(snapshotDate).split("-").map(Number);
+  const [cy, cm, cd] = String(cohortDate).split("-").map(Number);
+  if (![sy, sm, sd, cy, cm, cd].every(Number.isFinite)) return null;
+  return Math.max(0, Math.floor((Date.UTC(sy, sm - 1, sd) - Date.UTC(cy, cm - 1, cd)) / 86_400_000));
+}
+
+function qualityRows(cohortRows, snapshotAt, tokyoDate) {
+  const snapshotDate = tokyoDate(snapshotAt);
+  return cohortRows.map((row) => {
+    const eventKeys = [
+      "zoom_applied", "seminar_offered", "seminar_applied", "vsl_offered", "vsl_started",
+      "vsl_completed", "meeting_applied", "meeting_from_vsl", "meeting_from_seminar",
+      "openchat_offered", "openchat_clicked"
+    ];
+    const observed = eventKeys.reduce((sum, key) => sum + Number(row[key] || 0), 0);
+    const timestamped = eventKeys.reduce((sum, key) => sum + Number(row[`${key}_timestamped`] || 0), 0);
+    const cohortAgeDays = dateAgeDays(snapshotDate, row.registration_date);
+    return {
+      cohort_date_proxy: row.registration_date,
+      acquisition_timestamp_basis: row.acquisition_timestamp_basis || "proxy_reader_created_at",
+      timezone_status: row.timezone_status || "unverified",
+      line_id: row.line_id,
+      line_name: row.line_name,
+      source: row.source,
+      funnel_id: row.funnel_id,
+      funnel_name: row.funnel_name,
+      channel_id: row.channel_id,
+      channel_name: row.channel_name,
+      video_id: row.video_id,
+      video_title: row.video_title,
+      acquired_observed: row.registered,
+      seminar_applied_observed: row.seminar_applied,
+      seminar_applied_timestamped: row.seminar_applied_timestamped,
+      meeting_applied_observed: row.meeting_applied,
+      meeting_applied_timestamped: row.meeting_applied_timestamped,
+      observed_event_flags: observed,
+      timestamped_event_flags: timestamped,
+      event_timestamp_coverage_rate: observed ? timestamped / observed : "",
+      event_timestamp_completeness: observed === 0 ? "unknown" : timestamped === observed ? "complete" : "partial",
+      cohort_age_days: cohortAgeDays,
+      d7_denominator_eligible_proxy: cohortAgeDays == null ? "" : cohortAgeDays >= 7 ? 1 : 0,
+      d7_outcome_exact: 0,
+      snapshot_at: row.snapshot_at,
+      quality: row.quality
+    };
+  });
+}
+
 export function buildFunnelAnalytics({ readers, config, snapshotAt, tokyoDate }) {
   const unique = new Map();
   let configuredReaderCount = 0;
@@ -129,7 +214,12 @@ export function buildFunnelAnalytics({ readers, config, snapshotAt, tokyoDate })
       unique.set(key, {
         ...item,
         line,
-        signals: { labels: new Set(signals.labels), context: new Set(signals.context), labelsAvailable: signals.labelsAvailable },
+        signals: {
+          labels: new Set(signals.labels),
+          context: new Set(signals.context),
+          labelsAvailable: signals.labelsAvailable,
+          labelAssignments: new Map(signals.labelAssignments)
+        },
         reader: mergeReaderFlags({}, item.reader)
       });
       continue;
@@ -157,6 +247,7 @@ export function buildFunnelAnalytics({ readers, config, snapshotAt, tokyoDate })
   const cohort = new Map();
   let unclassifiedCount = 0;
   let labelsAvailableCount = 0;
+  let missingAcquisitionTimestampCount = 0;
 
   for (const item of unique.values()) {
     if (item.signals.labelsAvailable) labelsAvailableCount += 1;
@@ -183,8 +274,22 @@ export function buildFunnelAnalytics({ readers, config, snapshotAt, tokyoDate })
       source_system: "UTAGE"
     }, { count: 1 });
 
-    const events = eventFlags(item.signals, config);
-    const registrationDate = tokyoDate(item.createdAt);
+    if (!item.createdAt) {
+      missingAcquisitionTimestampCount += 1;
+      continue;
+    }
+    let registrationDate;
+    try {
+      registrationDate = tokyoDate(item.createdAt);
+    } catch {
+      missingAcquisitionTimestampCount += 1;
+      continue;
+    }
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(registrationDate)) {
+      missingAcquisitionTimestampCount += 1;
+      continue;
+    }
+    const events = eventEvidence(item.signals, config);
     const channelId = item.channel || "";
     const channelName = item.channelName || "";
     const videoId = item.videoId || "";
@@ -202,13 +307,21 @@ export function buildFunnelAnalytics({ readers, config, snapshotAt, tokyoDate })
       video_id: videoId,
       video_title: videoTitle,
       snapshot_at: snapshotAt,
-      quality
+      quality,
+      acquisition_timestamp_basis: item.createdAtBasis || "proxy_reader_created_at",
+      timezone_status: item.timezoneStatus || "unverified"
     }, { registered: 1, ...events });
   }
 
+  const cohortRows = [...cohort.values()].sort((a, b) => a.registration_date.localeCompare(b.registration_date));
+  const cohortQuality = qualityRows(cohortRows, snapshotAt, tokyoDate);
+  const observedEventFlags = cohortQuality.reduce((sum, row) => sum + Number(row.observed_event_flags || 0), 0);
+  const timestampedEventFlags = cohortQuality.reduce((sum, row) => sum + Number(row.timestamped_event_flags || 0), 0);
+
   return {
     current: [...current.values()],
-    cohort: [...cohort.values()].sort((a, b) => a.registration_date.localeCompare(b.registration_date)),
+    cohort: cohortRows,
+    cohortQuality,
     health: [{
       snapshot_at: snapshotAt,
       configured_reader_records: configuredReaderCount,
@@ -216,8 +329,19 @@ export function buildFunnelAnalytics({ readers, config, snapshotAt, tokyoDate })
       labels_available_readers: labelsAvailableCount,
       unclassified_readers: unclassifiedCount,
       label_coverage_rate: unique.size ? labelsAvailableCount / unique.size : 0,
-      status: configuredReaderCount === 0 ? "no_configured_accounts" : labelsAvailableCount === 0 ? "labels_unavailable" : unclassifiedCount ? "partial" : "ok",
-      note: "オプチャ反応は実参加ではなくリンククリック。実参加は手動補助指標。"
+      observed_event_flags: observedEventFlags,
+      timestamped_event_flags: timestampedEventFlags,
+      event_timestamp_coverage_rate: observedEventFlags ? timestampedEventFlags / observedEventFlags : null,
+      registration_timestamp_basis: "proxy_reader_created_at",
+      missing_acquisition_timestamp_readers: missingAcquisitionTimestampCount,
+      status: configuredReaderCount === 0
+        ? "no_configured_accounts"
+        : labelsAvailableCount === 0
+          ? "labels_unavailable"
+          : unclassifiedCount || missingAcquisitionTimestampCount
+            ? "partial"
+            : "ok",
+      note: "created_atはシナリオ読者登録proxy。オプチャ反応は実参加ではなくリンククリック。"
     }]
   };
 }
