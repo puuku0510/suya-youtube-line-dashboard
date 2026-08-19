@@ -120,6 +120,78 @@ test("handling status precedence is error over manual over stopped over automati
   assert.equal(result.current[0].status_id, "error");
 });
 
+test("label assigned_at is preserved as timestamp coverage without claiming exact D+7", () => {
+  const result = buildFunnelAnalytics({
+    config,
+    snapshotAt: "2026-08-19T03:00:00.000Z",
+    tokyoDate,
+    readers: [{
+      accountName: "こすもす【公式】",
+      uniqueId: "timestamped-reader",
+      createdAt: "2026-08-10T01:00:00Z",
+      createdAtBasis: "proxy_reader_created_at",
+      timezoneStatus: "unverified",
+      trackingName: "Instagram",
+      reader: {
+        labels: [
+          { name: "src_instagram_10benefits", assigned_at: "2026-08-10 10:00:00" },
+          { name: "evt_seminar_applied", assigned_at: "2026-08-12 11:00:00" }
+        ]
+      }
+    }]
+  });
+
+  assert.equal(result.cohort[0].seminar_applied, 1);
+  assert.equal(result.cohort[0].seminar_applied_timestamped, 1);
+  assert.equal(result.cohortQuality[0].acquisition_timestamp_basis, "proxy_reader_created_at");
+  assert.equal(result.cohortQuality[0].d7_denominator_eligible_proxy, 1);
+  assert.equal(result.cohortQuality[0].d7_outcome_exact, 0);
+  assert.equal(result.cohortQuality[0].event_timestamp_completeness, "complete");
+});
+
+test("context-only historical evidence remains untimestamped and partial", () => {
+  const result = buildFunnelAnalytics({
+    config,
+    snapshotAt: "2026-08-19T03:00:00.000Z",
+    tokyoDate,
+    readers: [{
+      accountName: "ゆるAI",
+      uniqueId: "context-reader",
+      createdAt: "2026-08-01T01:00:00Z",
+      trackingName: "旧ルート",
+      reader: {
+        labels: ["src_youtube_yuru"],
+        scenarios: ["09 申込者LINE（k6x新規）"]
+      }
+    }]
+  });
+
+  assert.equal(result.cohort[0].seminar_applied, 1);
+  assert.equal(result.cohort[0].seminar_applied_timestamped, 0);
+  assert.equal(result.cohortQuality[0].event_timestamp_completeness, "partial");
+  assert.equal(result.cohortQuality[0].d7_outcome_exact, 0);
+});
+
+test("missing acquisition timestamp stays in current state but is excluded from cohorts", () => {
+  const result = buildFunnelAnalytics({
+    config,
+    snapshotAt: "2026-08-19T03:00:00.000Z",
+    tokyoDate,
+    readers: [{
+      accountName: "こすもす【公式】",
+      uniqueId: "missing-time",
+      createdAt: null,
+      trackingName: "Instagram",
+      reader: { labels: ["src_instagram_10benefits", "evt_seminar_applied"] }
+    }]
+  });
+
+  assert.equal(result.current.reduce((sum, row) => sum + row.count, 0), 1);
+  assert.equal(result.cohort.length, 0);
+  assert.equal(result.health[0].missing_acquisition_timestamp_readers, 1);
+  assert.equal(result.health[0].status, "partial");
+});
+
 test("CSV escapes commas and line breaks", () => {
   assert.equal(toCsv([{ a: "x,y", b: "line\n2" }], ["a", "b"]), 'a,b\n"x,y","line\n2"\n');
 });
