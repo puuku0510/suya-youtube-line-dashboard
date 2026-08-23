@@ -52,6 +52,7 @@ async function utageGet(endpoint) {
     lastUtageRequestAt = Date.now();
 
     const response = await fetch(`${UTAGE_BASE}${endpoint}`, {
+      method: "GET",
       headers: {
         Authorization: `Bearer ${utageApiKey}`,
         Accept: "application/json"
