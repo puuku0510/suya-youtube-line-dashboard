@@ -1,8 +1,8 @@
 {
   "meta": {
     "mode": "live-api",
-    "lastSync": "2026-08-28T00:15:22.214Z",
-    "youtubeSnapshotAt": "2026-08-28T00:15:22.214Z",
+    "lastSync": "2026-08-28T14:47:53.981Z",
+    "youtubeSnapshotAt": "2026-08-28T14:47:53.981Z",
     "timezone": "Asia/Tokyo",
     "youtubeHistoryScope": "public-videos-over-60s-v1",
     "utageAccountCount": 47,
@@ -15,8 +15,8 @@
       "name": "ゆるAI",
       "handle": "@yuruyuru-ai000",
       "channelId": "UCnY6D6uMLAlD65iHG87PYsQ",
-      "subscribers": 404,
-      "currentViews": 19334,
+      "subscribers": 413,
+      "currentViews": 20511,
       "status": "active"
     },
     {
@@ -43,25 +43,25 @@
       "channel": "yuruyuru",
       "videoId": "YjugyzWIZYk",
       "title": "9割が間違ってるClaude Codeの使い方!?Anthropic公式講座200本受けてみた",
-      "currentViews": 4531,
+      "currentViews": 5596,
       "publishedAt": "2026-08-24T10:00:35Z",
-      "publishedText": "3日前",
+      "publishedText": "4日前",
       "durationSeconds": 969
     },
     {
       "channel": "yuruyuru",
       "videoId": "98se0y1flLo",
       "title": "【AI業界に激震】Claude Fable5は裏側で一体何が起きたのか？",
-      "currentViews": 1474,
+      "currentViews": 1475,
       "publishedAt": "2026-08-07T10:00:38Z",
-      "publishedText": "2週間前",
+      "publishedText": "3週間前",
       "durationSeconds": 902
     },
     {
       "channel": "yuruyuru",
       "videoId": "WRjN6UeNtcE",
       "title": "【最新版】今アツい稼げるAI副業5選 |Claude CodeやCodexを活用して時代に乗る方法",
-      "currentViews": 814,
+      "currentViews": 819,
       "publishedAt": "2026-08-03T10:35:54Z",
       "publishedText": "3週間前",
       "durationSeconds": 1185
@@ -79,7 +79,7 @@
       "channel": "yuruyuru",
       "videoId": "hmjIPVylvlw",
       "title": "Claude Codeで使える！Skills機能を世界一わかりやすく解説してみた",
-      "currentViews": 6857,
+      "currentViews": 6960,
       "publishedAt": "2026-07-30T10:00:05Z",
       "publishedText": "4週間前",
       "durationSeconds": 1237
@@ -97,7 +97,7 @@
       "channel": "yuruyuru",
       "videoId": "ZcwZhJRDZcA",
       "title": "【最新版】CodexをAPIコスト7割削減しながら限界まで働かせる方法",
-      "currentViews": 3621,
+      "currentViews": 3622,
       "publishedAt": "2026-07-18T10:00:31Z",
       "publishedText": "1か月前",
       "durationSeconds": 1125
@@ -124,7 +124,7 @@
       "channel": "yuruyuru",
       "videoId": "9z3P90deMBI",
       "title": "【最新版】初心者でもわかるCodexの使い方徹底解説",
-      "currentViews": 673,
+      "currentViews": 674,
       "publishedAt": "2026-07-10T07:32:22Z",
       "publishedText": "1か月前",
       "durationSeconds": 1045
@@ -133,7 +133,7 @@
       "channel": "yuruyuru",
       "videoId": "MZOtIDFBYQY",
       "title": "【最新版！】Claude Code完全入門マニュアル",
-      "currentViews": 488,
+      "currentViews": 489,
       "publishedAt": "2026-07-05T10:00:23Z",
       "publishedText": "1か月前",
       "durationSeconds": 1250
@@ -1345,8 +1345,8 @@
     {
       "date": "2026-08-28",
       "channel": "yuruyuru",
-      "subscribers": 404,
-      "views": 19334
+      "subscribers": 413,
+      "views": 20511
     },
     {
       "date": "2026-08-28",
@@ -3605,17 +3605,17 @@
     {
       "date": "2026-08-28",
       "videoId": "YjugyzWIZYk",
-      "views": 4531
+      "views": 5596
     },
     {
       "date": "2026-08-28",
       "videoId": "98se0y1flLo",
-      "views": 1474
+      "views": 1475
     },
     {
       "date": "2026-08-28",
       "videoId": "WRjN6UeNtcE",
-      "views": 814
+      "views": 819
     },
     {
       "date": "2026-08-28",
@@ -3625,7 +3625,7 @@
     {
       "date": "2026-08-28",
       "videoId": "hmjIPVylvlw",
-      "views": 6857
+      "views": 6960
     },
     {
       "date": "2026-08-28",
@@ -3635,7 +3635,7 @@
     {
       "date": "2026-08-28",
       "videoId": "ZcwZhJRDZcA",
-      "views": 3621
+      "views": 3622
     },
     {
       "date": "2026-08-28",
@@ -3650,12 +3650,12 @@
     {
       "date": "2026-08-28",
       "videoId": "9z3P90deMBI",
-      "views": 673
+      "views": 674
     },
     {
       "date": "2026-08-28",
       "videoId": "MZOtIDFBYQY",
-      "views": 488
+      "views": 489
     },
     {
       "date": "2026-08-28",
