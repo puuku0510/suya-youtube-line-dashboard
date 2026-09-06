@@ -1,8 +1,8 @@
 {
   "meta": {
     "mode": "live-api",
-    "lastSync": "2026-09-05T17:07:36.637Z",
-    "youtubeSnapshotAt": "2026-09-05T17:07:36.637Z",
+    "lastSync": "2026-09-06T07:31:45.300Z",
+    "youtubeSnapshotAt": "2026-09-06T07:31:45.300Z",
     "timezone": "Asia/Tokyo",
     "youtubeHistoryScope": "public-videos-over-60s-v1",
     "utageAccountCount": 47,
@@ -15,8 +15,8 @@
       "name": "ゆるAI",
       "handle": "@yuruyuru-ai000",
       "channelId": "UCnY6D6uMLAlD65iHG87PYsQ",
-      "subscribers": 646,
-      "currentViews": 51347,
+      "subscribers": 653,
+      "currentViews": 52374,
       "status": "active"
     },
     {
@@ -43,7 +43,7 @@
       "channel": "yuruyuru",
       "videoId": "gqkHs7WpeUQ",
       "title": "【意外と知らない】Codexの完全入門徹底解説",
-      "currentViews": 4566,
+      "currentViews": 4578,
       "publishedAt": "2026-08-29T10:00:15Z",
       "publishedText": "1週間前",
       "durationSeconds": 955
@@ -52,7 +52,7 @@
       "channel": "yuruyuru",
       "videoId": "YjugyzWIZYk",
       "title": "9割が間違ってるClaude Codeの使い方!?Anthropic公式講座200本受けてみた",
-      "currentViews": 30689,
+      "currentViews": 31643,
       "publishedAt": "2026-08-24T10:00:35Z",
       "publishedText": "1週間前",
       "durationSeconds": 969
@@ -61,7 +61,7 @@
       "channel": "yuruyuru",
       "videoId": "98se0y1flLo",
       "title": "【AI業界に激震】Claude Fable5は裏側で一体何が起きたのか？",
-      "currentViews": 1505,
+      "currentViews": 1506,
       "publishedAt": "2026-08-07T10:00:38Z",
       "publishedText": "4週間前",
       "durationSeconds": 902
@@ -88,7 +88,7 @@
       "channel": "yuruyuru",
       "videoId": "hmjIPVylvlw",
       "title": "Claude Codeで使える！Skills機能を世界一わかりやすく解説してみた",
-      "currentViews": 7930,
+      "currentViews": 7972,
       "publishedAt": "2026-07-30T10:00:05Z",
       "publishedText": "1か月前",
       "durationSeconds": 1237
@@ -97,7 +97,7 @@
       "channel": "yuruyuru",
       "videoId": "0i2ZdKe7PKY",
       "title": "【最新版】AIガチ勢が厳選した、課金すべきAI TOP3 ChatGPTは時代遅れ...？",
-      "currentViews": 916,
+      "currentViews": 918,
       "publishedAt": "2026-07-23T10:00:17Z",
       "publishedText": "1か月前",
       "durationSeconds": 901
@@ -106,7 +106,7 @@
       "channel": "yuruyuru",
       "videoId": "ZcwZhJRDZcA",
       "title": "【最新版】CodexをAPIコスト7割削減しながら限界まで働かせる方法",
-      "currentViews": 3646,
+      "currentViews": 3650,
       "publishedAt": "2026-07-18T10:00:31Z",
       "publishedText": "1か月前",
       "durationSeconds": 1125
@@ -133,7 +133,7 @@
       "channel": "yuruyuru",
       "videoId": "9z3P90deMBI",
       "title": "【最新版】初心者でもわかるCodexの使い方徹底解説",
-      "currentViews": 700,
+      "currentViews": 701,
       "publishedAt": "2026-07-10T07:32:22Z",
       "publishedText": "1か月前",
       "durationSeconds": 1045
@@ -142,7 +142,7 @@
       "channel": "yuruyuru",
       "videoId": "MZOtIDFBYQY",
       "title": "【最新版！】Claude Code完全入門マニュアル",
-      "currentViews": 523,
+      "currentViews": 534,
       "publishedAt": "2026-07-05T10:00:23Z",
       "publishedText": "2か月前",
       "durationSeconds": 1250
@@ -206,32 +206,32 @@
     {
       "id": "line-782007577b68",
       "name": "ゆるAI",
-      "totalFriends": 112,
-      "activeFriends": 82,
+      "totalFriends": 114,
+      "activeFriends": 84,
       "channels": [
         "yuruyuru"
       ],
       "status": "connected",
-      "youtubeLeads": 112,
+      "youtubeLeads": 114,
       "firstYoutubeLeadDate": "2026-07-06"
     },
     {
       "id": "line-a0ce3f122eec",
       "name": "AIでひとり起業（広告）",
-      "totalFriends": 87,
-      "activeFriends": 78,
+      "totalFriends": 90,
+      "activeFriends": 81,
       "channels": [
         "yuruyuru"
       ],
       "status": "connected",
-      "youtubeLeads": 37,
+      "youtubeLeads": 40,
       "firstYoutubeLeadDate": "2026-08-25"
     },
     {
       "id": "line-7cd62c8408d4",
       "name": "AI×一人起業【YouTube統合】",
       "totalFriends": 58,
-      "activeFriends": 52,
+      "activeFriends": 51,
       "channels": [
         "yuruyuru"
       ],
@@ -972,6 +972,20 @@
       "channel": "yuruyuru",
       "videoId": "YjugyzWIZYk",
       "line": "line-a0ce3f122eec",
+      "leads": 4
+    },
+    {
+      "date": "2026-09-06",
+      "channel": "yuruyuru",
+      "videoId": "9z3P90deMBI",
+      "line": "line-782007577b68",
+      "leads": 1
+    },
+    {
+      "date": "2026-09-07",
+      "channel": "yuruyuru",
+      "videoId": "9z3P90deMBI",
+      "line": "line-782007577b68",
       "leads": 1
     }
   ],
@@ -1663,8 +1677,8 @@
     {
       "date": "2026-09-06",
       "channel": "yuruyuru",
-      "subscribers": 646,
-      "views": 51347
+      "subscribers": 653,
+      "views": 52374
     },
     {
       "date": "2026-09-06",
@@ -4723,17 +4737,17 @@
     {
       "date": "2026-09-06",
       "videoId": "gqkHs7WpeUQ",
-      "views": 4566
+      "views": 4578
     },
     {
       "date": "2026-09-06",
       "videoId": "YjugyzWIZYk",
-      "views": 30689
+      "views": 31643
     },
     {
       "date": "2026-09-06",
       "videoId": "98se0y1flLo",
-      "views": 1505
+      "views": 1506
     },
     {
       "date": "2026-09-06",
@@ -4748,17 +4762,17 @@
     {
       "date": "2026-09-06",
       "videoId": "hmjIPVylvlw",
-      "views": 7930
+      "views": 7972
     },
     {
       "date": "2026-09-06",
       "videoId": "0i2ZdKe7PKY",
-      "views": 916
+      "views": 918
     },
     {
       "date": "2026-09-06",
       "videoId": "ZcwZhJRDZcA",
-      "views": 3646
+      "views": 3650
     },
     {
       "date": "2026-09-06",
@@ -4773,12 +4787,12 @@
     {
       "date": "2026-09-06",
       "videoId": "9z3P90deMBI",
-      "views": 700
+      "views": 701
     },
     {
       "date": "2026-09-06",
       "videoId": "MZOtIDFBYQY",
-      "views": 523
+      "views": 534
     },
     {
       "date": "2026-09-06",
@@ -5745,20 +5759,20 @@
     {
       "date": "2026-09-06",
       "line": "line-782007577b68",
-      "totalFriends": 112,
-      "activeFriends": 82
+      "totalFriends": 114,
+      "activeFriends": 84
     },
     {
       "date": "2026-09-06",
       "line": "line-a0ce3f122eec",
-      "totalFriends": 87,
-      "activeFriends": 78
+      "totalFriends": 90,
+      "activeFriends": 81
     },
     {
       "date": "2026-09-06",
       "line": "line-7cd62c8408d4",
       "totalFriends": 58,
-      "activeFriends": 52
+      "activeFriends": 51
     },
     {
       "date": "2026-09-06",
