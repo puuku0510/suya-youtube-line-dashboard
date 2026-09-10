@@ -1,8 +1,8 @@
 {
   "meta": {
     "mode": "live-api",
-    "lastSync": "2026-09-09T18:16:29.409Z",
-    "youtubeSnapshotAt": "2026-09-09T18:16:29.409Z",
+    "lastSync": "2026-09-10T07:44:03.575Z",
+    "youtubeSnapshotAt": "2026-09-10T07:44:03.575Z",
     "timezone": "Asia/Tokyo",
     "youtubeHistoryScope": "public-videos-over-60s-v1",
     "utageAccountCount": 47,
@@ -15,8 +15,8 @@
       "name": "ゆるAI",
       "handle": "@yuruyuru-ai000",
       "channelId": "UCnY6D6uMLAlD65iHG87PYsQ",
-      "subscribers": 725,
-      "currentViews": 62905,
+      "subscribers": 741,
+      "currentViews": 65024,
       "status": "active"
     },
     {
@@ -43,7 +43,7 @@
       "channel": "yuruyuru",
       "videoId": "bSiHTimHr8I",
       "title": "【9割が知らない】Codexの超便利機能7選",
-      "currentViews": 6897,
+      "currentViews": 8523,
       "publishedAt": "2026-09-06T10:33:50Z",
       "publishedText": "3日前",
       "durationSeconds": 918
@@ -52,7 +52,7 @@
       "channel": "yuruyuru",
       "videoId": "gqkHs7WpeUQ",
       "title": "【意外と知らない】Codexの完全入門徹底解説",
-      "currentViews": 4685,
+      "currentViews": 4705,
       "publishedAt": "2026-08-29T10:00:15Z",
       "publishedText": "1週間前",
       "durationSeconds": 955
@@ -61,7 +61,7 @@
       "channel": "yuruyuru",
       "videoId": "YjugyzWIZYk",
       "title": "9割が間違ってるClaude Codeの使い方!?Anthropic公式講座200本受けてみた",
-      "currentViews": 34961,
+      "currentViews": 35424,
       "publishedAt": "2026-08-24T10:00:35Z",
       "publishedText": "2週間前",
       "durationSeconds": 969
@@ -97,7 +97,7 @@
       "channel": "yuruyuru",
       "videoId": "hmjIPVylvlw",
       "title": "Claude Codeで使える！Skills機能を世界一わかりやすく解説してみた",
-      "currentViews": 8109,
+      "currentViews": 8116,
       "publishedAt": "2026-07-30T10:00:05Z",
       "publishedText": "1か月前",
       "durationSeconds": 1237
@@ -106,7 +106,7 @@
       "channel": "yuruyuru",
       "videoId": "0i2ZdKe7PKY",
       "title": "【最新版】AIガチ勢が厳選した、課金すべきAI TOP3 ChatGPTは時代遅れ...？",
-      "currentViews": 931,
+      "currentViews": 933,
       "publishedAt": "2026-07-23T10:00:17Z",
       "publishedText": "1か月前",
       "durationSeconds": 901
@@ -115,7 +115,7 @@
       "channel": "yuruyuru",
       "videoId": "ZcwZhJRDZcA",
       "title": "【最新版】CodexをAPIコスト7割削減しながら限界まで働かせる方法",
-      "currentViews": 3663,
+      "currentViews": 3664,
       "publishedAt": "2026-07-18T10:00:31Z",
       "publishedText": "1か月前",
       "durationSeconds": 1125
@@ -215,13 +215,13 @@
     {
       "id": "line-a0ce3f122eec",
       "name": "AIでひとり起業（広告）",
-      "totalFriends": 110,
-      "activeFriends": 101,
+      "totalFriends": 115,
+      "activeFriends": 105,
       "channels": [
         "yuruyuru"
       ],
       "status": "connected",
-      "youtubeLeads": 60,
+      "youtubeLeads": 65,
       "firstYoutubeLeadDate": "2026-08-25"
     },
     {
@@ -1051,7 +1051,7 @@
       "channel": "yuruyuru",
       "videoId": "bSiHTimHr8I",
       "line": "line-a0ce3f122eec",
-      "leads": 1
+      "leads": 6
     }
   ],
   "youtubeHistory": [
@@ -1814,8 +1814,8 @@
     {
       "date": "2026-09-10",
       "channel": "yuruyuru",
-      "subscribers": 725,
-      "views": 62905
+      "subscribers": 741,
+      "views": 65024
     },
     {
       "date": "2026-09-10",
@@ -5249,17 +5249,17 @@
     {
       "date": "2026-09-10",
       "videoId": "bSiHTimHr8I",
-      "views": 6897
+      "views": 8523
     },
     {
       "date": "2026-09-10",
       "videoId": "gqkHs7WpeUQ",
-      "views": 4685
+      "views": 4705
     },
     {
       "date": "2026-09-10",
       "videoId": "YjugyzWIZYk",
-      "views": 34961
+      "views": 35424
     },
     {
       "date": "2026-09-10",
@@ -5279,17 +5279,17 @@
     {
       "date": "2026-09-10",
       "videoId": "hmjIPVylvlw",
-      "views": 8109
+      "views": 8116
     },
     {
       "date": "2026-09-10",
       "videoId": "0i2ZdKe7PKY",
-      "views": 931
+      "views": 933
     },
     {
       "date": "2026-09-10",
       "videoId": "ZcwZhJRDZcA",
-      "views": 3663
+      "views": 3664
     },
     {
       "date": "2026-09-10",
@@ -6372,8 +6372,8 @@
     {
       "date": "2026-09-10",
       "line": "line-a0ce3f122eec",
-      "totalFriends": 110,
-      "activeFriends": 101
+      "totalFriends": 115,
+      "activeFriends": 105
     },
     {
       "date": "2026-09-10",
