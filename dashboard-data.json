@@ -1,8 +1,8 @@
 {
   "meta": {
     "mode": "live-api",
-    "lastSync": "2026-09-17T18:49:20.128Z",
-    "youtubeSnapshotAt": "2026-09-17T18:49:20.128Z",
+    "lastSync": "2026-09-18T07:51:44.689Z",
+    "youtubeSnapshotAt": "2026-09-18T07:51:44.689Z",
     "timezone": "Asia/Tokyo",
     "youtubeHistoryScope": "public-videos-over-60s-v1",
     "utageAccountCount": 47,
@@ -15,8 +15,8 @@
       "name": "ゆるAI",
       "handle": "@yuruyuru-ai000",
       "channelId": "UCnY6D6uMLAlD65iHG87PYsQ",
-      "subscribers": 755,
-      "currentViews": 70350,
+      "subscribers": 767,
+      "currentViews": 70539,
       "status": "active"
     },
     {
@@ -43,7 +43,7 @@
       "channel": "yuruyuru",
       "videoId": "bIZWUmyrEoc",
       "title": "AIエージェント半年ガチ運用したら衝撃の結果に...",
-      "currentViews": 66,
+      "currentViews": 180,
       "publishedAt": "2026-09-17T10:00:38Z",
       "publishedText": "今日",
       "durationSeconds": 776
@@ -52,7 +52,7 @@
       "channel": "yuruyuru",
       "videoId": "qLw7Xqv4vvM",
       "title": "【衝撃】GPT-6 Astraを会社にガチ導入した結果…",
-      "currentViews": 1931,
+      "currentViews": 1940,
       "publishedAt": "2026-09-12T10:00:39Z",
       "publishedText": "5日前",
       "durationSeconds": 725
@@ -61,7 +61,7 @@
       "channel": "yuruyuru",
       "videoId": "bSiHTimHr8I",
       "title": "【9割が知らない】Codexの超便利機能7選",
-      "currentViews": 10477,
+      "currentViews": 10479,
       "publishedAt": "2026-09-06T10:33:50Z",
       "publishedText": "1週間前",
       "durationSeconds": 918
@@ -70,7 +70,7 @@
       "channel": "yuruyuru",
       "videoId": "gqkHs7WpeUQ",
       "title": "【意外と知らない】Codexの完全入門徹底解説",
-      "currentViews": 4815,
+      "currentViews": 4819,
       "publishedAt": "2026-08-29T10:00:15Z",
       "publishedText": "2週間前",
       "durationSeconds": 955
@@ -79,7 +79,7 @@
       "channel": "yuruyuru",
       "videoId": "YjugyzWIZYk",
       "title": "9割が間違ってるClaude Codeの使い方!?Anthropic公式講座200本受けてみた",
-      "currentViews": 36378,
+      "currentViews": 36417,
       "publishedAt": "2026-08-24T10:00:35Z",
       "publishedText": "3週間前",
       "durationSeconds": 969
@@ -115,7 +115,7 @@
       "channel": "yuruyuru",
       "videoId": "hmjIPVylvlw",
       "title": "Claude Codeで使える！Skills機能を世界一わかりやすく解説してみた",
-      "currentViews": 8366,
+      "currentViews": 8382,
       "publishedAt": "2026-07-30T10:00:05Z",
       "publishedText": "1か月前",
       "durationSeconds": 1237
@@ -124,7 +124,7 @@
       "channel": "yuruyuru",
       "videoId": "0i2ZdKe7PKY",
       "title": "【最新版】AIガチ勢が厳選した、課金すべきAI TOP3 ChatGPTは時代遅れ...？",
-      "currentViews": 937,
+      "currentViews": 938,
       "publishedAt": "2026-07-23T10:00:17Z",
       "publishedText": "1か月前",
       "durationSeconds": 901
@@ -160,7 +160,7 @@
       "channel": "yuruyuru",
       "videoId": "9z3P90deMBI",
       "title": "【最新版】初心者でもわかるCodexの使い方徹底解説",
-      "currentViews": 723,
+      "currentViews": 726,
       "publishedAt": "2026-07-10T07:32:22Z",
       "publishedText": "2か月前",
       "durationSeconds": 1045
@@ -169,7 +169,7 @@
       "channel": "yuruyuru",
       "videoId": "MZOtIDFBYQY",
       "title": "【最新版！】Claude Code完全入門マニュアル",
-      "currentViews": 550,
+      "currentViews": 551,
       "publishedAt": "2026-07-05T10:00:23Z",
       "publishedText": "2か月前",
       "durationSeconds": 1250
@@ -2025,8 +2025,8 @@
     {
       "date": "2026-09-18",
       "channel": "yuruyuru",
-      "subscribers": 755,
-      "views": 70350
+      "subscribers": 767,
+      "views": 70539
     },
     {
       "date": "2026-09-18",
@@ -6245,27 +6245,27 @@
     {
       "date": "2026-09-18",
       "videoId": "bIZWUmyrEoc",
-      "views": 66
+      "views": 180
     },
     {
       "date": "2026-09-18",
       "videoId": "qLw7Xqv4vvM",
-      "views": 1931
+      "views": 1940
     },
     {
       "date": "2026-09-18",
       "videoId": "bSiHTimHr8I",
-      "views": 10477
+      "views": 10479
     },
     {
       "date": "2026-09-18",
       "videoId": "gqkHs7WpeUQ",
-      "views": 4815
+      "views": 4819
     },
     {
       "date": "2026-09-18",
       "videoId": "YjugyzWIZYk",
-      "views": 36378
+      "views": 36417
     },
     {
       "date": "2026-09-18",
@@ -6285,12 +6285,12 @@
     {
       "date": "2026-09-18",
       "videoId": "hmjIPVylvlw",
-      "views": 8366
+      "views": 8382
     },
     {
       "date": "2026-09-18",
       "videoId": "0i2ZdKe7PKY",
-      "views": 937
+      "views": 938
     },
     {
       "date": "2026-09-18",
@@ -6310,12 +6310,12 @@
     {
       "date": "2026-09-18",
       "videoId": "9z3P90deMBI",
-      "views": 723
+      "views": 726
     },
     {
       "date": "2026-09-18",
       "videoId": "MZOtIDFBYQY",
-      "views": 550
+      "views": 551
     },
     {
       "date": "2026-09-18",
