@@ -1,8 +1,8 @@
 {
   "meta": {
     "mode": "live-api",
-    "lastSync": "2026-09-26T18:18:38.169Z",
-    "youtubeSnapshotAt": "2026-09-26T18:18:38.169Z",
+    "lastSync": "2026-09-27T08:50:35.413Z",
+    "youtubeSnapshotAt": "2026-09-27T08:50:35.413Z",
     "timezone": "Asia/Tokyo",
     "youtubeHistoryScope": "public-videos-over-60s-v1",
     "utageAccountCount": 47,
@@ -15,8 +15,8 @@
       "name": "ゆるAI",
       "handle": "@yuruyuru-ai000",
       "channelId": "UCnY6D6uMLAlD65iHG87PYsQ",
-      "subscribers": 766,
-      "currentViews": 73156,
+      "subscribers": 765,
+      "currentViews": 73296,
       "status": "active"
     },
     {
@@ -43,7 +43,7 @@
       "channel": "yuruyuru",
       "videoId": "lQBSPU4kJdo",
       "title": "【9割が知らない】AIで英会話を完全マスターする方法｜営業ロープレもやり放題!?",
-      "currentViews": 147,
+      "currentViews": 176,
       "publishedAt": "2026-09-25T11:27:25Z",
       "publishedText": "1日前",
       "durationSeconds": 691
@@ -52,7 +52,7 @@
       "channel": "yuruyuru",
       "videoId": "96M_YH3yCRU",
       "title": "【9割が知らない】ChatGPT Images 2.5完全入門",
-      "currentViews": 1809,
+      "currentViews": 1825,
       "publishedAt": "2026-09-20T10:00:13Z",
       "publishedText": "6日前",
       "durationSeconds": 707
@@ -61,7 +61,7 @@
       "channel": "yuruyuru",
       "videoId": "qLw7Xqv4vvM",
       "title": "【徹底解説】初心者でもわかるGPT-6Astra超入門編",
-      "currentViews": 2047,
+      "currentViews": 2091,
       "publishedAt": "2026-09-12T10:00:39Z",
       "publishedText": "2週間前",
       "durationSeconds": 725
@@ -70,7 +70,7 @@
       "channel": "yuruyuru",
       "videoId": "bSiHTimHr8I",
       "title": "【9割が知らない】Codexの超便利機能7選",
-      "currentViews": 10546,
+      "currentViews": 10548,
       "publishedAt": "2026-09-06T10:33:50Z",
       "publishedText": "2週間前",
       "durationSeconds": 918
@@ -79,7 +79,7 @@
       "channel": "yuruyuru",
       "videoId": "gqkHs7WpeUQ",
       "title": "【意外と知らない】Codexの完全入門徹底解説",
-      "currentViews": 4855,
+      "currentViews": 4856,
       "publishedAt": "2026-08-29T10:00:15Z",
       "publishedText": "4週間前",
       "durationSeconds": 955
@@ -88,7 +88,7 @@
       "channel": "yuruyuru",
       "videoId": "YjugyzWIZYk",
       "title": "9割が間違ってるClaude Codeの使い方!?Anthropic公式講座200本受けてみた",
-      "currentViews": 36678,
+      "currentViews": 36708,
       "publishedAt": "2026-08-24T10:00:35Z",
       "publishedText": "1か月前",
       "durationSeconds": 969
@@ -124,7 +124,7 @@
       "channel": "yuruyuru",
       "videoId": "hmjIPVylvlw",
       "title": "Claude Codeで使える！Skills機能を世界一わかりやすく解説してみた",
-      "currentViews": 8712,
+      "currentViews": 8730,
       "publishedAt": "2026-07-30T10:00:05Z",
       "publishedText": "1か月前",
       "durationSeconds": 1237
@@ -242,8 +242,8 @@
     {
       "id": "line-a0ce3f122eec",
       "name": "AIでひとり起業（広告）",
-      "totalFriends": 140,
-      "activeFriends": 125,
+      "totalFriends": 141,
+      "activeFriends": 126,
       "channels": [
         "yuruyuru"
       ],
@@ -2243,8 +2243,8 @@
     {
       "date": "2026-09-27",
       "channel": "yuruyuru",
-      "subscribers": 766,
-      "views": 73156
+      "subscribers": 765,
+      "views": 73296
     },
     {
       "date": "2026-09-27",
@@ -7463,32 +7463,32 @@
     {
       "date": "2026-09-27",
       "videoId": "lQBSPU4kJdo",
-      "views": 147
+      "views": 176
     },
     {
       "date": "2026-09-27",
       "videoId": "96M_YH3yCRU",
-      "views": 1809
+      "views": 1825
     },
     {
       "date": "2026-09-27",
       "videoId": "qLw7Xqv4vvM",
-      "views": 2047
+      "views": 2091
     },
     {
       "date": "2026-09-27",
       "videoId": "bSiHTimHr8I",
-      "views": 10546
+      "views": 10548
     },
     {
       "date": "2026-09-27",
       "videoId": "gqkHs7WpeUQ",
-      "views": 4855
+      "views": 4856
     },
     {
       "date": "2026-09-27",
       "videoId": "YjugyzWIZYk",
-      "views": 36678
+      "views": 36708
     },
     {
       "date": "2026-09-27",
@@ -7508,7 +7508,7 @@
     {
       "date": "2026-09-27",
       "videoId": "hmjIPVylvlw",
-      "views": 8712
+      "views": 8730
     },
     {
       "date": "2026-09-27",
@@ -9045,8 +9045,8 @@
     {
       "date": "2026-09-27",
       "line": "line-a0ce3f122eec",
-      "totalFriends": 140,
-      "activeFriends": 125
+      "totalFriends": 141,
+      "activeFriends": 126
     },
     {
       "date": "2026-09-27",
