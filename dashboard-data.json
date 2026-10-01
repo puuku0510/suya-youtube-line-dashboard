@@ -1,12 +1,12 @@
 {
   "meta": {
     "mode": "live-api",
-    "lastSync": "2026-10-01T09:44:29.392Z",
-    "youtubeSnapshotAt": "2026-10-01T09:44:29.392Z",
+    "lastSync": "2026-10-01T20:07:06.032Z",
+    "youtubeSnapshotAt": "2026-10-01T20:07:06.032Z",
     "timezone": "Asia/Tokyo",
     "youtubeHistoryScope": "public-videos-over-60s-v1",
     "utageAccountCount": 48,
-    "youtubeTrackingCount": 13,
+    "youtubeTrackingCount": 0,
     "notice": "YouTube概要欄の登録用リンクとUTAGEを照合し、YouTube由来だけを表示しています。公式LINEの有効友だち数は、ブロック・配信除外を除いた現在値です。"
   },
   "channels": [
@@ -15,8 +15,8 @@
       "name": "ゆるAI",
       "handle": "@yuruyuru-ai000",
       "channelId": "UCnY6D6uMLAlD65iHG87PYsQ",
-      "subscribers": 774,
-      "currentViews": 74727,
+      "subscribers": 778,
+      "currentViews": 76057,
       "status": "active"
     },
     {
@@ -43,16 +43,16 @@
       "channel": "yuruyuru",
       "videoId": "RSuYWyyB-0U",
       "title": "AIを使うなら知っておきたい！GitHubで人生を丸ごと管理する方法",
-      "currentViews": 890,
+      "currentViews": 2170,
       "publishedAt": "2026-09-30T10:00:09Z",
-      "publishedText": "今日",
+      "publishedText": "1日前",
       "durationSeconds": 1078
     },
     {
       "channel": "yuruyuru",
       "videoId": "96M_YH3yCRU",
       "title": "【9割が知らない】ChatGPT Images 2.5完全入門",
-      "currentViews": 1879,
+      "currentViews": 1883,
       "publishedAt": "2026-09-20T10:00:13Z",
       "publishedText": "1週間前",
       "durationSeconds": 707
@@ -70,7 +70,7 @@
       "channel": "yuruyuru",
       "videoId": "bSiHTimHr8I",
       "title": "【9割が知らない】Codexの超便利機能7選",
-      "currentViews": 10568,
+      "currentViews": 10572,
       "publishedAt": "2026-09-06T10:33:50Z",
       "publishedText": "3週間前",
       "durationSeconds": 918
@@ -79,7 +79,7 @@
       "channel": "yuruyuru",
       "videoId": "gqkHs7WpeUQ",
       "title": "【意外と知らない】Codexの完全入門徹底解説",
-      "currentViews": 4870,
+      "currentViews": 4873,
       "publishedAt": "2026-08-29T10:00:15Z",
       "publishedText": "1か月前",
       "durationSeconds": 955
@@ -88,7 +88,7 @@
       "channel": "yuruyuru",
       "videoId": "YjugyzWIZYk",
       "title": "9割が間違ってるClaude Codeの使い方!?Anthropic公式講座200本受けてみた",
-      "currentViews": 36825,
+      "currentViews": 36836,
       "publishedAt": "2026-08-24T10:00:35Z",
       "publishedText": "1か月前",
       "durationSeconds": 969
@@ -124,7 +124,7 @@
       "channel": "yuruyuru",
       "videoId": "hmjIPVylvlw",
       "title": "Claude Codeで使える！Skills機能を世界一わかりやすく解説してみた",
-      "currentViews": 8911,
+      "currentViews": 8938,
       "publishedAt": "2026-07-30T10:00:05Z",
       "publishedText": "2か月前",
       "durationSeconds": 1237
@@ -178,7 +178,7 @@
       "channel": "yuruyuru",
       "videoId": "MZOtIDFBYQY",
       "title": "【最新版！】Claude Code完全入門マニュアル",
-      "currentViews": 562,
+      "currentViews": 563,
       "publishedAt": "2026-07-05T10:00:23Z",
       "publishedText": "2か月前",
       "durationSeconds": 1250
@@ -240,18 +240,6 @@
   ],
   "officialLines": [
     {
-      "id": "line-a0ce3f122eec",
-      "name": "AIでひとり起業（広告）",
-      "totalFriends": 149,
-      "activeFriends": 123,
-      "channels": [
-        "yuruyuru"
-      ],
-      "status": "connected",
-      "youtubeLeads": 76,
-      "firstYoutubeLeadDate": "2026-08-25"
-    },
-    {
       "id": "line-782007577b68",
       "name": "ゆるAI",
       "totalFriends": 114,
@@ -262,30 +250,6 @@
       "status": "connected",
       "youtubeLeads": 114,
       "firstYoutubeLeadDate": "2026-07-06"
-    },
-    {
-      "id": "line-7cd62c8408d4",
-      "name": "AI×一人起業【YouTube統合】",
-      "totalFriends": 61,
-      "activeFriends": 53,
-      "channels": [
-        "yuruyuru"
-      ],
-      "status": "connected",
-      "youtubeLeads": 47,
-      "firstYoutubeLeadDate": "2026-07-31"
-    },
-    {
-      "id": "line-009799457bc7",
-      "name": "こすもす【公式】",
-      "totalFriends": 40,
-      "activeFriends": 29,
-      "channels": [
-        "yuruyuru"
-      ],
-      "status": "connected",
-      "youtubeLeads": 4,
-      "firstYoutubeLeadDate": "2026-09-17"
     },
     {
       "id": "line-2feecc2495f7",
@@ -493,22 +457,8 @@
     {
       "date": "2026-07-31",
       "channel": "yuruyuru",
-      "videoId": "hmjIPVylvlw",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
-    },
-    {
-      "date": "2026-07-31",
-      "channel": "yuruyuru",
       "videoId": "0i2ZdKe7PKY",
       "line": "line-782007577b68",
-      "leads": 1
-    },
-    {
-      "date": "2026-08-01",
-      "channel": "yuruyuru",
-      "videoId": "hmjIPVylvlw",
-      "line": "line-7cd62c8408d4",
       "leads": 1
     },
     {
@@ -535,22 +485,8 @@
     {
       "date": "2026-08-02",
       "channel": "yuruyuru",
-      "videoId": "hmjIPVylvlw",
-      "line": "line-7cd62c8408d4",
-      "leads": 3
-    },
-    {
-      "date": "2026-08-02",
-      "channel": "yuruyuru",
       "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
-      "leads": 4
-    },
-    {
-      "date": "2026-08-03",
-      "channel": "yuruyuru",
-      "videoId": "hmjIPVylvlw",
-      "line": "line-7cd62c8408d4",
       "leads": 4
     },
     {
@@ -559,20 +495,6 @@
       "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
       "leads": 1
-    },
-    {
-      "date": "2026-08-04",
-      "channel": "yuruyuru",
-      "videoId": "ZcwZhJRDZcA",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
-    },
-    {
-      "date": "2026-08-04",
-      "channel": "yuruyuru",
-      "videoId": "hmjIPVylvlw",
-      "line": "line-7cd62c8408d4",
-      "leads": 5
     },
     {
       "date": "2026-08-04",
@@ -584,51 +506,9 @@
     {
       "date": "2026-08-05",
       "channel": "yuruyuru",
-      "videoId": "hmjIPVylvlw",
-      "line": "line-7cd62c8408d4",
-      "leads": 4
-    },
-    {
-      "date": "2026-08-05",
-      "channel": "yuruyuru",
-      "videoId": "ZcwZhJRDZcA",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
-    },
-    {
-      "date": "2026-08-05",
-      "channel": "yuruyuru",
-      "videoId": "WRjN6UeNtcE",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
-    },
-    {
-      "date": "2026-08-05",
-      "channel": "yuruyuru",
       "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
       "leads": 4
-    },
-    {
-      "date": "2026-08-06",
-      "channel": "yuruyuru",
-      "videoId": "MZOtIDFBYQY",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
-    },
-    {
-      "date": "2026-08-06",
-      "channel": "yuruyuru",
-      "videoId": "hmjIPVylvlw",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
-    },
-    {
-      "date": "2026-08-06",
-      "channel": "yuruyuru",
-      "videoId": "WRjN6UeNtcE",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
     },
     {
       "date": "2026-08-06",
@@ -654,36 +534,8 @@
     {
       "date": "2026-08-09",
       "channel": "yuruyuru",
-      "videoId": "ZcwZhJRDZcA",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
-    },
-    {
-      "date": "2026-08-09",
-      "channel": "yuruyuru",
-      "videoId": "hmjIPVylvlw",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
-    },
-    {
-      "date": "2026-08-09",
-      "channel": "yuruyuru",
       "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
-      "leads": 1
-    },
-    {
-      "date": "2026-08-10",
-      "channel": "yuruyuru",
-      "videoId": "98se0y1flLo",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
-    },
-    {
-      "date": "2026-08-10",
-      "channel": "yuruyuru",
-      "videoId": "ZcwZhJRDZcA",
-      "line": "line-7cd62c8408d4",
       "leads": 1
     },
     {
@@ -696,30 +548,9 @@
     {
       "date": "2026-08-11",
       "channel": "yuruyuru",
-      "videoId": "MZOtIDFBYQY",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
-    },
-    {
-      "date": "2026-08-11",
-      "channel": "yuruyuru",
-      "videoId": "hmjIPVylvlw",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
-    },
-    {
-      "date": "2026-08-11",
-      "channel": "yuruyuru",
       "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
       "leads": 5
-    },
-    {
-      "date": "2026-08-12",
-      "channel": "yuruyuru",
-      "videoId": "hmjIPVylvlw",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
     },
     {
       "date": "2026-08-12",
@@ -734,13 +565,6 @@
       "videoId": "MZOtIDFBYQY",
       "line": "line-782007577b68",
       "leads": 1
-    },
-    {
-      "date": "2026-08-13",
-      "channel": "yuruyuru",
-      "videoId": "hmjIPVylvlw",
-      "line": "line-7cd62c8408d4",
-      "leads": 2
     },
     {
       "date": "2026-08-13",
@@ -755,20 +579,6 @@
       "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
       "leads": 4
-    },
-    {
-      "date": "2026-08-15",
-      "channel": "yuruyuru",
-      "videoId": "ZcwZhJRDZcA",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
-    },
-    {
-      "date": "2026-08-16",
-      "channel": "yuruyuru",
-      "videoId": "hmjIPVylvlw",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
     },
     {
       "date": "2026-08-16",
@@ -799,27 +609,6 @@
       "leads": 1
     },
     {
-      "date": "2026-08-22",
-      "channel": "yuruyuru",
-      "videoId": "hmjIPVylvlw",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
-    },
-    {
-      "date": "2026-08-23",
-      "channel": "yuruyuru",
-      "videoId": "hmjIPVylvlw",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
-    },
-    {
-      "date": "2026-08-23",
-      "channel": "yuruyuru",
-      "videoId": "9z3P90deMBI",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
-    },
-    {
       "date": "2026-08-24",
       "channel": "yuruyuru",
       "videoId": "9z3P90deMBI",
@@ -829,29 +618,8 @@
     {
       "date": "2026-08-25",
       "channel": "yuruyuru",
-      "videoId": "YjugyzWIZYk",
-      "line": "line-a0ce3f122eec",
-      "leads": 3
-    },
-    {
-      "date": "2026-08-25",
-      "channel": "yuruyuru",
       "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
-      "leads": 1
-    },
-    {
-      "date": "2026-08-26",
-      "channel": "yuruyuru",
-      "videoId": "hmjIPVylvlw",
-      "line": "line-7cd62c8408d4",
-      "leads": 2
-    },
-    {
-      "date": "2026-08-26",
-      "channel": "yuruyuru",
-      "videoId": "YjugyzWIZYk",
-      "line": "line-a0ce3f122eec",
       "leads": 1
     },
     {
@@ -860,13 +628,6 @@
       "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
       "leads": 1
-    },
-    {
-      "date": "2026-08-27",
-      "channel": "yuruyuru",
-      "videoId": "YjugyzWIZYk",
-      "line": "line-a0ce3f122eec",
-      "leads": 3
     },
     {
       "date": "2026-08-28",
@@ -878,13 +639,6 @@
     {
       "date": "2026-08-29",
       "channel": "yuruyuru",
-      "videoId": "YjugyzWIZYk",
-      "line": "line-a0ce3f122eec",
-      "leads": 2
-    },
-    {
-      "date": "2026-08-29",
-      "channel": "yuruyuru",
       "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
       "leads": 1
@@ -892,44 +646,9 @@
     {
       "date": "2026-08-30",
       "channel": "yuruyuru",
-      "videoId": "hmjIPVylvlw",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
-    },
-    {
-      "date": "2026-08-30",
-      "channel": "yuruyuru",
-      "videoId": "YjugyzWIZYk",
-      "line": "line-a0ce3f122eec",
-      "leads": 3
-    },
-    {
-      "date": "2026-08-30",
-      "channel": "yuruyuru",
       "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
       "leads": 2
-    },
-    {
-      "date": "2026-08-31",
-      "channel": "yuruyuru",
-      "videoId": "YjugyzWIZYk",
-      "line": "line-a0ce3f122eec",
-      "leads": 6
-    },
-    {
-      "date": "2026-09-01",
-      "channel": "yuruyuru",
-      "videoId": "YjugyzWIZYk",
-      "line": "line-a0ce3f122eec",
-      "leads": 5
-    },
-    {
-      "date": "2026-09-01",
-      "channel": "yuruyuru",
-      "videoId": "gqkHs7WpeUQ",
-      "line": "line-a0ce3f122eec",
-      "leads": 1
     },
     {
       "date": "2026-09-01",
@@ -941,57 +660,8 @@
     {
       "date": "2026-09-02",
       "channel": "yuruyuru",
-      "videoId": "YjugyzWIZYk",
-      "line": "line-a0ce3f122eec",
-      "leads": 3
-    },
-    {
-      "date": "2026-09-02",
-      "channel": "yuruyuru",
-      "videoId": "gqkHs7WpeUQ",
-      "line": "line-a0ce3f122eec",
-      "leads": 1
-    },
-    {
-      "date": "2026-09-02",
-      "channel": "yuruyuru",
       "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
-      "leads": 1
-    },
-    {
-      "date": "2026-09-03",
-      "channel": "yuruyuru",
-      "videoId": "YjugyzWIZYk",
-      "line": "line-a0ce3f122eec",
-      "leads": 2
-    },
-    {
-      "date": "2026-09-04",
-      "channel": "yuruyuru",
-      "videoId": "MZOtIDFBYQY",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
-    },
-    {
-      "date": "2026-09-04",
-      "channel": "yuruyuru",
-      "videoId": "WRjN6UeNtcE",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
-    },
-    {
-      "date": "2026-09-04",
-      "channel": "yuruyuru",
-      "videoId": "YjugyzWIZYk",
-      "line": "line-a0ce3f122eec",
-      "leads": 2
-    },
-    {
-      "date": "2026-09-04",
-      "channel": "yuruyuru",
-      "videoId": "gqkHs7WpeUQ",
-      "line": "line-a0ce3f122eec",
       "leads": 1
     },
     {
@@ -1000,27 +670,6 @@
       "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
       "leads": 1
-    },
-    {
-      "date": "2026-09-05",
-      "channel": "yuruyuru",
-      "videoId": "hmjIPVylvlw",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
-    },
-    {
-      "date": "2026-09-05",
-      "channel": "yuruyuru",
-      "videoId": "YjugyzWIZYk",
-      "line": "line-a0ce3f122eec",
-      "leads": 3
-    },
-    {
-      "date": "2026-09-06",
-      "channel": "yuruyuru",
-      "videoId": "YjugyzWIZYk",
-      "line": "line-a0ce3f122eec",
-      "leads": 4
     },
     {
       "date": "2026-09-06",
@@ -1032,162 +681,8 @@
     {
       "date": "2026-09-07",
       "channel": "yuruyuru",
-      "videoId": "bSiHTimHr8I",
-      "line": "line-a0ce3f122eec",
-      "leads": 3
-    },
-    {
-      "date": "2026-09-07",
-      "channel": "yuruyuru",
-      "videoId": "YjugyzWIZYk",
-      "line": "line-a0ce3f122eec",
-      "leads": 1
-    },
-    {
-      "date": "2026-09-07",
-      "channel": "yuruyuru",
       "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
-      "leads": 1
-    },
-    {
-      "date": "2026-09-08",
-      "channel": "yuruyuru",
-      "videoId": "YjugyzWIZYk",
-      "line": "line-a0ce3f122eec",
-      "leads": 1
-    },
-    {
-      "date": "2026-09-08",
-      "channel": "yuruyuru",
-      "videoId": "gqkHs7WpeUQ",
-      "line": "line-a0ce3f122eec",
-      "leads": 1
-    },
-    {
-      "date": "2026-09-08",
-      "channel": "yuruyuru",
-      "videoId": "bSiHTimHr8I",
-      "line": "line-a0ce3f122eec",
-      "leads": 11
-    },
-    {
-      "date": "2026-09-09",
-      "channel": "yuruyuru",
-      "videoId": "bSiHTimHr8I",
-      "line": "line-a0ce3f122eec",
-      "leads": 1
-    },
-    {
-      "date": "2026-09-09",
-      "channel": "yuruyuru",
-      "videoId": "YjugyzWIZYk",
-      "line": "line-a0ce3f122eec",
-      "leads": 1
-    },
-    {
-      "date": "2026-09-10",
-      "channel": "yuruyuru",
-      "videoId": "bSiHTimHr8I",
-      "line": "line-a0ce3f122eec",
-      "leads": 6
-    },
-    {
-      "date": "2026-09-11",
-      "channel": "yuruyuru",
-      "videoId": "bSiHTimHr8I",
-      "line": "line-a0ce3f122eec",
-      "leads": 3
-    },
-    {
-      "date": "2026-09-12",
-      "channel": "yuruyuru",
-      "videoId": "bSiHTimHr8I",
-      "line": "line-a0ce3f122eec",
-      "leads": 1
-    },
-    {
-      "date": "2026-09-12",
-      "channel": "yuruyuru",
-      "videoId": "YjugyzWIZYk",
-      "line": "line-a0ce3f122eec",
-      "leads": 1
-    },
-    {
-      "date": "2026-09-13",
-      "channel": "yuruyuru",
-      "videoId": "qLw7Xqv4vvM",
-      "line": "line-a0ce3f122eec",
-      "leads": 3
-    },
-    {
-      "date": "2026-09-14",
-      "channel": "yuruyuru",
-      "videoId": "hmjIPVylvlw",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
-    },
-    {
-      "date": "2026-09-14",
-      "channel": "yuruyuru",
-      "videoId": "bSiHTimHr8I",
-      "line": "line-a0ce3f122eec",
-      "leads": 1
-    },
-    {
-      "date": "2026-09-16",
-      "channel": "yuruyuru",
-      "videoId": "hmjIPVylvlw",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
-    },
-    {
-      "date": "2026-09-17",
-      "channel": "yuruyuru",
-      "videoId": "96M_YH3yCRU",
-      "line": "line-009799457bc7",
-      "leads": 1
-    },
-    {
-      "date": "2026-09-21",
-      "channel": "yuruyuru",
-      "videoId": "96M_YH3yCRU",
-      "line": "line-009799457bc7",
-      "leads": 1
-    },
-    {
-      "date": "2026-09-22",
-      "channel": "yuruyuru",
-      "videoId": "96M_YH3yCRU",
-      "line": "line-009799457bc7",
-      "leads": 1
-    },
-    {
-      "date": "2026-09-23",
-      "channel": "yuruyuru",
-      "videoId": "96M_YH3yCRU",
-      "line": "line-009799457bc7",
-      "leads": 1
-    },
-    {
-      "date": "2026-09-24",
-      "channel": "yuruyuru",
-      "videoId": "bSiHTimHr8I",
-      "line": "line-a0ce3f122eec",
-      "leads": 1
-    },
-    {
-      "date": "2026-10-01",
-      "channel": "yuruyuru",
-      "videoId": "hmjIPVylvlw",
-      "line": "line-7cd62c8408d4",
-      "leads": 1
-    },
-    {
-      "date": "2026-10-01",
-      "channel": "yuruyuru",
-      "videoId": "RSuYWyyB-0U",
-      "line": "line-a0ce3f122eec",
       "leads": 1
     }
   ],
@@ -2340,6 +1835,24 @@
     },
     {
       "date": "2026-10-01",
+      "channel": "manimani",
+      "subscribers": 2,
+      "views": 9
+    },
+    {
+      "date": "2026-10-02",
+      "channel": "yuruyuru",
+      "subscribers": 778,
+      "views": 76057
+    },
+    {
+      "date": "2026-10-02",
+      "channel": "yukkuri",
+      "subscribers": 546,
+      "views": 7322
+    },
+    {
+      "date": "2026-10-02",
       "channel": "manimani",
       "subscribers": 2,
       "views": 9
@@ -8095,6 +7608,116 @@
       "date": "2026-10-01",
       "videoId": "Oi9KnlR0E5k",
       "views": 367
+    },
+    {
+      "date": "2026-10-02",
+      "videoId": "RSuYWyyB-0U",
+      "views": 2170
+    },
+    {
+      "date": "2026-10-02",
+      "videoId": "96M_YH3yCRU",
+      "views": 1883
+    },
+    {
+      "date": "2026-10-02",
+      "videoId": "qLw7Xqv4vvM",
+      "views": 2403
+    },
+    {
+      "date": "2026-10-02",
+      "videoId": "bSiHTimHr8I",
+      "views": 10572
+    },
+    {
+      "date": "2026-10-02",
+      "videoId": "gqkHs7WpeUQ",
+      "views": 4873
+    },
+    {
+      "date": "2026-10-02",
+      "videoId": "YjugyzWIZYk",
+      "views": 36836
+    },
+    {
+      "date": "2026-10-02",
+      "videoId": "98se0y1flLo",
+      "views": 1530
+    },
+    {
+      "date": "2026-10-02",
+      "videoId": "WRjN6UeNtcE",
+      "views": 922
+    },
+    {
+      "date": "2026-10-02",
+      "videoId": "68R-bUGBs5s",
+      "views": 45
+    },
+    {
+      "date": "2026-10-02",
+      "videoId": "hmjIPVylvlw",
+      "views": 8938
+    },
+    {
+      "date": "2026-10-02",
+      "videoId": "0i2ZdKe7PKY",
+      "views": 953
+    },
+    {
+      "date": "2026-10-02",
+      "videoId": "ZcwZhJRDZcA",
+      "views": 3686
+    },
+    {
+      "date": "2026-10-02",
+      "videoId": "XB8D06toYZ8",
+      "views": 9
+    },
+    {
+      "date": "2026-10-02",
+      "videoId": "1b_qRGocOmU",
+      "views": 3986
+    },
+    {
+      "date": "2026-10-02",
+      "videoId": "9z3P90deMBI",
+      "views": 728
+    },
+    {
+      "date": "2026-10-02",
+      "videoId": "MZOtIDFBYQY",
+      "views": 563
+    },
+    {
+      "date": "2026-10-02",
+      "videoId": "x7Q0qvvmwT8",
+      "views": 1790
+    },
+    {
+      "date": "2026-10-02",
+      "videoId": "PkACpVlSvmA",
+      "views": 166
+    },
+    {
+      "date": "2026-10-02",
+      "videoId": "nRt-lwDoP_E",
+      "views": 188
+    },
+    {
+      "date": "2026-10-02",
+      "videoId": "t8ISg0HYlzA",
+      "views": 695
+    },
+    {
+      "date": "2026-10-02",
+      "videoId": "fVrw_p75IXc",
+      "views": 85
+    },
+    {
+      "date": "2026-10-02",
+      "videoId": "Oi9KnlR0E5k",
+      "views": 367
     }
   ],
   "lineHistory": [
@@ -9714,6 +9337,18 @@
     },
     {
       "date": "2026-10-01",
+      "line": "line-2feecc2495f7",
+      "totalFriends": 24,
+      "activeFriends": 21
+    },
+    {
+      "date": "2026-10-02",
+      "line": "line-782007577b68",
+      "totalFriends": 114,
+      "activeFriends": 81
+    },
+    {
+      "date": "2026-10-02",
       "line": "line-2feecc2495f7",
       "totalFriends": 24,
       "activeFriends": 21
