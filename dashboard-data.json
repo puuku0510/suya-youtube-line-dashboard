@@ -1,8 +1,8 @@
 {
   "meta": {
     "mode": "live-api",
-    "lastSync": "2026-10-02T19:48:26.502Z",
-    "youtubeSnapshotAt": "2026-10-02T19:48:26.502Z",
+    "lastSync": "2026-10-03T08:51:25.365Z",
+    "youtubeSnapshotAt": "2026-10-03T08:51:25.365Z",
     "timezone": "Asia/Tokyo",
     "youtubeHistoryScope": "public-videos-over-60s-v1",
     "utageAccountCount": 48,
@@ -15,8 +15,8 @@
       "name": "ゆるAI",
       "handle": "@yuruyuru-ai000",
       "channelId": "UCnY6D6uMLAlD65iHG87PYsQ",
-      "subscribers": 776,
-      "currentViews": 76465,
+      "subscribers": 777,
+      "currentViews": 76623,
       "status": "active"
     },
     {
@@ -43,7 +43,7 @@
       "channel": "yuruyuru",
       "videoId": "RSuYWyyB-0U",
       "title": "AIを使うなら知っておきたい！GitHubで人生を丸ごと管理する方法",
-      "currentViews": 2493,
+      "currentViews": 2629,
       "publishedAt": "2026-09-30T10:00:09Z",
       "publishedText": "2日前",
       "durationSeconds": 1078
@@ -52,7 +52,7 @@
       "channel": "yuruyuru",
       "videoId": "96M_YH3yCRU",
       "title": "【9割が知らない】ChatGPT Images 2.5完全入門",
-      "currentViews": 1891,
+      "currentViews": 1894,
       "publishedAt": "2026-09-20T10:00:13Z",
       "publishedText": "1週間前",
       "durationSeconds": 707
@@ -61,7 +61,7 @@
       "channel": "yuruyuru",
       "videoId": "qLw7Xqv4vvM",
       "title": "【徹底解説】初心者でもわかるGPT-6Astra超入門編",
-      "currentViews": 2407,
+      "currentViews": 2403,
       "publishedAt": "2026-09-12T10:00:39Z",
       "publishedText": "2週間前",
       "durationSeconds": 725
@@ -70,7 +70,7 @@
       "channel": "yuruyuru",
       "videoId": "bSiHTimHr8I",
       "title": "【9割が知らない】Codexの超便利機能7選",
-      "currentViews": 10575,
+      "currentViews": 10576,
       "publishedAt": "2026-09-06T10:33:50Z",
       "publishedText": "3週間前",
       "durationSeconds": 918
@@ -79,7 +79,7 @@
       "channel": "yuruyuru",
       "videoId": "gqkHs7WpeUQ",
       "title": "【意外と知らない】Codexの完全入門徹底解説",
-      "currentViews": 4873,
+      "currentViews": 4874,
       "publishedAt": "2026-08-29T10:00:15Z",
       "publishedText": "1か月前",
       "durationSeconds": 955
@@ -88,7 +88,7 @@
       "channel": "yuruyuru",
       "videoId": "YjugyzWIZYk",
       "title": "9割が間違ってるClaude Codeの使い方!?Anthropic公式講座200本受けてみた",
-      "currentViews": 36847,
+      "currentViews": 36853,
       "publishedAt": "2026-08-24T10:00:35Z",
       "publishedText": "1か月前",
       "durationSeconds": 969
@@ -124,7 +124,7 @@
       "channel": "yuruyuru",
       "videoId": "hmjIPVylvlw",
       "title": "Claude Codeで使える！Skills機能を世界一わかりやすく解説してみた",
-      "currentViews": 8996,
+      "currentViews": 9011,
       "publishedAt": "2026-07-30T10:00:05Z",
       "publishedText": "2か月前",
       "durationSeconds": 1237
@@ -1860,8 +1860,8 @@
     {
       "date": "2026-10-03",
       "channel": "yuruyuru",
-      "subscribers": 776,
-      "views": 76465
+      "subscribers": 777,
+      "views": 76623
     },
     {
       "date": "2026-10-03",
@@ -7740,32 +7740,32 @@
     {
       "date": "2026-10-03",
       "videoId": "RSuYWyyB-0U",
-      "views": 2493
+      "views": 2629
     },
     {
       "date": "2026-10-03",
       "videoId": "96M_YH3yCRU",
-      "views": 1891
+      "views": 1894
     },
     {
       "date": "2026-10-03",
       "videoId": "qLw7Xqv4vvM",
-      "views": 2407
+      "views": 2403
     },
     {
       "date": "2026-10-03",
       "videoId": "bSiHTimHr8I",
-      "views": 10575
+      "views": 10576
     },
     {
       "date": "2026-10-03",
       "videoId": "gqkHs7WpeUQ",
-      "views": 4873
+      "views": 4874
     },
     {
       "date": "2026-10-03",
       "videoId": "YjugyzWIZYk",
-      "views": 36847
+      "views": 36853
     },
     {
       "date": "2026-10-03",
@@ -7785,7 +7785,7 @@
     {
       "date": "2026-10-03",
       "videoId": "hmjIPVylvlw",
-      "views": 8996
+      "views": 9011
     },
     {
       "date": "2026-10-03",
