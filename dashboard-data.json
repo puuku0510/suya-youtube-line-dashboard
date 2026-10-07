@@ -1,8 +1,8 @@
 {
   "meta": {
     "mode": "live-api",
-    "lastSync": "2026-10-06T20:03:58.592Z",
-    "youtubeSnapshotAt": "2026-10-06T20:03:58.592Z",
+    "lastSync": "2026-10-07T09:40:21.037Z",
+    "youtubeSnapshotAt": "2026-10-07T09:40:21.037Z",
     "timezone": "Asia/Tokyo",
     "youtubeHistoryScope": "public-videos-over-60s-v1",
     "utageAccountCount": 48,
@@ -15,8 +15,8 @@
       "name": "ゆるAI",
       "handle": "@yuruyuru-ai000",
       "channelId": "UCnY6D6uMLAlD65iHG87PYsQ",
-      "subscribers": 781,
-      "currentViews": 77566,
+      "subscribers": 782,
+      "currentViews": 77641,
       "status": "active"
     },
     {
@@ -43,7 +43,7 @@
       "channel": "yuruyuru",
       "videoId": "LmUq5zCX-EU",
       "title": "CodexにWebサイト作らせてみたら、2時間でできた",
-      "currentViews": 185,
+      "currentViews": 198,
       "publishedAt": "2026-10-05T10:00:10Z",
       "publishedText": "1日前",
       "durationSeconds": 937
@@ -52,7 +52,7 @@
       "channel": "yuruyuru",
       "videoId": "RSuYWyyB-0U",
       "title": "AIを使うなら知っておきたい！GitHubで人生を丸ごと管理する方法",
-      "currentViews": 3007,
+      "currentViews": 3015,
       "publishedAt": "2026-09-30T10:00:09Z",
       "publishedText": "6日前",
       "durationSeconds": 1078
@@ -79,7 +79,7 @@
       "channel": "yuruyuru",
       "videoId": "bSiHTimHr8I",
       "title": "【9割が知らない】Codexの超便利機能7選",
-      "currentViews": 10590,
+      "currentViews": 10591,
       "publishedAt": "2026-09-06T10:33:50Z",
       "publishedText": "4週間前",
       "durationSeconds": 918
@@ -88,7 +88,7 @@
       "channel": "yuruyuru",
       "videoId": "gqkHs7WpeUQ",
       "title": "【意外と知らない】Codexの完全入門徹底解説",
-      "currentViews": 4886,
+      "currentViews": 4889,
       "publishedAt": "2026-08-29T10:00:15Z",
       "publishedText": "1か月前",
       "durationSeconds": 955
@@ -97,7 +97,7 @@
       "channel": "yuruyuru",
       "videoId": "YjugyzWIZYk",
       "title": "9割が間違ってるClaude Codeの使い方!?Anthropic公式講座200本受けてみた",
-      "currentViews": 36966,
+      "currentViews": 36979,
       "publishedAt": "2026-08-24T10:00:35Z",
       "publishedText": "1か月前",
       "durationSeconds": 969
@@ -133,7 +133,7 @@
       "channel": "yuruyuru",
       "videoId": "hmjIPVylvlw",
       "title": "Claude Codeで使える！Skills機能を世界一わかりやすく解説してみた",
-      "currentViews": 9194,
+      "currentViews": 9231,
       "publishedAt": "2026-07-30T10:00:05Z",
       "publishedText": "2か月前",
       "durationSeconds": 1237
@@ -252,7 +252,7 @@
       "id": "line-a0ce3f122eec",
       "name": "AIでひとり起業（広告）",
       "totalFriends": 159,
-      "activeFriends": 126,
+      "activeFriends": 125,
       "channels": [
         "yuruyuru"
       ],
@@ -2460,8 +2460,8 @@
     {
       "date": "2026-10-07",
       "channel": "yuruyuru",
-      "subscribers": 781,
-      "views": 77566
+      "subscribers": 782,
+      "views": 77641
     },
     {
       "date": "2026-10-07",
@@ -8795,12 +8795,12 @@
     {
       "date": "2026-10-07",
       "videoId": "LmUq5zCX-EU",
-      "views": 185
+      "views": 198
     },
     {
       "date": "2026-10-07",
       "videoId": "RSuYWyyB-0U",
-      "views": 3007
+      "views": 3015
     },
     {
       "date": "2026-10-07",
@@ -8815,17 +8815,17 @@
     {
       "date": "2026-10-07",
       "videoId": "bSiHTimHr8I",
-      "views": 10590
+      "views": 10591
     },
     {
       "date": "2026-10-07",
       "videoId": "gqkHs7WpeUQ",
-      "views": 4886
+      "views": 4889
     },
     {
       "date": "2026-10-07",
       "videoId": "YjugyzWIZYk",
-      "views": 36966
+      "views": 36979
     },
     {
       "date": "2026-10-07",
@@ -8845,7 +8845,7 @@
     {
       "date": "2026-10-07",
       "videoId": "hmjIPVylvlw",
-      "views": 9194
+      "views": 9231
     },
     {
       "date": "2026-10-07",
@@ -10647,7 +10647,7 @@
       "date": "2026-10-07",
       "line": "line-a0ce3f122eec",
       "totalFriends": 159,
-      "activeFriends": 126
+      "activeFriends": 125
     },
     {
       "date": "2026-10-07",
