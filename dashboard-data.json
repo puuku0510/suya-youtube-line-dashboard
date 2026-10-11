@@ -1,12 +1,12 @@
 {
   "meta": {
     "mode": "live-api",
-    "lastSync": "2026-10-11T09:37:39.261Z",
-    "youtubeSnapshotAt": "2026-10-11T09:37:39.261Z",
+    "lastSync": "2026-10-11T19:26:01.110Z",
+    "youtubeSnapshotAt": "2026-10-11T19:26:01.110Z",
     "timezone": "Asia/Tokyo",
     "youtubeHistoryScope": "public-videos-over-60s-v1",
     "utageAccountCount": 48,
-    "youtubeTrackingCount": 15,
+    "youtubeTrackingCount": 16,
     "notice": "YouTube概要欄の登録用リンクとUTAGEを照合し、YouTube由来だけを表示しています。公式LINEの有効友だち数は、ブロック・配信除外を除いた現在値です。"
   },
   "channels": [
@@ -16,7 +16,7 @@
       "handle": "@yuruyuru-ai000",
       "channelId": "UCnY6D6uMLAlD65iHG87PYsQ",
       "subscribers": 784,
-      "currentViews": 78989,
+      "currentViews": 79173,
       "status": "active"
     },
     {
@@ -41,27 +41,36 @@
   "videos": [
     {
       "channel": "yuruyuru",
+      "videoId": "1DqgRAaWLmE",
+      "title": "全員頼み方違う？Codexを正しく使うステップを解説します",
+      "currentViews": 67,
+      "publishedAt": "2026-10-11T10:00:18Z",
+      "publishedText": "今日",
+      "durationSeconds": 759
+    },
+    {
+      "channel": "yuruyuru",
       "videoId": "aJpIiQz2Edk",
       "title": "【9割が知らない】ChatGPTの便利機能7選",
-      "currentViews": 904,
+      "currentViews": 962,
       "publishedAt": "2026-10-07T10:00:37Z",
-      "publishedText": "3日前",
+      "publishedText": "4日前",
       "durationSeconds": 607
     },
     {
       "channel": "yuruyuru",
       "videoId": "LmUq5zCX-EU",
       "title": "CodexにWebサイト作らせてみたら、2時間でできた",
-      "currentViews": 285,
+      "currentViews": 288,
       "publishedAt": "2026-10-05T10:00:10Z",
-      "publishedText": "5日前",
+      "publishedText": "6日前",
       "durationSeconds": 937
     },
     {
       "channel": "yuruyuru",
       "videoId": "RSuYWyyB-0U",
       "title": "AIを使うなら知っておきたい！GitHubで人生を丸ごと管理する方法",
-      "currentViews": 3023,
+      "currentViews": 3026,
       "publishedAt": "2026-09-30T10:00:09Z",
       "publishedText": "1週間前",
       "durationSeconds": 1078
@@ -72,7 +81,7 @@
       "title": "【9割が知らない】ChatGPT Images 2.5完全入門",
       "currentViews": 1912,
       "publishedAt": "2026-09-20T10:00:13Z",
-      "publishedText": "2週間前",
+      "publishedText": "3週間前",
       "durationSeconds": 707
     },
     {
@@ -88,7 +97,7 @@
       "channel": "yuruyuru",
       "videoId": "bSiHTimHr8I",
       "title": "【9割が知らない】Codexの超便利機能7選",
-      "currentViews": 10597,
+      "currentViews": 10598,
       "publishedAt": "2026-09-06T10:33:50Z",
       "publishedText": "1か月前",
       "durationSeconds": 918
@@ -97,7 +106,7 @@
       "channel": "yuruyuru",
       "videoId": "gqkHs7WpeUQ",
       "title": "【意外と知らない】Codexの完全入門徹底解説",
-      "currentViews": 4907,
+      "currentViews": 4911,
       "publishedAt": "2026-08-29T10:00:15Z",
       "publishedText": "1か月前",
       "durationSeconds": 955
@@ -106,7 +115,7 @@
       "channel": "yuruyuru",
       "videoId": "YjugyzWIZYk",
       "title": "9割が間違ってるClaude Codeの使い方!?Anthropic公式講座200本受けてみた",
-      "currentViews": 37054,
+      "currentViews": 37065,
       "publishedAt": "2026-08-24T10:00:35Z",
       "publishedText": "1か月前",
       "durationSeconds": 969
@@ -142,7 +151,7 @@
       "channel": "yuruyuru",
       "videoId": "hmjIPVylvlw",
       "title": "Claude Codeで使える！Skills機能を世界一わかりやすく解説してみた",
-      "currentViews": 9451,
+      "currentViews": 9488,
       "publishedAt": "2026-07-30T10:00:05Z",
       "publishedText": "2か月前",
       "durationSeconds": 1237
@@ -260,8 +269,8 @@
     {
       "id": "line-a0ce3f122eec",
       "name": "AIでひとり起業（広告）",
-      "totalFriends": 167,
-      "activeFriends": 127,
+      "totalFriends": 169,
+      "activeFriends": 129,
       "channels": [
         "yuruyuru"
       ],
@@ -272,13 +281,13 @@
     {
       "id": "line-782007577b68",
       "name": "ゆるAI",
-      "totalFriends": 116,
-      "activeFriends": 80,
+      "totalFriends": 118,
+      "activeFriends": 82,
       "channels": [
         "yuruyuru"
       ],
       "status": "connected",
-      "youtubeLeads": 116,
+      "youtubeLeads": 118,
       "firstYoutubeLeadDate": "2026-07-06"
     },
     {
@@ -1227,7 +1236,7 @@
       "channel": "yuruyuru",
       "videoId": "9z3P90deMBI",
       "line": "line-782007577b68",
-      "leads": 1
+      "leads": 3
     }
   ],
   "youtubeHistory": [
@@ -2559,6 +2568,24 @@
     },
     {
       "date": "2026-10-11",
+      "channel": "manimani",
+      "subscribers": 2,
+      "views": 9
+    },
+    {
+      "date": "2026-10-12",
+      "channel": "yuruyuru",
+      "subscribers": 784,
+      "views": 79173
+    },
+    {
+      "date": "2026-10-12",
+      "channel": "yukkuri",
+      "subscribers": 546,
+      "views": 7322
+    },
+    {
+      "date": "2026-10-12",
       "channel": "manimani",
       "subscribers": 2,
       "views": 9
@@ -9474,6 +9501,131 @@
       "date": "2026-10-11",
       "videoId": "Oi9KnlR0E5k",
       "views": 367
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "1DqgRAaWLmE",
+      "views": 67
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "aJpIiQz2Edk",
+      "views": 962
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "LmUq5zCX-EU",
+      "views": 288
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "RSuYWyyB-0U",
+      "views": 3026
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "96M_YH3yCRU",
+      "views": 1912
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "qLw7Xqv4vvM",
+      "views": 2429
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "bSiHTimHr8I",
+      "views": 10598
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "gqkHs7WpeUQ",
+      "views": 4911
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "YjugyzWIZYk",
+      "views": 37065
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "98se0y1flLo",
+      "views": 1531
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "WRjN6UeNtcE",
+      "views": 924
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "68R-bUGBs5s",
+      "views": 45
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "hmjIPVylvlw",
+      "views": 9488
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "0i2ZdKe7PKY",
+      "views": 970
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "ZcwZhJRDZcA",
+      "views": 3690
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "XB8D06toYZ8",
+      "views": 9
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "1b_qRGocOmU",
+      "views": 3986
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "9z3P90deMBI",
+      "views": 736
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "MZOtIDFBYQY",
+      "views": 576
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "x7Q0qvvmwT8",
+      "views": 1790
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "PkACpVlSvmA",
+      "views": 166
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "nRt-lwDoP_E",
+      "views": 188
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "t8ISg0HYlzA",
+      "views": 695
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "fVrw_p75IXc",
+      "views": 85
+    },
+    {
+      "date": "2026-10-12",
+      "videoId": "Oi9KnlR0E5k",
+      "views": 367
     }
   ],
   "lineHistory": [
@@ -11357,6 +11509,36 @@
     },
     {
       "date": "2026-10-11",
+      "line": "line-2feecc2495f7",
+      "totalFriends": 24,
+      "activeFriends": 21
+    },
+    {
+      "date": "2026-10-12",
+      "line": "line-a0ce3f122eec",
+      "totalFriends": 169,
+      "activeFriends": 129
+    },
+    {
+      "date": "2026-10-12",
+      "line": "line-782007577b68",
+      "totalFriends": 118,
+      "activeFriends": 82
+    },
+    {
+      "date": "2026-10-12",
+      "line": "line-7cd62c8408d4",
+      "totalFriends": 62,
+      "activeFriends": 54
+    },
+    {
+      "date": "2026-10-12",
+      "line": "line-009799457bc7",
+      "totalFriends": 41,
+      "activeFriends": 29
+    },
+    {
+      "date": "2026-10-12",
       "line": "line-2feecc2495f7",
       "totalFriends": 24,
       "activeFriends": 21
