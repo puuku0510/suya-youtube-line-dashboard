@@ -1,11 +1,11 @@
 {
   "meta": {
     "mode": "live-api",
-    "lastSync": "2026-10-29T20:03:34.519Z",
-    "youtubeSnapshotAt": "2026-10-29T20:03:34.519Z",
+    "lastSync": "2026-10-30T09:23:12.767Z",
+    "youtubeSnapshotAt": "2026-10-30T09:23:12.767Z",
     "timezone": "Asia/Tokyo",
     "youtubeHistoryScope": "public-videos-over-60s-v1",
-    "utageAccountCount": 58,
+    "utageAccountCount": 59,
     "youtubeTrackingCount": 19,
     "notice": "YouTube概要欄の登録用リンクとUTAGEを照合し、YouTube由来だけを表示しています。公式LINEの有効友だち数は、ブロック・配信除外を除いた現在値です。"
   },
@@ -16,7 +16,7 @@
       "handle": "@yuruyuru-ai000",
       "channelId": "UCnY6D6uMLAlD65iHG87PYsQ",
       "subscribers": 792,
-      "currentViews": 81813,
+      "currentViews": 81915,
       "status": "active"
     },
     {
@@ -43,7 +43,7 @@
       "channel": "yuruyuru",
       "videoId": "lDZIJljbKuo",
       "title": "【警告】Codexで同じチャットを使い続けるとバカになる｜精度を落とさない4つのコツ",
-      "currentViews": 206,
+      "currentViews": 261,
       "publishedAt": "2026-10-28T11:38:46Z",
       "publishedText": "1日前",
       "durationSeconds": 1255
@@ -52,7 +52,7 @@
       "channel": "yuruyuru",
       "videoId": "e1wVeHDJnQc",
       "title": "【9割がやってる】AIで頭が悪くなる人の使い方トップ5",
-      "currentViews": 160,
+      "currentViews": 162,
       "publishedAt": "2026-10-25T10:00:03Z",
       "publishedText": "4日前",
       "durationSeconds": 1125
@@ -61,7 +61,7 @@
       "channel": "yuruyuru",
       "videoId": "xTfmb6-cprs",
       "title": "【知らなきゃ損】Claude CodeやCodexが最大化するフォルダ設計方法",
-      "currentViews": 196,
+      "currentViews": 202,
       "publishedAt": "2026-10-22T10:00:08Z",
       "publishedText": "1週間前",
       "durationSeconds": 1013
@@ -88,7 +88,7 @@
       "channel": "yuruyuru",
       "videoId": "LmUq5zCX-EU",
       "title": "CodexにWebサイト作らせてみたら、2時間でできた",
-      "currentViews": 482,
+      "currentViews": 486,
       "publishedAt": "2026-10-05T10:00:10Z",
       "publishedText": "3週間前",
       "durationSeconds": 937
@@ -133,7 +133,7 @@
       "channel": "yuruyuru",
       "videoId": "gqkHs7WpeUQ",
       "title": "【意外と知らない】Codexの完全入門徹底解説",
-      "currentViews": 4946,
+      "currentViews": 4947,
       "publishedAt": "2026-08-29T10:00:15Z",
       "publishedText": "2か月前",
       "durationSeconds": 955
@@ -142,7 +142,7 @@
       "channel": "yuruyuru",
       "videoId": "YjugyzWIZYk",
       "title": "9割が間違ってるClaude Codeの使い方!?Anthropic公式講座200本受けてみた",
-      "currentViews": 37317,
+      "currentViews": 37328,
       "publishedAt": "2026-08-24T10:00:35Z",
       "publishedText": "2か月前",
       "durationSeconds": 969
@@ -178,7 +178,7 @@
       "channel": "yuruyuru",
       "videoId": "hmjIPVylvlw",
       "title": "Claude Codeで使える！Skills機能を世界一わかりやすく解説してみた",
-      "currentViews": 10418,
+      "currentViews": 10441,
       "publishedAt": "2026-07-30T10:00:05Z",
       "publishedText": "3か月前",
       "durationSeconds": 1237
@@ -2960,7 +2960,7 @@
       "date": "2026-10-30",
       "channel": "yuruyuru",
       "subscribers": 792,
-      "views": 81813
+      "views": 81915
     },
     {
       "date": "2026-10-30",
@@ -12199,17 +12199,17 @@
     {
       "date": "2026-10-30",
       "videoId": "lDZIJljbKuo",
-      "views": 206
+      "views": 261
     },
     {
       "date": "2026-10-30",
       "videoId": "e1wVeHDJnQc",
-      "views": 160
+      "views": 162
     },
     {
       "date": "2026-10-30",
       "videoId": "xTfmb6-cprs",
-      "views": 196
+      "views": 202
     },
     {
       "date": "2026-10-30",
@@ -12224,7 +12224,7 @@
     {
       "date": "2026-10-30",
       "videoId": "LmUq5zCX-EU",
-      "views": 482
+      "views": 486
     },
     {
       "date": "2026-10-30",
@@ -12249,12 +12249,12 @@
     {
       "date": "2026-10-30",
       "videoId": "gqkHs7WpeUQ",
-      "views": 4946
+      "views": 4947
     },
     {
       "date": "2026-10-30",
       "videoId": "YjugyzWIZYk",
-      "views": 37317
+      "views": 37328
     },
     {
       "date": "2026-10-30",
@@ -12274,7 +12274,7 @@
     {
       "date": "2026-10-30",
       "videoId": "hmjIPVylvlw",
-      "views": 10418
+      "views": 10441
     },
     {
       "date": "2026-10-30",
