@@ -1,8 +1,8 @@
 {
   "meta": {
     "mode": "live-api",
-    "lastSync": "2026-10-31T19:01:11.502Z",
-    "youtubeSnapshotAt": "2026-10-31T19:01:11.502Z",
+    "lastSync": "2026-11-01T10:00:16.635Z",
+    "youtubeSnapshotAt": "2026-11-01T10:00:16.635Z",
     "timezone": "Asia/Tokyo",
     "youtubeHistoryScope": "public-videos-over-60s-v1",
     "utageAccountCount": 60,
@@ -16,7 +16,7 @@
       "handle": "@yuruyuru-ai000",
       "channelId": "UCnY6D6uMLAlD65iHG87PYsQ",
       "subscribers": 793,
-      "currentViews": 82288,
+      "currentViews": 82339,
       "status": "active"
     },
     {
@@ -43,7 +43,7 @@
       "channel": "yuruyuru",
       "videoId": "lDZIJljbKuo",
       "title": "【警告】Codexで同じチャットを使い続けるとバカになる｜精度を落とさない4つのコツ",
-      "currentViews": 513,
+      "currentViews": 542,
       "publishedAt": "2026-10-28T11:38:46Z",
       "publishedText": "3日前",
       "durationSeconds": 1255
@@ -52,7 +52,7 @@
       "channel": "yuruyuru",
       "videoId": "e1wVeHDJnQc",
       "title": "【9割がやってる】AIで頭が悪くなる人の使い方トップ5",
-      "currentViews": 163,
+      "currentViews": 165,
       "publishedAt": "2026-10-25T10:00:03Z",
       "publishedText": "6日前",
       "durationSeconds": 1125
@@ -88,7 +88,7 @@
       "channel": "yuruyuru",
       "videoId": "LmUq5zCX-EU",
       "title": "CodexにWebサイト作らせてみたら、2時間でできた",
-      "currentViews": 507,
+      "currentViews": 512,
       "publishedAt": "2026-10-05T10:00:10Z",
       "publishedText": "3週間前",
       "durationSeconds": 937
@@ -142,7 +142,7 @@
       "channel": "yuruyuru",
       "videoId": "YjugyzWIZYk",
       "title": "9割が間違ってるClaude Codeの使い方!?Anthropic公式講座200本受けてみた",
-      "currentViews": 37365,
+      "currentViews": 37370,
       "publishedAt": "2026-08-24T10:00:35Z",
       "publishedText": "2か月前",
       "durationSeconds": 969
@@ -178,7 +178,7 @@
       "channel": "yuruyuru",
       "videoId": "hmjIPVylvlw",
       "title": "Claude Codeで使える！Skills機能を世界一わかりやすく解説してみた",
-      "currentViews": 10485,
+      "currentViews": 10495,
       "publishedAt": "2026-07-30T10:00:05Z",
       "publishedText": "3か月前",
       "durationSeconds": 1237
@@ -3003,7 +3003,7 @@
       "date": "2026-11-01",
       "channel": "yuruyuru",
       "subscribers": 793,
-      "views": 82288
+      "views": 82339
     },
     {
       "date": "2026-11-01",
@@ -12522,12 +12522,12 @@
     {
       "date": "2026-11-01",
       "videoId": "lDZIJljbKuo",
-      "views": 513
+      "views": 542
     },
     {
       "date": "2026-11-01",
       "videoId": "e1wVeHDJnQc",
-      "views": 163
+      "views": 165
     },
     {
       "date": "2026-11-01",
@@ -12547,7 +12547,7 @@
     {
       "date": "2026-11-01",
       "videoId": "LmUq5zCX-EU",
-      "views": 507
+      "views": 512
     },
     {
       "date": "2026-11-01",
@@ -12577,7 +12577,7 @@
     {
       "date": "2026-11-01",
       "videoId": "YjugyzWIZYk",
-      "views": 37365
+      "views": 37370
     },
     {
       "date": "2026-11-01",
@@ -12597,7 +12597,7 @@
     {
       "date": "2026-11-01",
       "videoId": "hmjIPVylvlw",
-      "views": 10485
+      "views": 10495
     },
     {
       "date": "2026-11-01",
